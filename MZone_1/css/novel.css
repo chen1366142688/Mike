@@ -74,6 +74,11 @@ body{
     background: url("../img/0301_32.png") no-repeat;
     background-size:cover;
 }
+.c_bg13{
+    background: url("../img/0090.png") no-repeat;
+    background-size:cover;
+}
+
 .c_text{
     display:inline-block;
     width:12.15rem;
