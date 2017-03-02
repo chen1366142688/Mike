@@ -1,0 +1,206 @@
+body{
+    background-color: #f9f9f9;
+}
+.main{
+    width:100%;
+    border-bottom:1px solid #ddd;
+}
+.c_nice{
+    width:100%;
+    margin: 1rem 0;
+    padding: 0 1.125rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.c_yue{
+    text-align: center;
+}
+.c_yue b{
+    font-size: 3rem;
+    color: #fe4e48;
+    font-weight:normal;
+}
+.c_section{
+    width:100%;
+    margin-top: 1rem;
+    padding: 0 1.125rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.overflow:after {
+    content: "";
+    visibility: hidden;
+    display: inline-block;
+    font-size: 0;
+    clear: both;
+    height: 0;
+}
+.overflow a{
+    float: right;
+}
+.article{
+    width:100%;
+    margin-top: 1rem;
+}
+.article li{
+    height:6.25rem;
+    border:1px solid #ff9e5d;
+    border-radius: 0.4rem;
+    display: inline-block;
+    text-align: center;
+    width:30%;
+    font-size: 1.3rem;
+    margin:1rem 0;
+}
+.article li:nth-child(2),.article li:nth-child(5){
+    margin:0 0.5rem;
+}
+.article li b,.article li span,.article li a{
+    display: block;
+}
+.article li:first-child b{
+    height:3rem;
+    line-height:3rem;
+    text-align: center;
+    background: url("../images/dou.png") no-repeat;
+    background-size: 1.3rem;
+    background-position:50% 50%;
+}
+.article li:nth-child(2) b{
+    height:3rem;
+    line-height:3rem;
+    text-align: center;
+    background: url("../images/dou2.png") no-repeat;
+    background-size: 2.3rem;
+    background-position:50% 50%;
+}
+.article li:nth-child(3) b{
+    height:3rem;
+    line-height:3rem;
+    text-align: center;
+    background: url("../images/dou3.png") no-repeat;
+    background-size: 3.3rem;
+    background-position:50% 50%;
+}
+.article li:nth-child(4) b{
+    height:3rem;
+    line-height:3rem;
+    text-align: center;
+    background: url("../images/dou4.png") no-repeat;
+    background-size: 3rem;
+    background-position:50% 50%;
+}
+.article li:last-child b{
+    height:3rem;
+    line-height:3rem;
+    text-align: center;
+    background: url("../images/dou5.png") no-repeat;
+    background-size: 3rem;
+    background-position:50% 50%;
+}
+.article li a{
+    width:6rem;
+    height:1.5rem;
+    line-height:1.5rem;
+     text-align: center;
+     color:#fff;
+     border-radius:0.625rem;
+     background-color:#ff4f31;
+    margin:0 auto;
+}
+
+
+
+
+/*弹出*/
+#Recharge_window{
+    width: 19rem;
+    height:10rem;
+    background: #fff9f6;
+    border: 0.05rem solid #afafaf;
+    border-radius: 2.3rem;
+    border-bottom-left-radius: 1rem ;
+    border-bottom-right-radius:1rem ;
+    text-align: center;
+    margin-top:5.625rem;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+}
+.close_cyou {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    border: 0.05rem solid #fe9843;
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff9f6;
+    box-shadow: 0 0 0.3rem #ccc;
+}
+.close_cyou .x {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url(../images/close.png) no-repeat center #fff9f6;
+    background-size: 100%;
+    display: block;
+    margin-top: 0.65rem;
+    margin-left: 0.75rem;
+}
+.cyoutext{
+    margin-top: 1.35rem;
+    display: inline-block;
+    font-size: 1rem;
+    width: 13.025rem;
+    height:2.25rem;
+}
+#text{
+    width: 12.225rem;
+    height:2.25rem;
+    border: none;
+    background: #dddddd;
+    border-radius: 0.2rem;
+    padding-left: 0.8rem;
+    font-size: 1rem;
+}
+.twobutton{
+    margin-top:1.22rem;
+}
+.twobutton a{
+    display: inline-block;
+    width:9.5rem;
+    height:2.5rem;
+    float: left;
+    line-height:2.5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+#exchange{
+    background: #ff6235;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+#cancel{
+    background: #bbbbbb;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+body{
+    position: relative;
+}
+#Recharge_window{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    display: none;
+}
+
+.twobutton{
+    position: fixed;
+    bottom:0;
+}

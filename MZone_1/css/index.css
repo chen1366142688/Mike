@@ -1,0 +1,113 @@
+nav{
+    height:1.6rem ;
+    line-height:1.6rem;
+    display: flex;
+    text-align: center;
+}
+nav a{
+    font-size: 0.65rem;
+    display: block;
+    flex: 1;
+    color: #8b8b8b;
+}
+.active{
+    color: #25ab57;
+    font-weight:bold;
+}
+.main{
+    width:100%;
+    background: url("../images/bg.png") no-repeat;
+    -webkit-background-size:100%;
+    background-size:100%;
+    padding-top:6.6rem;
+    position: relative;
+    text-align: center;
+}
+.gas{
+    width: 12.25rem;
+    height: 11.7rem;
+    background: url("../images/gas.png") no-repeat;
+    background-size: cover;
+    margin-left:2.45rem;
+    position: relative;
+}
+.gas_num{
+    position: absolute;
+    top:2.93rem;
+    left:5.35rem;
+    font-size: 1.15rem;
+    color: #ffe750;
+    font-style: italic;
+    font-family: "Helvetica";
+}
+.user{
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background: url("../images/user.png") no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    top:14.15rem;
+    right:1.05rem;
+}
+#join_btn{
+    margin-top:0.5rem;
+    width:12.5rem;
+    height:2.2rem;
+    border:none;
+    background: #ff7538;
+    font-size: 1rem;
+    color:#fff;
+    line-height:2.2rem;
+    border-radius: 1rem;
+    display: inline-block;
+    font-family: "Yuanti SC";
+}
+.buy{
+    width:17.1rem;
+    height:6.05rem;
+    background: url("../images/buy.png") no-repeat;
+    background-size: 100%;
+    margin-left:0.875rem;
+    margin-top:1.25rem;
+    position: relative;
+}
+.card_zsh,.card_zsy{
+    width: 10.7rem;
+    height:2.425rem;
+    position: absolute;
+    display: block;
+    left: 6.125rem;
+}
+.card_zsh{
+    top:0.275rem;
+}
+.card_zsy{
+    top:2.95rem;
+}
+.today_gas_price{
+    position: absolute;
+    color: #fe4e48;
+    width:3.1rem;
+    height:1.85rem;
+    top:2.5rem;
+    left: 1.4rem;
+}
+#price_jiaofen,#price_yuan,.d{
+    font-family: "Helvetica";
+    float: left;
+    font-weight: bold;
+}
+#price_yuan{
+    font-size: 1.75rem;
+    margin-left: 0.25rem;
+    font-family: "Helvetica";
+}
+.d{
+    font-size: 1.75rem;
+    font-family: "Helvetica";
+}
+#price_jiaofen{
+    font-size: 1rem;
+}

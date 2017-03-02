@@ -1,0 +1,47 @@
+.main {
+    width: 100%;
+    padding: 0 1.125rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.c_top{
+    width:100%;
+    height:16rem;
+    margin:2.25rem 0;
+    background: url("../images/card.png") no-repeat;
+    background-size: 100% 100%;
+}
+.c_hao{
+    width:100%;
+    margin:0.65rem 0;
+}
+.c_hao input{
+    width:100%;
+    height:2.35rem;
+    background: #ddd;
+    border:1px solid transparent;
+
+    border-radius: 0.5rem;
+    text-indent:0.85rem;
+    outline: none;
+}
+.c_hao input.c_item {
+    margin-bottom:0.425rem;
+}
+.c_bding{
+    display: block;
+    width:100%;
+    height:2.875rem;
+    text-align: center;
+    line-height:2.875rem;
+    background-color: #ff4f31;
+    border-radius: 2rem;
+    border:0;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    outline:none;
+}
+.c_jin{
+    color: #fe4e48;
+}

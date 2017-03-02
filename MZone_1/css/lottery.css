@@ -1,0 +1,187 @@
+body{
+    width: 100%;
+    background: url("../images/bg3.png") no-repeat;
+    text-align: center;
+    position: relative;
+    padding-top: 1.5rem;
+    background-size: cover;
+}
+#head1{
+    display: none;
+}
+#number2{
+
+    font-size: 1rem;
+}
+header{
+    font-size: 1rem;
+    font-style: italic;
+    color: #fff;
+}
+#number{
+    color: #ffe750;
+    font-size: 1rem;
+    margin:0 0.35rem;
+}
+.clock{
+    width:7.375rem;
+    height:2.275rem;
+    background: url("../images/clock.png") no-repeat;
+    background-size: 100%;
+    margin: 0.5rem auto;
+    line-height:2.275rem;
+    position: relative;
+}
+.clock span{
+    font-size: 1rem;
+    font-family: "Helvetica";
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    height: 1rem;
+    line-height:1rem;
+    top:0.65rem;
+}
+#h{
+    left:0.45rem;
+}
+#m{
+    left:3.2rem;
+}
+#s{
+    right: 0.45rem;
+}
+.text{
+    font-size:0.7rem;
+    color:#fff;
+    height: 1rem;
+    line-height:1rem;
+}
+#gasnumber{
+    color: #ffe750;
+    font-size: 0.7rem;
+    font-family: "Helvetica";
+}
+.party1{
+    width:16.3rem;
+    padding:0.325rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    margin:0 auto;
+    margin-top:0.65rem;
+}
+.mynumber{
+    border:0.1rem dotted #ff4f31;
+    border-radius: 0.75rem;
+    padding-bottom: 1.5rem;
+}
+.mynumber span{
+    font-size: 0.825rem;
+    margin-left:1.15rem;
+    margin-top:0.5rem;
+    display: block;
+    width: 5.05rem;
+}
+.mynumber .number{
+    margin-top:1.375rem;
+}
+.mynumber ul{
+    width: 13.1rem;
+    margin:0 auto;
+}
+.mynumber ul li{
+    float: left;
+    width: 2.25rem;
+    height:2.25rem;
+    line-height:2.25rem;
+    text-align: center;
+    border:0.05rem solid #ff9e5d;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 0.8rem;
+    font-family: "Helvetica";
+    margin:0 0.15rem 0.15rem 0.05rem;
+    color: #ff9e5d;
+    font-weight: bold;
+}
+.party2{
+    width:16.3rem;
+    padding:0.325rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    margin:0 auto;
+    margin-top:0.65rem;
+}
+.party_area{
+    border:0.1rem dotted #ff4f31;
+    border-radius: 0.75rem;
+    padding: 0.7rem 1rem;
+}
+.tit .t1,.tit .t2,.tit .t3{
+    font-size: 0.6rem;
+    color: #a4a4a4;
+}
+.tit .t1{
+    margin-left:0.8rem;
+}
+.tit .t2{
+    margin-left:2.525rem;
+}
+.tit .t3{
+    margin-left:4rem;
+}
+.party_area ul{
+    margin-top:0.6rem;
+    overflow-x: hidden;
+}
+.party_area ul li{
+    width:14.9rem;
+    height:2.325rem;
+}
+.party_area ul li:nth-child(odd){
+    border-radius: 0.2rem;
+    background: #ebebeb;
+}
+.party_area ul li:nth-child(even){
+}
+.party_area ul li span{
+    display: block;
+    float: left;
+}
+.no{
+    width:1.5rem;
+    height:1.5rem;
+    color: #ff9e5d;
+    border-radius: 50%;
+    border:0.05rem solid #ff9e5d;
+    line-height:1.5rem;
+    font-family: "Helvetica";
+    font-size: 0.5rem;
+    margin-top:0.4rem;
+    margin-left:0.6rem;
+    background: #fff;
+}
+.userinfo{
+    width: 5rem;
+    margin-left:1rem;
+}
+.userinfo b{
+    display: block;
+}
+.time{
+    margin-left:1rem;
+    margin-top:0.925rem;
+    font-family: Helvetica;
+}
+.mt05{
+    margin-top:0.5rem;
+}
+#gasnumber2{
+    color: #ffe750;
+    font-size: 0.7rem;
+}
+.lookmain{
+    margin-left:12.125rem;
+    color: #ffe750;
+    font-size: 0.65rem;
+}

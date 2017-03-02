@@ -1,0 +1,529 @@
+body{
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    background: url("../images/bg_2.png") no-repeat;
+    background-size: cover;
+    padding-top: 1.75rem;
+    position: relative;
+}
+.tit{
+    width: 15.2rem;
+    height: 3.125rem;
+    background: url("../images/tit.png") no-repeat;
+    background-size: 100%;
+    margin-left:1.825rem;
+    position: relative;
+    left:-1rem;
+}
+#phase{
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    right: -1.6rem;
+    top:0.4rem;
+    font-family: "Helvetica";
+}
+#phase span{
+    color:#ffe750 ;
+    font-size: 0.7rem;
+}
+.past{
+    position: absolute;
+    width: 3.7rem;
+    height: 0.9rem;
+    top:1.85rem;
+    right:0.25rem;
+}
+.gas_main{
+    height: 17.875rem;
+    width: 15.825rem;
+    background: url("../images/gas_2.png") no-repeat;
+    background-size: cover;
+    margin-top:0.925rem;
+    position: absolute;
+    left:0.4rem;
+}
+#gas_time,#gas_liter,#joined_people{
+    font-family: "Helvetica";
+    position: absolute;
+}
+#gas_time{
+    font-size: 1.4rem;
+    color: #fff;
+    top:0.1rem;
+    left:7rem;
+    text-shadow: 0 0 0.15rem #fff;
+
+}
+#joined_people{
+    font-size: 0.7rem;
+    color: #ffe750;
+    top:6.45rem;
+    left:54.5%;
+    font-style: italic;
+}
+#gas_liter{
+    font-size: 1.45rem;
+    color: #ffe750;
+    top:9.3rem;
+    left: 48%;
+    font-style: italic;
+    text-shadow: 0 0 0.15rem #fff;
+}
+.lookfor a{
+    font-size: 0.6rem;
+    color:#ffe750;
+    position: absolute;
+    bottom: 3.7rem;
+    right:3.475rem;
+}
+.main_btn{
+    margin-top:18.875rem;
+    margin-left: 3.1rem;
+    height:1.625rem;
+    display: block;
+    position: relative;
+    z-index:4;
+}
+.btn{
+    width:1.65rem;
+    height:1.625rem;
+    line-height:1.625rem;
+    text-align: center;
+    color: #a4a4a4;
+    background: #dcdcdc;
+}
+.r{
+    font-size: 0.8rem;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius:0.2rem ;
+}
+.l{
+    font-size: 0.8rem;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:0.2rem ;
+}
+.text{
+    width: 9.05rem;
+    height:1.625rem;
+    line-height:1.625rem;
+    text-align: center;
+    color: #a4a4a4;
+    background: #dcdcdc;
+    font-weight: bold;
+    margin:0 0.075rem;
+    font-size: 0.8rem;
+}
+.text span{
+    font-size: 0.8rem;
+}
+.cannotclick_btn{
+    margin-top:18.875rem;
+    margin-left: 3.1rem;
+    height:1.625rem;
+    display: none;
+}
+#add,#cut{
+    width:1.65rem;
+    height:1.625rem;
+    line-height:1.625rem;
+    text-align: center;
+    color: #e14541;
+    background: #dcdcdc;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border:none;
+}
+#add,#cut,#num{
+    display: block;
+}
+#cut{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:0.2rem ;
+}
+#add{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius:0.2rem ;
+}
+#add,#cut{
+    font-size: 1rem;
+    outline: none;
+}
+#add:active,#cut:active{
+    background: #fdad44;
+    color: #fff;
+}
+#num{
+    width: 9.05rem;
+    height:1.625rem;
+    line-height:1.625rem;
+    text-align: center;
+    color: #e14541;
+    background: #dcdcdc;
+    font-weight: bold;
+    margin:0 0.075rem;
+    font-size: 0.8rem;
+}
+#num span{
+    font-size: 0.8rem;
+}
+.numbermain{
+    border: none;
+    font-size: 0.8rem;
+    background: #dcdcdc;
+    width: 1.2rem;
+    color: #e14541;
+    outline: none;
+    text-align: center;
+}
+.w04{
+    width: 2.6rem;
+}
+#start,#waitmoment,#lkmainly{
+    box-shadow: 0 0.2rem 0 #ebebeb;
+}
+#start{
+    width: 12.5rem;
+    height:2.1rem;
+    line-height:2.1rem;
+    display: block;
+    color: #fff;
+    background: #ff7238;
+    text-align: center;
+    margin-top:0.175rem;
+    margin-left:3.1rem;
+    font-size: 0.95rem;
+    border-bottom-left-radius:1.15rem ;
+    border-bottom-right-radius:1.15rem ;
+    border-top-left-radius:0.2rem;
+    border-top-right-radius:0.2rem;
+}
+.btn_area{
+    position: relative;
+}
+#lkmainly{
+    width:12.5rem;
+    line-height: 2.1rem;
+    height: 2.1rem;
+    background: #ff6e37;
+    color: #fff;
+    position: absolute;
+    font-size: 1rem;
+    text-align: center;
+    top:0;
+    left:3.1rem;
+    display: none;
+    border-radius: 1rem;
+    margin-top:0.175rem;
+}
+#waitmoment{
+    width: 12.5rem;
+    height:2.1rem;
+    line-height:2.1rem;
+    display: none;
+    color: #fff;
+    background: #a4a4a4;
+    text-align: center;
+    margin-top:0.175rem;
+    margin-left:3.1rem;
+    font-size: 0.95rem;
+    border-bottom-left-radius:1.15rem ;
+    border-bottom-right-radius:1.15rem ;
+    border-top-left-radius:0.2rem;
+    border-top-right-radius:0.2rem;
+}
+footer{
+    width:100%;
+    text-align: center;
+    position: absolute;
+    top:28.05rem;
+    color: #be1c3b;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+footer a{
+    padding: 0 0.625rem;
+    color: #be1c3b;
+    font-size: 0.6rem;
+    display:inline-block;
+}
+#timeout{
+    width:6.4rem;
+    height:1.15rem;
+    background: url("../images/full_time.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top:0.65rem;
+    left:6.2rem;
+    display: none;
+}
+#cannotjoin{
+    width:7.025rem;
+    height:8.05rem;
+    background: url("../images/full.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 4.8rem;
+    left: 5.75rem;
+    display: none;
+    z-index: 2;
+}
+#cannotjoin span{
+    position: absolute;
+    top:2.2rem;
+    left:0.95rem;
+    color: #c0c0c0;
+    font-size: 0.5rem;
+    font-family: "Heiti SC";
+}
+#cannotjoin #act_num{
+    color: #ffe750;
+    font-size: 0.475rem;
+    font-style: italic;
+    font-family: "Helvetica";
+}
+/*弹出层*/
+.success{
+    position: absolute;
+    width:18.75rem;
+    height: 30.15rem;
+    background: rgba(76,76,76,0.5);
+    top:0;
+    left: 0;
+    z-index:10;
+}
+#success,#unsuccess{
+    display: none;
+}
+.cyou{
+    width: 15.45rem;
+    height:9.6rem;
+    border:0.05rem solid #afafaf;
+    border-radius: 2.3rem;
+    background: #fff9f6;
+    text-align: center;
+    position: relative;
+    margin-top:5.625rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cyou .cyoutext{
+    font-size: 1rem;
+    display: inline-block;
+}
+.twobtn{
+    margin-top: 1.35rem;
+}
+.twobtn .looklook{
+    width: 12.5rem;
+    height:2.1rem;
+    background: #ff6d37;
+    line-height:2.1rem;
+    font-size: 1rem;
+    display: block;
+    color: #fff;
+    border-radius: 1rem;
+    margin-left:1.65rem;
+}
+.mb20{
+    margin-bottom:0.5rem;
+}
+.close_cyou{
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    border:0.05rem solid #fe9843;
+    position: absolute;
+    top:0;
+    right: 0;
+    background: #fff9f6;
+}
+.close_cyou .x{
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/close.png") no-repeat center #fff9f6;
+    background-size: 100%;
+    display: block;
+    margin-top:0.65rem;
+    margin-left: 0.75rem;
+}
+.h745{
+    height: 7.45rem;
+}
+.go_or_cancel{
+    width: 15.55rem;
+    margin-top:1.64rem;
+}
+.recharge{
+    width:7.75rem;
+    height: 2.1rem;
+    color: #fff;
+    line-height:2.1rem;
+}
+.go_left{
+    background: #ff6135;
+    border-top-left-radius: 1.05rem;
+    border-bottom-left-radius: 1.05rem;
+    font-size: 1rem;
+}
+.cancel_right{
+    background: #a9a9a9;
+    border-top-right-radius: 1.05rem;
+    border-bottom-right-radius: 1.05rem;
+    font-size: 1rem;
+}
+.brn{
+    border-bottom-right-radius: 1.05rem;
+    border-bottom-left-radius: 1.05rem;
+}
+.mt135{
+    margin-top: 1.35rem;
+}
+.mt24{
+    margin-top: 2.4rem;
+}
+.mt255{
+    margin-top:2.55rem;
+}
+.yournumber{
+    display: block;
+    font-size: 0.8rem;
+}
+.hauto{
+    height: auto;
+    padding-bottom: 0.925rem;
+    position: absolute;
+    top: -5%;
+    left: 1.6rem;
+}
+.numberbox{
+    margin-top:1.55rem;
+    height: 7.2rem;
+    overflow-y: scroll;
+}
+.numberbox ul{
+    width: 13.1rem;
+    margin:0 auto;
+}
+.numberbox ul li{
+    float: left;
+    width: 2.25rem;
+    height:2.25rem;
+    line-height:2.25rem;
+    text-align: center;
+    border:0.05rem solid #ff9e5d;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 0.8rem;
+    font-family: "Helvetica";
+    margin:0 0.15rem 0.15rem 0.05rem;
+    color: #ff9e5d;
+}
+#htp,#calcu{
+    position: absolute;
+    width:18.2rem;
+    height: 27.45rem;
+    background: rgba(76,76,76,0.5);
+    display: none;
+    top:0;
+    left: 0;
+    z-index:4;
+    padding-top: 2.7rem;
+    padding-left: 0.55rem;
+}
+#calcu{
+    z-index: 5;
+}
+.htp_con{
+    width:17.525rem;
+    height:24.95rem;
+    background: url("../images/howtoplay.png") no-repeat;
+    background-size: 100%;
+    border-radius: 2.8rem;
+    position: relative;
+}
+.calcu_con{
+    width:17.525rem;
+    height:24.95rem;
+    background: url("../images/calculate.png") no-repeat;
+    background-size: 100%;
+    border-radius: 2.8rem;
+    position: relative;
+}
+#close_cyou4,#close_cyou5{
+    position: absolute;
+    top:2.775rem;
+    right: 0.6rem;
+    z-index: 10;
+}
+#gotocalculate{
+    width: 3.5rem;
+    height: 0.675rem;
+    position: absolute;
+    bottom: 4.225rem;
+    right: 5rem;
+}
+#usernumberbox{
+    display: none;
+}
+#lotteryed{
+    margin-top: 18rem;
+    margin-left: 3.1rem;
+    height: 1.625rem;
+    display: none;
+}
+#nav{
+    position: absolute;
+    top:8.45rem;
+    right:0;
+    z-index: 3;
+    height: 7.225rem;
+    overflow: hidden;
+}
+#nav div{
+    height:1.95rem;
+    line-height:1.95rem;
+    font-family: "Lantinghei SC";
+    color: #da2e39;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+}
+.firstCon{
+    width: 4.675rem;
+    background: #fff4ee;
+}
+#Bignum,#Bignum b{
+    font-family: "Lantinghei SC";
+
+}
+.AnotherNO{
+    width: 1.85rem;
+    margin-left:2.825rem;
+    background: rgba(255,244,238,0.5);
+}
+.br1{
+    border-right:0.025rem;
+    border-color: #da2e39;
+}
+.bl1{
+    border-left:0.025rem;
+    border-color: #da2e39;
+}
+.active{
+    width: 4.675rem;
+    background: #fff4ee;
+    margin-left: 0;
+}
+#howtoplay{
+    border-right:0.025rem solid #da2e39;
+}
+#calculate{
+    border-right:0.025rem solid #da2e39;
+}
