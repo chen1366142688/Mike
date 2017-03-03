@@ -18,17 +18,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Novel.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Novel.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Novel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="127" column="79" lean-forward="false" selection-start-line="127" selection-start-column="79" selection-end-line="127" selection-end-column="79" />
+            <state relative-caret-position="176">
+              <caret line="8" column="71" lean-forward="false" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="novel.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="novel.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/novel.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="484">
@@ -54,8 +54,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/comepultergame.html" />
-        <option value="$PROJECT_DIR$/Novel.html" />
         <option value="$PROJECT_DIR$/css/novel.css" />
+        <option value="$PROJECT_DIR$/Novel.html" />
       </list>
     </option>
   </component>
@@ -133,12 +133,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488456460095</updated>
       <workItem from="1488456464006" duration="1638000" />
-      <workItem from="1488503820063" duration="3095000" />
+      <workItem from="1488503820063" duration="3365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4733000" />
+    <option name="totallyTimeSpent" value="5003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
@@ -181,6 +181,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/novel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/comepultergame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1210">
@@ -191,16 +199,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Novel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="127" column="79" lean-forward="false" selection-start-line="127" selection-start-column="79" selection-end-line="127" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/novel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+        <state relative-caret-position="176">
+          <caret line="8" column="71" lean-forward="false" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
           <folding />
         </state>
       </provider>
