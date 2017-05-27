@@ -1,0 +1,118 @@
+body{
+    width:18.75rem;
+    background: #efefef;
+    height: 30.15rem;
+    position: relative;
+}
+header{
+    padding-left: 1.3rem;
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.licenselate{
+    font-size: 0.9rem;
+    border-left: 0.2rem solid #3b7eec;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    padding-left: 0.55rem;
+    font-weight: bold;
+}
+.wzjl{
+    height:1.85rem;
+    line-height:1.85rem;
+    padding-left: 0.75rem;
+    font-size: 0.65rem;
+    color: #535353;
+}
+.content{
+    background: #e8e8e8;
+    max-height: 22.625rem;
+    overflow-y: scroll;
+}
+.content ul li{
+    padding-top: 1.075rem;
+    padding-left: 1.25rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+    margin-bottom: 0.05rem;
+    background: #fff;
+}
+.content ul li .tit{
+    font-size: 0.85rem;
+    color: #434343;
+    font-weight: bold;
+    display: block;
+    line-height:0.85rem;
+    height: 0.85rem;
+}
+.content ul li .con{
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: #434343;
+    font-weight: bold;
+}
+.content ul li .time{
+    display: block;
+    margin-top:0.9rem;
+    font-size: 0.65rem;
+    font-weight:bold;
+    color: #9d9d9d;
+}
+.content ul li .type{
+    font-size: 0.7rem;
+    color: #ff4242;
+    position: absolute;
+    top:1rem;
+    right:1rem;
+}
+.content ul li .type2{
+    font-size: 0.7rem;
+    color: #3b7eec;
+    position: absolute;
+    top:1rem;
+    right:1rem;
+}
+.fixed{
+    height: 3.05rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.fixed div{
+    width: 11.85rem;
+    height: 3.05rem;
+}
+.fixed div span,.fixed div b{
+    display: inline-block;
+    margin-left:1.175rem;
+}
+.fixed div span{
+    font-size: 0.75rem;
+    height: 0.75rem;
+    line-height:0.75rem;
+    font-weight: bold;
+    width: 6rem;
+    margin-top:0.675rem;
+}
+.fixed div b{
+    font-size: 0.6rem;
+    height:0.6rem;
+    line-height:0.6rem;
+    margin-top:0.45rem;
+    color: #969696;
+}
+.fixed a{
+    width:6.9rem;
+    background: #3b7eec;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: bold;
+    height: 3.05rem;
+    line-height:3.05rem;
+}
+.btn_area{
+    border-top:0.02rem solid #ccc;
+}

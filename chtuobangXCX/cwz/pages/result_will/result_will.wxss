@@ -1,0 +1,122 @@
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/*清浮动*/
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.body{
+    font-family: "PingFang SC";
+    background: #efefef;
+}
+.header {
+    padding-left: 52rpx;
+    background: #fff;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+}
+.licenselate {
+    font-size: 36rpx;
+    border-left: 8rpx solid #3b7eec;
+    height: 36rpx;
+    line-height: 36rpx;
+    padding-left: 22rpx;
+    font-weight: bold;
+}
+.wzjl {
+    height: 1.85rem;
+    line-height: 1.85rem;
+    padding-left: 0.75rem;
+    font-size: 0.65rem;
+    color: #535353;
+}
+.content {
+    background: #e8e8e8;
+}
+.content .ul .li {
+    padding-top: 43rpx;
+    padding-left: 50rpx;
+    padding-bottom: 30rpx;
+    position: relative;
+    background: #fff;
+    border-bottom:2rpx solid #ccc;
+}
+.content .ul .li .tit {
+    font-size: 34rpx;
+    color: #434343;
+    font-weight: bold;
+    display: block;
+    line-height: 34rpx;
+    height: 34rpx;
+}
+.content .ul .li .con {
+    display: block;
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: #434343;
+    font-weight: bold;
+}
+.content .ul .li .time {
+    display: block;
+    margin-top: 36rpx;
+    font-size: 26rpx;
+    font-weight: bold;
+    color: #9d9d9d;
+}
+.content .ul .li .type {
+    font-size: 28rpx;
+    color: #ff4242;
+    position: absolute;
+    top: 40rpx;
+    right:40rpx;
+}
+.fixed {
+    height: 122rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+}
+.btn_area {
+    width: 474rpx;
+    height: 122rpx;
+    border-top: 2rpx solid #ccc;
+}
+.tit1 {
+    font-size: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-weight: bold;
+    width: 240rpx;
+    margin-top: 27rpx;
+}
+.tit2{
+    font-size: 24rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    margin-top: 18rpx;
+    color: #969696;
+}
+.tit1,.tit2{
+    margin-left: 47rpx;
+}
+#cheWu{
+    width: 276rpx;
+    background: #3b7eec;
+    text-align: center;
+    font-size: 34rpx;
+    color: #fff;
+    font-weight: bold;
+    height: 122rpx;
+    line-height: 122rpx;
+}
+.rpx24{
+    font-size:24rpx;
+}

@@ -1,0 +1,31 @@
+<view class="body">
+    <view class="header">
+        <view class="licenselate">{{plate}}</view>
+    </view>
+    <view class="wzjl">
+    违章记录
+    </view>
+    <view class="content">
+        <view class="ul">
+           <view class="li" wx:for="{{arr}}">
+                <view class="tit">罚款{{item.punishMoney}}元，扣{{item.punishPoint}}分</view>
+                <view class="con">{{item.location}}<br/>{{item.reason}}</view>
+                <view class="time">{{item.violateTime}}</view>
+                <view class="type">{{item.state == 1 ?'待处理' : '已处理'}}</view>
+            </view>
+            <view class="li rpx24" hidden="{{hidden}}">
+            您没有违章记录！
+            </view>
+        </view>
+        
+    </view>
+    <!--<view class="fixed clearfix">
+        <view class="btn_area fl">
+            <view class="tit1">车托帮查违章</view>
+            <view class="tit2">免费 | 精准 | 安全 | 快速</view>
+        </view>
+        <view class="fl" id="cheWu" href="javascript:;">
+            车务代办
+        </view>
+    </view>-->
+</view> 

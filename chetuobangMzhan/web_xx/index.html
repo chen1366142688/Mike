@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>限行查询</title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div></div>
+    <div class="head">
+        <div class="area">
+            <div class="topbar clearfix">
+                <span class="area_icon fl"></span>
+                <select id="box" class="fl" size="1" onchange="A(this)">
+                   <!-- <option>北京市</option>
+                    <option>邯郸市</option>
+                    <option>保定市</option>-->
+                </select>
+                <span class="jt fl"></span>
+            </div>
+            <!--<div class="fr" onclick="qieHuan()">
+                <span class="refresh"></span>
+                <span class="choose">更换城市</span>
+            </div>-->
+        </div>
+    </div>
+    <div class="today">
+
+    </div>
+    <div class="text">今日限行尾号</div>
+    <div class="number clearfix">
+        <div id="number1" class="fl"></div>
+        <div id="number2" class="fl"></div>
+    </div>
+    <div class="content">
+        <div class="xx_con">
+
+        </div>
+
+    </div>
+</body>
+<script src="https://api.map.baidu.com/api?v=2.0&ak=pUdpk24ECioDBguRBSAAvjuvMOUluvD5"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/index.js"></script>
+
+</html>

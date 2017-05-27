@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=pUdpk24ECioDBguRBSAAvjuvMOUluvD5"></script>
+</head>
+<body>
+<script>
+    //百度可以帮助我们获取当前用户坐标
+    var a=new BMap.Geolocation();//提供geo类
+    a.getCurrentPosition(function(p){
+        console.dir(p);
+        p.latitude//维度 0-90
+        p.longitude//经度
+        p.address.province//省份
+        p.address.city //城市
+        p.address.district//区
+        p.address.street//街道
+    })
+    new Date();  new String(); new Boolean(); new Stu();
+    function Stu(){ this.age=0; this.gender="男"}
+    var k=new Stu();
+    var Tedu={
+        Stu:function(){  this.age=0;this.gender="" }
+    }
+    var b =new Tedu.Stu();
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<?php
+namespace app\oilbeanLotteryActivity\controller;
+use app\oilbeanLotteryActivity\model\ctb_user;
+use app\oilbeanLotteryActivity\model\oilbean_lottery_activity_participator;
+use app\oilbeanLotteryActivity\model\user_bill;
+use think\Controller;
+use \think\request;
+use app\oilbeanLotteryActivity\model\oil_price;
+use app\oilbeanLotteryActivity\model\oilbean_lottery_activity;
+use think\Db;
+
+/**
+ * Created by PhpStorm.
+ * User: zmx_up
+ * Date: 2017/2/14
+ * Time: 下午3:13
+ */
+
+class Index extends Controller
+{
+    const HOMEPAGE = "http://oil.chetuobang.com";
+    const participator_num = 777;//默认最高注数777
+    const oilBeanCoversion = 0.01; //一油豆等于一分钱
+    public function index()
+    {
+        $oil_bean_price_obj = new oil_price();
+        $oil_bean_price_arr = $oil_bean_price_obj ->getTodayOilprice();
+        $oil_bean_price_today = $oil_bean_price_arr['p_oil_price'];
+        $oil_bean_price_today_arr=explode(".",$oil_bean_price_today);
+        return $this->fetch("oilBeanL",['todayOilPrice'=>$oil_bean_price_today_arr]);
+        return '油豆夺宝模块';
+    }
+
+    /**
+     * 展示油豆活动主页面
+     */
+    public function showOilbeanLPage(){
+        if( isset($_COOKIE['u_id']) && !empty($u_id)){
+            $u_id = $_COOKIE['u_id'];
+        }else{
+            header("Location:".self::HOMEPAGE."?link=".'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] );
+            exit();
+        }
+        $oil_bean_act_obj = new oilbean_lottery_activity();
+        $oil_bean_act_array = $oil_bean_act_obj->getRunactivityInfo($oil_bean_act_obj::ACTIVITY_STATUS_RUN);
+        $oil_price_obj = new oil_price();
+        $oil_price_arr = $oil_price_obj -> getTodayOilprice();
+        $oil_price_today = $oil_price_arr['p_oil_price'];
+        $oil_bean_act_par_obj = new oilbean_lottery_activity_participator();
+        foreach($oil_bean_act_array as $key=>$value){
+            $time = strtotime($value['a_end_time']);
+            $end_time = $time - time();
+            if($end_time<=0){
+                $end_time=1;
+            }
+            $oil_bean_act_array[$key]['end_time_stamp'] = $end_time;
+            $oil_bean_act_array[$key]['enoughBet'] = self::participator_num - $oil_bean_act_par_obj->getParticipatorNum($value['a_id']);
+            if($end_time/3600>0){
+                $hour = floor($end_time/3600);
+                $end_time = $end_time-(3600*$hour);
+            }else{
+                $hour = 0;
+            }
+            if($end_time/60>0){
+                $min = floor($end_time/60);
+                $end_time = $end_time-(60*$min);
+            }else{
+                $min = 0;
+            }
+            $timeStr = "";
+            if($hour >= 10){
+                $timeStr.=$hour.":";
+            }else{
+                $timeStr.="0".$hour.":";
+            }
+            if($min >= 10){
+                $timeStr.=$min.":";
+            }else{
+                $timeStr.="0".$min.":";
+            }
+            if($end_time >= 10){
+                $timeStr.=$end_time;
+            }else{
+                $timeStr.="0".$end_time;
+            }
+            $oil_bean_act_array[$key]['end_time'] = $timeStr;
+            $oil_bean_act_array[$key]['sum_oil']  = ceil($value['a_sum_money']/$oil_price_today*self::oilBeanCoversion);
+        }
+        $one_bet_oilBean_num = $oil_price_today/self::oilBeanCoversion;
+        //var_dump($oil_price_arr);die;
+        //var_dump($oil_bean_act_array);\
+        //print_r($oil_bean_act_array);die;
+        return $this->fetch("oilBeanLInfo",['oilBeanLActInfo'=>$oil_bean_act_array,'one_bet_oilBean_num'=>$one_bet_oilBean_num,'uId'=>$u_id]);
+
+    }
+
+    /**
+     * 后去往期活动结果
+     * @return mixed|string
+     */
+    public function getPastLatteryResult(){
+        $oil_bean_act_obj = new oilbean_lottery_activity();
+        $oil_bean_act_array = $oil_bean_act_obj->getPastActivityResult();
+        //print_r($oil_bean_act_array);die;
+        if(empty($oil_bean_act_array)){
+            $return=[
+                'code'=>200012,
+                'status'=>false,
+                'info'=>'往期活动查询为空'
+            ];
+            return json_encode($return);
+        }
+        $oil_bean_act_par_obj = new oilbean_lottery_activity_participator();
+        foreach($oil_bean_act_array as $key => $value){
+            $oil_par_num = $oil_bean_act_par_obj -> getParticipatorNum($value['a_id']);
+            $oil_bean_act_array[$key]['par_num'] = $oil_par_num;
+            $win_num = $oil_par_num-$value['a_ssc_winning_number']%$oil_par_num;
+            $win_arr = $oil_bean_act_par_obj -> getWinNumInfo($value['a_id'],$win_num);
+            $oil_bean_act_array[$key]['win_time'] = $win_arr['p_time'];
+            $oil_bean_act_array[$key]['win_num'] = $win_num;
+        }
+        return $this->fetch("oilBeanLPast",['actInfo'=>$oil_bean_act_array]);
+    }
+    /**
+     * ajax获取活动信息
+     * @return array|string
+     */
+    public function ajaxGetActInfo(){
+        if (!Request::instance()->isAjax()) return "非ajax请求驳回";
+        $a_id=Request::instance()->post('a_id',0);
+        $act_obj = new oilbean_lottery_activity();
+        $act_arr = $act_obj -> getPointActivityInfo($a_id);
+        $time = strtotime($act_arr['a_end_time']);
+        $end_time = $time - time();
+        if($end_time<=0){
+            $end_time=1;
+        }
+        $act_arr['end_time_stamp'] = $end_time;
+        if($end_time/3600>0){
+            $hour = floor($end_time/3600);
+            $end_time = $end_time-(3600*$hour);
+        }else{
+            $hour = 0;
+        }
+        if($end_time/60>0){
+            $min = floor($end_time/60);
+            $end_time = $end_time-(60*$min);
+        }else{
+            $min = 0;
+        }
+        $timeStr = "";
+        if($hour >= 10){
+            $timeStr.=$hour.":";
+        }else{
+            $timeStr.="0".$hour.":";
+        }
+        if($min >= 10){
+            $timeStr.=$min.":";
+        }else{
+            $timeStr.="0".$min.":";
+        }
+        if($end_time >= 10){
+            $timeStr.=$end_time;
+        }else{
+            $timeStr.="0".$end_time;
+        }
+        $act_arr['end_time'] = $timeStr;
+        $oil_price_obj = new oil_price();
+        $oil_price_arr = $oil_price_obj -> getTodayOilprice();
+        $oil_price_today = $oil_price_arr['p_oil_price'];
+        $act_arr['sum_oil']  = ceil($act_arr['a_sum_money']/$oil_price_today*self::oilBeanCoversion);
+        $oil_bean_act_par_obj = new oilbean_lottery_activity_participator();
+        $act_arr['enough_bet'] = self::participator_num - $oil_bean_act_par_obj->getParticipatorNum($act_arr['a_id']);
+        $act_arr['sum_oil_bena'] = ceil($act_arr['a_sum_money']/$oil_price_today*self::oilBeanCoversion/self::oilBeanCoversion);
+        //return $this->ajaxReturn();
+        if(empty($act_arr)){
+            return [
+                'code'=>200005,
+                'status'=>false,
+                'info'=>'无效的活动信息'
+            ];
+            //return json_encode($return);
+        }else{
+            return [
+                'code'=>200011,
+                'status'=>true,
+                'info'=>json_encode($act_arr)
+            ];
+            //return json_encode($return);
+        }
+    }
+    /*
+     * ajax请求活动结果
+     */
+    public function ajaxGetActivityResult(){
+        if (!Request::instance()->isAjax()) return "非ajax请求驳回";
+        $a_id=Request::instance()->post('a_id',0);
+        $act_obj = new oilbean_lottery_activity();
+        $act_info = $act_obj -> getPointActivityInfo($a_id);
+        if($act_info['a_sum_people_num']==0){
+            return 3;//无参与者
+        }
+        if($act_info['u_id']==0 && $act_info['a_sum_people_num']>0){
+            return 2;//有参与者，但尚未开奖，继续等待
+        }
+        if($act_info['u_id']!=0 && $act_info['a_sum_people_num']>0){
+            return 1;//有参与者，已开奖
+        }
+    }
+    /**
+     * 用户下注函数
+     * @u_id 用户ID
+     * @act_id 活动ID
+     */
+    public function userBet(){
+        $u_id=Request::instance()->post('u_id',0);
+        $act_id=Request::instance()->post('act_id',0);
+        $buy_num=Request::instance()->post('buy_num',5);
+        if($u_id == 0 || $act_id == 0 || $buy_num == 0){
+            return [
+                'code'=>500001,
+                'status'=>false,
+                'info'=>'参数异常，非法操作'
+            ];
+            //return json_encode($return);
+        }
+        /*
+         * 加密公式
+         *
+         */
+        //通过油价计算当天单期活动单位值
+        $oilPriceObj = new oil_price();
+        $today_oil_price = $oilPriceObj->getTodayOilprice();
+        $today_oil_price = $today_oil_price['p_oil_price'];
+        //计算当前用户消费了多少油豆
+        $payOilBean = $buy_num * $today_oil_price / self::oilBeanCoversion;
+        //判断用户余额是否足够
+        $user_obj = new ctb_user();
+        $user_info = $user_obj -> getUserInfo($u_id);
+        if(is_null($user_info)){
+            return [
+                'code'=>100001,
+                'status'=>false,
+                'info'=>'非法操作，用户信息异常'
+            ];
+            return json_encode($return);
+        }
+        if($user_info['u_oilbean'] < $payOilBean){
+            return [
+                'code'=>100002,
+                'status'=>false,
+                'info'=>'您的余额不足，请充值'
+            ];
+            return json_encode($return);
+        }
+
+        //获取用户下注活动的信息
+        $oil_bean_act_obj = new oilbean_lottery_activity();
+        $oil_bean_act_array = $oil_bean_act_obj->getPointActivityInfo($act_id);
+        //判断活动信息
+        if($oil_bean_act_array['a_activity_status'] != $oil_bean_act_obj::ACTIVITY_STATUS_RUN){
+            return [
+                'code'=>200001,
+                'status'=>false,
+                'info'=>'本盘已结束，请购买下一盘；（左右滑动可查看上下盘）'
+            ];
+            return json_encode($return);
+        }
+        $oil_bean_act_par_obj = new oilbean_lottery_activity_participator();
+        $buyed_num = $oil_bean_act_par_obj -> getParticipatorNum($act_id);
+        $participator_num=self::participator_num - $buyed_num;
+        if($participator_num <= $oil_bean_act_array['a_sum_people_num']){
+            $this->CloseOrStopAct($act_id,$oil_bean_act_obj::ACTIVITY_STATUS_CLOSEING);
+            return [
+                'code'=>200002,
+                'status'=>false,
+                'info'=>'本盘已满，请下注下一盘；（左右滑动可查看上下盘）'
+            ];
+            return json_encode($return);
+        }else{
+            $surplus_participator=$participator_num-$oil_bean_act_array['a_sum_people_num'];
+            if($buy_num > $surplus_participator){
+
+                $faild_num = $buy_num - $surplus_participator;
+                $buy_num = $surplus_participator;
+//
+//                $return=[
+//                    'code'=>200003,
+//                    'status'=>false,
+//                    'info'=>'本盘剩余注数不足，请减少购买注数或购买下一期。（本期剩余'.$surplus_participator.'注）'
+//                ];
+//                return json_encode($return);
+            }
+        }
+
+        $oil_bean_act_last_num = $oil_bean_act_par_obj ->getLastParticipatorActnum($act_id);
+        if(is_null($oil_bean_act_last_num)) {
+            $oil_bean_act_last_num = 0;
+        }else{
+            $oil_bean_act_last_num = $oil_bean_act_last_num['p_get_activity_num'];
+        }
+        $oil_bean_act_num = array();
+        for($i=1;$i<=$buy_num;$i++){
+            $oil_bean_act_num[]=$oil_bean_act_last_num+$i;
+        }
+        $time=date("Y-m-d H:i:s",time());
+        $par_new_array=array();
+        if(isset($faild_num)){
+            $tip_str[0]="由于活动剩余注数不足，有".$faild_num."注投注失败";
+        }else{
+            $tip_str[0]="";
+        }
+        foreach($oil_bean_act_num as $key => $value){
+            $par_new_array[]=[
+                'a_id'               => $act_id,
+                'u_id'               => $u_id,
+                'p_time'             => $time,
+                'p_get_activity_num' => $value
+            ];
+            $tip_str[1][]=$value;
+        }
+        $is_part_status = $oil_bean_act_par_obj -> getUserIsPatored($act_id,$u_id);
+        if(empty($is_part_status)){
+            $new_pep_num = 1;
+        }else{
+            $new_pep_num = 0;
+        }
+        Db::startTrans();
+        try{
+            $add_par_status = $oil_bean_act_par_obj ->saveNewParticipator($par_new_array);
+            if(is_int($add_par_status)){
+                $oil_bean_act_obj ->updateActSumPeople($act_id,$new_pep_num,$payOilBean);
+
+                $user_obj -> updateUserOilbean($u_id,-$payOilBean);
+
+                $bill_obj = new user_bill();
+                $bill_obj ->addUserBillRecard($u_id,-$payOilBean,$bill_obj::MONEY_TYPE_OIL_BEAN,$bill_obj::PAY_CHANNEL_LATTERY_BET);
+            }
+            // 提交事务
+            Db::commit();
+            return [
+                'code'=>200010,
+                'status'=>true,
+                'info'=>json_encode($tip_str)
+            ];
+        } catch (\Exception $e) {
+            // 回滚事务
+            Db::rollback();
+
+            $errorLog = "[ERROR][BET_MODEL][".date("Y-m-d H:i:s")."] UID:".$u_id." FILE_PATH:".dirname(__FILE__);
+            $this->writelog($errorLog);
+            return [
+                'code'=>200004,
+                'status'=>false,
+                'info'=>'下注失败，系统繁忙，请稍后再试'
+            ];
+            return json_encode($return);
+        }
+    }
+
+    /**
+     * 展示活动参与者列表
+     * @return mixed
+     */
+    public function getOilBeanLActUser(){
+        $act_id=Request::instance()->get('act_id',0);
+        $u_id = Request::instance()->get("u_id",0);
+        $act_obj = new oilbean_lottery_activity();
+        $act_arr = $act_obj -> getPointActivityInfo($act_id);
+        if(empty($act_arr)){
+            $return=[
+                'code'=>200014,
+                'status'=>false,
+                'info'=>'活动为空'
+            ];
+            return json_encode($return);
+        }
+        $time = strtotime($act_arr['a_end_time']);
+        $end_time = $time - time();
+        $act_arr['end_time_stamp'] = $end_time;
+        if($end_time/3600>0){
+            $hour = floor($end_time/3600);
+            $end_time = $end_time-(3600*$hour);
+        }else{
+            $hour = 0;
+        }
+        if($end_time/60>0){
+            $min = floor($end_time/60);
+            $end_time = $end_time-(60*$min);
+        }else{
+            $min = 0;
+        }
+        $timeStr = "";
+        if($hour >= 10){
+            $timeStr.=$hour.":";
+        }else{
+            $timeStr.="0".$hour.":";
+        }
+        if($min >= 10){
+            $timeStr.=$min.":";
+        }else{
+            $timeStr.="0".$min.":";
+        }
+        if($end_time >= 10){
+            $timeStr.=$end_time;
+        }else{
+            $timeStr.="0".$end_time;
+        }
+        $act_arr['end_time'] = $timeStr;
+        $act_user_list_obj = new oilbean_lottery_activity_participator();
+        $user_list = $act_user_list_obj -> getParticipatorList($act_id);
+        $num_list  = $act_user_list_obj -> getUserGetNumList($act_id,$u_id);
+        return $this->fetch("oilBeanLUserList",['user_list'=>$user_list,'num_list'=>$num_list,'actArr'=>$act_arr]);
+    }
+    /**
+     * 对活动进行封盘或者停止操作
+     * @param $act_id 活动ID
+     * @param $status 操作后活动状态
+     * @return bool 操作结果
+     */
+    private function CloseOrStopAct($act_id,$status){
+        $oil_act_obj = new oilbean_lottery_activity();
+        return $oil_act_obj->updateActStatus($act_id,$status);
+    }
+    /*
+     *
+     */
+    public function writelog($content="没有信息，测试调用"){
+        $time = date("Ymd");
+        $file_root_path = ".././public/log/";
+        $my_file = fopen($file_root_path.$time.".log","a");
+        fwrite($my_file, $content.PHP_EOL);
+        fclose($my_file);
+        return;
+    }
+    public function shiwu(){
+        Db::startTrans();
+        try{
+            Db::table('think_user')->find(1);
+            Db::table('think_user')->delete(1);
+            // 提交事务
+            Db::commit();
+        } catch (\Exception $e) {
+            // 回滚事务
+            Db::rollback();
+        }
+    }
+}

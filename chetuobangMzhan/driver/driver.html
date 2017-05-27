@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" capture="camera" accept="image/*,video/*" name="" value="" >
+<a href="#" id="Photograph">拍照上传</a>
+<a href="#" id="preview">预览图片</a>
+<a href="#" id="upload">上传图片</a>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '', // 必填，公众号的唯一标识
+        timestamp: , // 必填，生成签名的时间戳
+        nonceStr: '', // 必填，生成签名的随机串
+        signature: '',// 必填，签名，见附录1
+        jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+    wx.checkJsApi({
+        jsApiList: ['chooseImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+        success: function(res) {
+            console.log(res);
+            // 以键值对的形式返回，可用的api值true，不可用为false
+            // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+        }
+    });
+    //拍照或者从手机相册中选取图片
+    $('#Photograph').click(
+        wx.chooseImage({
+            count: 1, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                console.log(localIds);
+            }
+        })
+    );
+    //预览图片接口
+    $('#preview').click(
+        wx.previewImage({
+            current: '', // 当前显示图片的http链接
+            urls: [] // 需要预览的图片http链接列表
+        })
+    );
+    //上传图片接口
+    $('#upload').click(
+        wx.uploadImage({
+            localId: '', // 需要上传的图片的本地ID，由chooseImage接口获得
+            isShowProgressTips: 1, // 默认为1，显示进度提示
+            success: function (res) {
+                var serverId = res.serverId; // 返回图片的服务器端ID
+                console.log(serverId);
+            }
+        })
+    );
+</script>
+<!--<video width="200" height="150"></video>
+<canvas width="200" height="150"></canvas>
+
+<p>
+    <button id="snap">截取图像</button>
+    <button id="close">关闭摄像头</button>
+    <button id="upload">上传图像</button>
+</p>
+
+<img id="uploaded" width="200" height="150" />-->
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<!--<script type="text/javascript">
+    function $(elem) {
+        return document.querySelector(elem);
+    }
+
+    // 获取媒体方法（旧方法）
+    navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMeddia || navigator.msGetUserMedia;
+
+    var canvas = $('canvas'),
+        context = canvas.getContext('2d'),
+        video = $('video'),
+        snap = $('#snap'),
+        close = $('#close'),
+        upload = $('#upload'),
+        uploaded = $('#uploaded'),
+        mediaStreamTrack;
+
+    // 获取媒体方法（新方法）
+    // 使用新方法打开摄像头
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: true
+        }).then(function(stream) {
+            console.log(stream);
+
+            mediaStreamTrack = typeof stream.stop === 'function' ? stream : stream.getTracks()[1];
+
+            video.src = (window.URL || window.webkitURL).createObjectURL(stream);
+            video.play();
+        }).catch(function(err) {
+            console.log(err);
+        })
+    }
+    // 使用旧方法打开摄像头
+    else if (navigator.getMedia) {
+        navigator.getMedia({
+            video: true
+        }, function(stream) {
+            mediaStreamTrack = stream.getTracks()[0];
+
+            video.src = (window.URL || window.webkitURL).createObjectURL(stream);
+            video.play();
+        }, function(err) {
+            console.log(err);
+        });
+    }
+
+    // 截取图像
+    snap.addEventListener('click', function() {
+        console.log();
+        context.drawImage(video, 0, 0, 200, 150);
+    }, false);
+
+    // 关闭摄像头
+    close.addEventListener('click', function() {
+        mediaStreamTrack && mediaStreamTrack.stop();
+    }, false);
+
+    // 上传截取的图像
+    /*upload.addEventListener('click', function() {
+        jQuery.post('https://api-cn.faceplusplus.com/cardpp/v1/ocrdriverlicense', {
+            snapData: canvas.toDataURL('image/png')
+        }).done(function(rs) {
+            rs = JSON.parse(rs);
+
+            console.log(rs);
+
+            uploaded.src = rs.path;
+        }).fail(function(err) {
+            console.log(err);
+        });
+    }, false);*/
+    upload.click(function(){
+        $.ajax({
+            type:"post",
+            ulr:"https://api-cn.faceplusplus.com/cardpp/v1/ocrdriverlicense",
+            data:{"api_key":"gingv9GJ9rrGOgrh1jl037tKsJ3xjzyK",
+                  "api_secret":" j-OW360Gwk_8dedVJzQ5PkTOjjeRmB7z",
+            "image_url":canvas.toDataURL('image/png')
+            },
+            success:function(data){
+                console.log("开始处理相应数据");
+                console.log(data);
+            },
+            error:function(info){
+                console.log("上传图片失败");
+                console.log(info);
+            }
+        })
+    })
+
+</script>-->
+</html>

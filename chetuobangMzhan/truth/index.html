@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>快来说句匿名真心话吧</title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/dialog.css" rel="stylesheet"/>
+    <script>
+        function MusicPlay(){
+            var audio = document.getElementById('bgm');
+            var music=document.getElementById('music');
+            if(audio.paused){
+                audio.play();//audio.play();// 播放
+                music.style.backgroundImage='url("images/music_1.png")'
+            }
+            else{
+                audio.pause();// 暂停
+                music.style.backgroundImage='url("images/music_2.png")';
+                music.style.animationPlayState='paused';
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    分享精彩生活 尽在&nbsp;<a href="https://shequ.yunzhijia.com/thirdapp/forum/network/58c763cde4b0f8046d0fd3c3">车友社区</a>
+</header>
+<div id="content">
+    <div class="old"><b class="flow1"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow2"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow2"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow1"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow2"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow1"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow2"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+    <div class="old"><b class="flow1"></b><span class="text"><span class="fa fa-heart"></span>我真的好喜欢你啊</span></div>
+</div>
+<section id="user">
+    <!--<img src="images/head.jpg" class="head">
+    <span id="username">tissst</span>
+    <span class="num">已收到<b id="num">1000</b>条真心话</span>-->
+</section>
+<section class="send clearfix">
+    <input type="text" id="txt" class="fl" placeholder="说一句匿名真心话吧" maxlength="12">
+    <a href="javascript:;" id="send" class="fl"></a>
+</section>
+<section id="box">
+    <ul id="ul_fir" class="clearfix">
+        <li>每天都开开心心</li>
+        <li>我会永远爱你</li>
+        <li>我想你</li>
+        <li>我爱你</li>
+        <li>早点睡觉吧</li>
+    </ul>
+    <ul id="ul_sec" class="clearfix">
+        <li>你最美</li>
+        <li>你真的很可爱</li>
+        <li>我们在一起吧</li>
+        <li>哈哈哈哈哈</li>
+        <li>我下面给你吃</li>
+    </ul>
+    <a href="javascript:;" id="huan"></a>
+</section>
+<section id="btn_are">
+    <a href="javascript:;" id="create"></a>
+    <a href="javascript:;" id="manage"></a>
+</section>
+<section id="opc">
+    <section id="managebox">
+        <ul>
+        </ul>
+        <a href="javascript:;" id="close"></a>
+        <a href="javascript:;" id="delete"></a>
+    </section>
+</section>
+<a href="javascript:;" id="music" onclick="MusicPlay()">
+    <audio id="bgm" src="bgm.mp3" autoplay loop></audio>
+</a>
+</body>
+<script src="js/rem.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/dialog.js"></script>
+<script src="js/c_main.js"></script>
+<script src="js/index.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!--<script src="js/base.js"></script>-->
+<!--<script>
+    var oBox=document.getElementById('content');
+    var oDiv=oBox.getElementsByTagName('div');
+    var len=oDiv.length;
+    alert(len);
+    if(len>=5){
+        remove('content','div',5,len-5);
+        alert(len)
+    }
+</script>-->
+</html>

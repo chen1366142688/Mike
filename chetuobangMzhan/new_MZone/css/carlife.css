@@ -1,0 +1,101 @@
+body{
+    width:18.75rem;
+    height:100%;
+}
+header span{
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #a7a7c1;
+}
+header{
+    height: 3.125rem;
+    line-height:3.125rem;
+    text-indent: 0.9rem;
+}
+.main{
+    height: 24.15rem;
+    max-height: 24.15rem;
+    overflow-y: scroll;
+}
+.active{
+    color: #7ba4ee;
+}
+nav{
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+    height: 1.775rem;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 2.1rem #cccccc;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+nav a{
+    flex:1;
+    text-align: center;
+    color: #a4a4a4;
+    width:1.5rem;
+    height: 1.775rem;
+}
+nav a p{
+    width:1.2rem;
+    height: 1.1rem;
+    margin: 0 auto;
+}
+nav a span{
+    font-size: 0.6rem;
+    height: 0.6rem;
+    line-height:0.6rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+.home{
+    background: url("../images/tool_25.png") no-repeat;
+    background-size: 100%;
+}
+.menu{
+    background: url("../images/M_demo-0523_13.png") no-repeat;
+    background-size: 100%;
+}
+.carlife{
+    background: url("../images/carlife_14.png") no-repeat;
+    background-size: 100%;
+}
+.mine{
+    background: url("../images/M_demo-0523_17.png") no-repeat;
+    background-size: 100%;
+}
+.area{
+    width: 17.225rem;
+    margin:0 auto;
+}
+.area a{
+    text-indent: -999rem;
+}
+.btn1,.btn2,.btn3,.btn4{
+    width:17.225rem;
+}
+.btn1{
+    height:6.825rem;
+    background: url("../images/carlife_03.png") no-repeat;
+    background-size: 100%;
+}
+.btn2{
+    height:4.8rem;
+    background: url("../images/carlife_06.png") no-repeat;
+    background-size: 100%;
+    margin-top: 0.9rem;
+}
+.btn3{
+    height:4.8rem;
+    background: url("../images/carlife_09.png") no-repeat;
+    background-size: 100%;
+    margin-top:0.625rem;
+}
+.btn4{
+    height:5.4rem;
+    background: url("../images/carlife_11.png") no-repeat;
+    background-size: 100%;
+    margin-top:0.1rem;
+}

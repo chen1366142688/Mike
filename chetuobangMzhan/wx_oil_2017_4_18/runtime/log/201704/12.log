@@ -1,0 +1,372 @@
+[ 2017-04-12T02:49:31+08:00 ] 101.37.28.32 116.62.176.205 GET /
+[ log ] 59.56.103.65:80/ [运行时间：0.002797s][吞吐率：357.54req/s] [内存消耗：650.30kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '59.56.103.65:80',
+  'connection' => 'Close',
+  'accept-encoding' => 'identity',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T06:53:22+08:00 ] 101.37.28.32 139.162.114.70 GET /
+[ log ] 101.37.28.32/ [运行时间：0.004751s][吞吐率：210.48req/s] [内存消耗：650.39kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '101.37.28.32',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'connection' => 'close',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T07:12:35+08:00 ] 101.37.28.32 101.226.66.178 GET /
+[ log ] oil.chetuobang.com/ [运行时间：0.004756s][吞吐率：210.26req/s] [内存消耗：650.84kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'host' => 'oil.chetuobang.com',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T08:13:27+08:00 ] 101.37.28.32 42.156.251.187 GET /
+[ log ] 101.37.28.32/ [运行时间：0.004746s][吞吐率：210.69req/s] [内存消耗：650.81kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'spiderman',
+  'accept-language' => 'en-us,en-gb,en;q=0.7,*;q=0.3',
+  'accept-charset' => 'utf-8,ISO-8859-1;q=0.7,*;q=0.7',
+  'accept' => 'text/html,application/xml;q=0.9,application/xhtml+xml,text/xml;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+  'accept-encoding' => 'x-gzip, gzip, deflate',
+  'host' => '101.37.28.32',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T08:13:47+08:00 ] 101.37.28.32 42.156.251.187 GET /
+[ log ] 101.37.28.32/ [运行时间：0.004718s][吞吐率：211.95req/s] [内存消耗：650.81kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'spiderman',
+  'accept-language' => 'en-us,en-gb,en;q=0.7,*;q=0.3',
+  'accept-charset' => 'utf-8,ISO-8859-1;q=0.7,*;q=0.7',
+  'accept' => 'text/html,application/xml;q=0.9,application/xhtml+xml,text/xml;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+  'accept-encoding' => 'x-gzip, gzip, deflate',
+  'host' => '101.37.28.32',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T09:48:03+08:00 ] 101.37.28.32 221.122.36.85 GET /?link=http://www.oila-test.com/oilbeanl/showlist
+[ log ] oil.chetuobang.com/?link=http://www.oila-test.com/oilbeanl/showlist [运行时间：0.002715s][吞吐率：368.34req/s] [内存消耗：651.65kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oil.chetuobang.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'link' => 'http://www.oila-test.com/oilbeanl/showlist',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T09:48:13+08:00 ] 101.37.28.32 101.226.125.105 GET /?link=http://www.oila-test.com/oilbeanl/showlist
+[ log ] oil.chetuobang.com/?link=http://www.oila-test.com/oilbeanl/showlist [运行时间：0.003067s][吞吐率：326.05req/s] [内存消耗：651.44kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.2141.400 QQBrowser/9.5.10219.400',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'host' => 'oil.chetuobang.com',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'link' => 'http://www.oila-test.com/oilbeanl/showlist',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T10:22:28+08:00 ] 101.37.28.32 180.153.206.17 GET /member/index/paysuccess?order_no
+[ log ] oil.chetuobang.com/member/index/paysuccess?order_no [运行时间：0.002729s][吞吐率：366.44req/s] [内存消耗：663.00kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'index',
+    2 => 'paysuccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'host' => 'oil.chetuobang.com',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'order_no' => '',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T10:55:04+08:00 ] 101.37.28.32 119.23.140.203 GET /
+[ log ] 61.54.59.24:80/ [运行时间：0.002633s][吞吐率：379.78req/s] [内存消耗：650.30kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '61.54.59.24:80',
+  'connection' => 'Close',
+  'accept-encoding' => 'identity',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T10:58:22+08:00 ] 101.37.28.32 118.178.228.154 GET /
+[ log ] 101.37.39.132:80/ [运行时间：0.002666s][吞吐率：375.09req/s] [内存消耗：650.28kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '101.37.39.132:80',
+  'connection' => 'Close',
+  'accept-encoding' => 'identity',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T12:31:52+08:00 ] 101.37.28.32 139.162.124.167 GET /
+[ log ] 101.37.28.32/ [运行时间：0.002685s][吞吐率：372.43req/s] [内存消耗：657.06kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '101.37.28.32',
+  'user-agent' => 'Mozilla/5.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'close',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T14:14:54+08:00 ] 101.37.28.32 118.190.15.31 GET /
+[ log ] 61.53.167.142:80/ [运行时间：0.002819s][吞吐率：354.73req/s] [内存消耗：656.67kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '61.53.167.142:80',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-12T14:50:19+08:00 ] 101.37.28.32 221.122.36.85 GET /
+[ log ] oil.chetuobang.com/ [运行时间：0.002730s][吞吐率：366.31req/s] [内存消耗：657.73kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oil.chetuobang.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ /web/application/index/controller/Index.php 10 - 54
+}
+
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

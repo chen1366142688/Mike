@@ -1,0 +1,172 @@
+body{
+    width: 18.75rem;
+    height: 100%;
+    border-top: 0.425rem solid transparent;
+}
+.noscroll, .noscroll body {
+    overflow: hidden;
+}
+.noscroll body {
+    position: relative;
+}
+.main{
+    height: 26.85rem;
+    max-height: 26.85rem;
+    overflow-y: scroll;
+}
+.active{
+    color: #7ba4ee;
+}
+nav{
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+    height: 1.775rem;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 2.1rem #cccccc;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+nav a{
+    flex:1;
+    text-align: center;
+    color: #a4a4a4;
+    width:1.5rem;
+    height: 1.775rem;
+}
+nav a p{
+    width:1.2rem;
+    height: 1.1rem;
+    margin: 0 auto;
+}
+nav a span{
+    font-size: 0.6rem;
+    height: 0.6rem;
+    line-height:0.6rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+.home{
+    background: url("../images/tool_25.png") no-repeat;
+    background-size: 100%;
+}
+.menu{
+    background: url("../images/M_demo-0523_13.png") no-repeat;
+    background-size: 100%;
+}
+.carlife{
+    background: url("../images/M_demo-0523_15.png") no-repeat;
+    background-size: 100%;
+}
+.mine{
+    background: url("../images/mine_17.png") no-repeat;
+    background-size: 100%;
+}
+.user{
+    width: 18.075rem;
+    height:19.15rem;
+    background: url("../images/mine_03.png") no-repeat;
+    background-size: cover;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.headpic{
+    width: 5.7rem;
+    height: 5.7rem;
+    border-radius: 50%;
+    border: 0.05rem solid #92c8ed;
+    position: absolute;
+    top:3rem;
+    left:6.175rem;
+}
+.headpic img{
+    width: 5.7rem;
+    height: 5.7rem;
+    border-radius: 50%;
+}
+.username{
+    width: 18.075rem;
+    text-align: center;
+    position: relative;
+    height: 0.75rem;
+    line-height:0.75rem;
+    margin-top: 10.175rem;
+}
+.box{
+    width:4.6rem;
+    margin:0 auto;
+}
+.username{
+    text-align: center;
+}
+.username span{
+    display: inline-block;
+    font-size: 0.75rem;
+    max-width: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    font-weight: bold;
+}
+.male,.famale{
+    width: 0.6rem;
+    height:0.6rem;
+    display: inline-block;
+}
+.male{
+    background: url("../images/male_03.png") no-repeat;
+    background-size: 100%;
+}
+.famale{
+    background: url("../images/famale_03.png") no-repeat;
+    background-size: 100%;
+}
+.vip{
+    width: 1.425rem;
+    height:0.65rem;
+    background: url("../images/vip_06.png");
+    background-size: 100%;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.signature{
+    font-size: 0.7rem;
+    color: #fff;
+    position: absolute;
+    top:11.55rem;
+    left:5.05rem;
+    width: 8.35rem;
+    max-width: 8.35rem;
+    height:0.7rem;
+    line-height:0.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.send,.receive,.notice{
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: bold;
+    height: 0.9rem;
+    line-height:0.9rem;
+    text-align: center;
+    position: absolute;
+    top:17.125rem;
+}
+.send{
+    width: 5.65rem;
+}
+.receive{
+    width: 6.65rem;
+    left: 5.65rem;
+}
+.notice{
+    width: 5.7rem;
+    right: 0;
+    color: #ffcc00;
+}

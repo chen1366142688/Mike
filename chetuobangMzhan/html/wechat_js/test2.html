@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: #bbbbbb;
+            display: inline-block;
+            border:1px solid #ddd;
+            border-radius: 50%;
+            text-align: center;
+            line-height:100px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="done" onclick="wxChooseImage()">拍照</div>
+    <div id="lan" onclick="pre()">预览</div>
+    <div id="top" onclick="wxuploadImage()">上传</div>
+    <div id="down" onclick="down()">下载</div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/view.js"></script>
+</html>

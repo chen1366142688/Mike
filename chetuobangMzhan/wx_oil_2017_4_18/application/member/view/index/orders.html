@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>充值详情</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/pterol_detail.css">
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script src="/static/js/rem.js"></script>
+</head>
+<body>
+    <!--总容器-->
+    {volist name="info" id="vo" empty="$empty" }
+        <div class="main">
+            <!--details-->
+            <div class="details">
+                <div class="c_date">
+                    <span>{$vo.b_time}</span>
+                    <p>{$vo.b_money}
+                        {if $vo.b_money_type == 2}
+                        <b>元人民币</b>
+                    {else}
+                        <b class="bean">油豆</b>
+                    {/if}
+
+                    </p>
+                </div>
+                <p class="num">
+                    {switch name="vo.b_channel_id" }
+                        {case value="1" break="1"}现金充值油卡<b>{$vo.b_money}</b>元人民币{/case}
+                        {case value="3" break="1"}兑换码获得<b>{$vo.b_money}</b>油豆{/case}
+                        {case value="4" break="1"}夺宝中奖获得<b>{$vo.b_money}</b>油豆{/case}
+                        {case value="5" break="1"}充值获得<b>{$vo.b_money}</b>油豆{/case}
+                        {case value="6" break="1"}充值油卡<b>&nbsp;{$card ?? '123'}&nbsp;</b>消费<b>{$vo.b_money|abs}</b>油豆{/case}
+                        {case value="7" break="1"}积分商城消费<b>{$vo.b_money|abs}</b>油豆{/case}
+                        {case value="8" break="1"}夺宝下注消费<b>{$vo.b_money|abs}</b>油豆{/case}
+                    {/switch}
+                     </p>
+                {if $vo.b_money_type == 2}
+                <p class="num_2"> 价值{$vo.b_money |abs}元</p>
+                {else}
+                <p class="num_2">{$vo.b_money|abs}油豆&nbsp;价值{$vo.b_money/100 |abs}元</p>
+                {/if}
+            </div>
+        </div>
+    {/volist}
+</body>
+</html>

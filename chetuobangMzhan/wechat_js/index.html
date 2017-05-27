@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>查违章</title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <header></header>
+    <!--手机号验证-->
+    <section class="cAdd">
+        <nav>请先绑定手机号</nav>
+        <div id="sbui">
+            <div class="wraper clearfix">
+                <input type="text" id="tel" class="phone fl" placeholder="请输入手机号" >
+                <input id="btnSendCode" class="btnSendCode" type="button" value="获取验证码">
+            </div>
+            <div class="yzm">
+                <input type="text" id="code" placeholder="请输入验证码">
+            </div>
+            <div id="bindphone">
+                绑定手机号
+            </div>
+        </div>
+    </section>
+
+
+    <section class="ucenter clearfix">
+        <div class="userpic fl">
+        </div>
+        <div class="userinfo fl">
+
+            <div class="usertype1">非订阅用户</div>
+            <div class="usertype2">包月用户</div>
+        </div>
+        <div class="recording fl">
+            <a href="recording_do.html" class="recordingbtn">违章记录</a>
+        </div>
+    </section>
+
+    <section id="nocarinfo">
+        尚无车辆信息
+    </section>
+    <section>
+        <a href="message.html" class="addcarinfo"></a>
+    </section>
+    <!--<section class="subscribemsg">
+        <div class="subtext">订阅车辆违章信息实时短信提醒</div>
+        <div class="btn_area clearfix">
+            <a href="register.html" class="fm fl" >5元每月</a>
+            <a href="register.html" class="fy fl" >50元每年</a>
+        </div>
+    </section>-->
+</body>
+<script src="js/rem.js"></script>
+<script src="js/index.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/base.js"></script>
+<script src="js/register.js"></script>
+</html>

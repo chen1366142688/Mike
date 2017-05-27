@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>查违章</title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<header></header>
+<section class="ucenter clearfix">
+    <div class="userpic fl">
+    </div>
+    <div class="userinfo fl">
+
+        <div class="usertype1">非订阅用户</div>
+        <div class="usertype2">包月用户</div>
+    </div>
+    <div class="recording fl">
+        <a href="recording_do.html" class="recordingbtn">违章记录</a>
+    </div>
+</section>
+
+<section id="nocarinfo">
+    尚无车辆信息
+</section>
+<section>
+    <a href="message.html" class="addcarinfo"></a>
+</section>
+<section class="subscribemsg">
+    <div class="subtext">订阅车辆违章信息实时短信提醒</div>
+    <div class="btn_area clearfix">
+        <a href="register.html" class="fm fl" >5元每月</a>
+        <a href="register.html" class="fy fl" >50元每年</a>
+    </div>
+</section>
+</body>
+<script src="js/rem.js"></script>
+<script src="js/index.js"></script>
+</html>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var ur=encodeURIComponent(window.location.href.split("#")[0]);
+    console.log(ur);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4){
+            if(xhr.status==200){
+                doResponse(xhr);
+            }else{
+                alert('响应完成但有问题');
+            }
+        }
+    };
+    xhr.open('GET','http://wzcx.chetuobang.com/wz_api/?service=default.jsapi&url='+ur,false);
+    xhr.send(null);
+
+    function  doResponse(xhr){
+        console.log('开始处理响应数据...');
+        var obj = JSON.parse(xhr.responseText);
+        console.log(obj);
+        var appId,nonceStr,rawString,signature,timestamp,url;
+        appId=obj.data.appId;
+        nonceStr=obj.data.nonceStr;
+        rawString=obj.data.rawString;
+        //rawString=rawString.slice(13);
+        signature=obj.data.signature;
+        timestamp=obj.data.timestamp;
+        url=obj.data.url;
+
+        console.log(signature+"第一次输出");
+    wx.config({
+        debug:  false,  //调式模式，设置为ture后会直接在网页上弹出调试信息，用于排查问题
+        appId: appId,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [  //需要使用的网页服务接口
+            'checkJsApi',  //判断当前客户端版本是否支持指定JS接口
+            'onMenuShareTimeline', //分享给好友
+            'onMenuShareAppMessage', //分享到朋友圈
+            'onMenuShareQQ',  //分享到QQ
+            'onMenuShareWeibo', //分享到微博
+            'onMenuShareQZone'
+        ]
+    });
+    }
+    wx.ready(function () {
+        wx.onMenuShareTimeline({
+            title: '车托帮查违章',
+            desc: '北京车托帮网络科技有限公司',
+            link: 'http://wzcx.chetuobang.com',
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3217327445,710137008&fm=117&gp=0.jpg',
+            success: function () {
+                alert("成功");
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                alert("取消");
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        // 分享给朋友
+        wx.onMenuShareAppMessage({
+            title: '查违章', // 商品名
+            desc: '北京车托帮网络科技有限公司', // 店铺名
+            link: 'http://wzcx.chetuobang.com', // 商品购买地址
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3217327445,710137008&fm=117&gp=0.jpg', // 分享的图标
+            success: function () {
+                alert("成功");
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                alert("取消");
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQQ({
+            title: '查违章', // 分享标题
+            desc: '北京车托帮网络科技有限公司', // 分享描述
+            link: 'http://wzcx.chetuobang.com', // 分享链接
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3217327445,710137008&fm=117&gp=0.jpg', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                alert("成功");
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                alert("取消");
+            }
+        });
+        wx.onMenuShareWeibo({
+            title: '查违章', // 分享标题
+            desc: '北京车托帮网络科技有限公司', // 分享描述
+            link: 'http://wzcx.chetuobang.com', // 分享链接
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3217327445,710137008&fm=117&gp=0.jpg', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                alert("成功");
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                alert("取消");
+            }
+        });
+        wx.onMenuShareQZone({
+            title: '查违章', // 分享标题
+            desc: '北京车托帮网络科技有限公司', // 分享描述
+            link: 'http://wzcx.chetuobang.com', // 分享链接
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3217327445,710137008&fm=117&gp=0.jpg', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                alert("成功");
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                alert("取消");
+            }
+        });
+
+
+    });
+    wx.error(function (res) {
+        alert(res.errMsg);  //打印错误消息。及把 debug:false,设置为debug:ture就可以直接在网页上看到弹出的错误提示
+    });
+</script>

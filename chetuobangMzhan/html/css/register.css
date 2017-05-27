@@ -1,0 +1,66 @@
+body{
+    background: #efefef;
+    padding-top: 1.15rem;
+    padding-left: 0.6rem;
+}
+header{
+    color: #535353;
+    height: 1rem;
+}
+.wraper{
+    margin-top:0.6rem;
+}
+.getverify-code-btn{
+    display: inline-block;
+    width: 5.2rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background-color: #3b7eec;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0.2rem;
+    margin-left:0.325rem;
+    font-size: 0.75rem;
+}
+.phone{
+    width: 11.95rem;
+    height:2.5rem;
+    line-height:2.5rem;
+    border: none;
+    font-size: 0.75rem;
+    color: #969696;
+    text-indent: 0.95rem;
+    border-radius: 0.2rem;
+}
+#yzm{
+    border-radius: 0.2rem;
+    margin-top:0.45rem;
+    height: 2.5rem;
+    line-height:2.5rem;
+    text-indent: 0.95rem;
+    font-size: 0.75rem;
+    border: none;
+    color: #969696;
+    width: 17.475rem;
+}
+#bindphone{
+    display: inline-block;
+    width: 17.475rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #3b7eec;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0.2rem;
+    margin-top:2.075rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.unlabed{
+    background: #bbbbbb;
+}
+.error{
+    border:0.01rem #e4393c solid;
+}

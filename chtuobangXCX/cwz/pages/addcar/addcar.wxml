@@ -1,0 +1,56 @@
+<view class="content">
+    <view class="section" id="ct">
+        <view class="car">车辆信息绑定</view>
+    </view>
+    <view class="phone_one fl" bindtap="clickPerson">
+        <view class="phone_personal">{{firstPerson}}</view>
+        <image src="../../images/right.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image>
+    </view>
+    <input type="text" bindblur="plate" bindfocus="play" id="chePai" class="chepai fl" value="{{plate}}" placeholder="请输入车牌号"/>
+    <view class="db2">
+        <input type="text" bindblur="engin" bindfocus="eng"id="cheJia" class="chejia" value="{{engin}}" placeholder="请输入车架号"/>
+    </view>
+    <view class="db3">
+        <input type="text" bindblur="evin" bindfocus="ev"id="faDong" class="chejia" value="{{evin}}" placeholder="请输入发动机号"/>
+    </view>
+    <view class="db4">
+        <input type="text" bindblur="hander" bindfocus="hand"id="pinPai" class="chejia" value="{{hander}}" placeholder="请输入车型"/>
+    </view>
+    <label style="vertical-align: bottom ">
+        <checkbox value="" checked="true"/>
+        <span class="span">我已同意或阅读《用户使用手册》</span>
+    </label>
+    <button id="submit" bindtap="submit">确认</button>
+    <view class="area_select clearfix" hidden="{{selectPerson}}">
+    <view class="select_one" bindtap="mySelect" data-me="京">京</view>
+        <view class="select_one" bindtap="mySelect" data-me="津">津</view>
+        <view class="select_one" bindtap="mySelect" data-me="晋">晋</view>
+        <view class="select_one" bindtap="mySelect" data-me="蒙">蒙</view>
+        <view class="select_one" bindtap="mySelect" data-me="辽">辽</view>
+        <view class="select_one" bindtap="mySelect" data-me="吉">吉</view>
+        <view class="select_one" bindtap="mySelect" data-me="黑">黑</view>
+        <view class="select_one" bindtap="mySelect" data-me="沪">沪</view>
+        <view class="select_one" bindtap="mySelect" data-me="苏">苏</view>
+        <view class="select_one" bindtap="mySelect" data-me="浙">浙</view>
+        <view class="select_one" bindtap="mySelect" data-me="粤">粤</view>
+        <view class="select_one" bindtap="mySelect" data-me="川">川</view>
+        <view class="select_one" bindtap="mySelect" data-me="渝">渝</view>
+        <view class="select_one" bindtap="mySelect" data-me="鄂">鄂</view>
+        <view class="select_one" bindtap="mySelect" data-me="赣">赣</view>
+        <view class="select_one" bindtap="mySelect" data-me="鲁">鲁</view>
+        <view class="select_one" bindtap="mySelect" data-me="皖">皖</view>
+        <view class="select_one" bindtap="mySelect" data-me="湘">湘</view>
+        <view class="select_one" bindtap="mySelect" data-me="琼">琼</view>
+        <view class="select_one" bindtap="mySelect" data-me="贵">贵</view>
+        <view class="select_one" bindtap="mySelect" data-me="桂">桂</view>
+        <view class="select_one" bindtap="mySelect" data-me="云">云</view>
+        <view class="select_one" bindtap="mySelect" data-me="藏">藏</view>
+        <view class="select_one" bindtap="mySelect" data-me="陕">陕</view>
+        <view class="select_one" bindtap="mySelect" data-me="甘">甘</view>
+        <view class="select_one" bindtap="mySelect" data-me="宁">宁</view>
+        <view class="select_one" bindtap="mySelect" data-me="青">青</view>
+        <view class="select_one" bindtap="mySelect" data-me="豫">豫</view>
+        <view class="select_one" bindtap="mySelect" data-me="闽">闽</view>
+        <view class="select_one" bindtap="mySelect" data-me="新">新</view>
+    </view>
+</view>

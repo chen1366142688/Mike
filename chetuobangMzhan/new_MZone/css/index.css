@@ -1,0 +1,174 @@
+body{
+    width:18.75rem;
+    height:100%;
+    border-top: 0.35rem solid transparent;
+}
+.main{
+    height: 26.925rem;
+    max-height: 26.925rem;
+    overflow-y: scroll;
+}
+.cxx{
+    background: url("../images/cxx_bg.png") no-repeat;
+    background-size: cover;
+    height: 4.8rem;
+    width:18.1rem;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+}
+#date{
+    font-size: 0.85rem;
+    height: 0.85rem;
+    line-height:0.85rem;
+    color: #fff;
+    position: absolute;
+    top:1.25rem;
+    left:0.85rem;
+}
+#area{
+    position: absolute;
+    top:2.875rem;
+    left:0.85rem;
+}
+.area_icon{
+    background: url("../images/M_demo-0523_03.png") no-repeat;
+    width: 0.575rem;
+    height:0.75rem;
+    background-size: cover;
+    margin-top: 0.1rem;
+}
+.choose_city{
+    width: 3rem;
+    font-size: 0.7rem;
+    outline: none;
+    font-weight: bold;
+    color: #d0e9f5;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    border:none;
+    background: transparent;
+    margin-left: 0.35rem;
+}
+.cxx_text{
+    position: absolute;
+    top:1rem;
+    right:1.125rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #fff;
+}
+#number1,#number2{
+    position: absolute;
+    font-size: 1.1rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    border: 0.05rem solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    top:2.2rem;
+}
+#number1{
+    right:3.15rem;
+}
+#number2{
+    right: 1rem;
+}
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 18.15rem;
+    margin-top: 0.4rem;
+    padding-bottom: 0.9rem;
+}
+.news_pic{
+    width: 18.1rem;
+    height: 8.95rem;
+    border:0.025rem solid #fff;
+    border-radius: 0.25rem;
+}
+.con_tit{
+    font-size: 0.85rem;
+    font-weight: bold;
+    height: 0.85rem;
+    line-height:0.85rem;
+    padding-left: 0.8rem;
+    margin-top:1.1rem;
+    max-width: 18rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.con_p{
+    font-size: 0.65rem;
+    color: #828282;
+    padding-left: 0.8rem;
+    font-weight: bold;
+    line-height:0.9rem;
+    margin-top:0.75rem;
+    max-height: 1.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+nav{
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+    height: 1.775rem;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 2.1rem #cccccc;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+nav a{
+    flex:1;
+    text-align: center;
+    color: #a4a4a4;
+    width:1.5rem;
+    height: 1.775rem;
+    text-align: center;
+}
+nav a p{
+    width:1.2rem;
+    height: 1.1rem;
+    margin: 0 auto;
+}
+nav a span{
+    font-size: 0.6rem;
+    height: 0.6rem;
+    line-height:0.6rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+.active{
+    color: #7ba4ee;
+}
+.home{
+    background: url("../images/M_demo-0523_11.png") no-repeat;
+    background-size: 100%;
+}
+.menu{
+    background: url("../images/M_demo-0523_13.png") no-repeat;
+    background-size: 100%;
+}
+.carlife{
+    background: url("../images/M_demo-0523_15.png") no-repeat;
+    background-size: 100%;
+}
+.mine{
+    background: url("../images/M_demo-0523_17.png") no-repeat;
+    background-size: 100%;
+}
+.noscroll, .noscroll body {
+    overflow: hidden;
+}
+.noscroll body {
+    position: relative;
+}

@@ -1,0 +1,352 @@
+body {
+    width: 18.75rem;
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: hidden;
+}
+
+header {
+    height: 0.7rem;
+    line-height: 0.7rem;
+    color: #fff;
+    margin-top: 0.8rem;
+    margin-left: 8.55rem;
+    width: 9.375rem;
+    font-size: 0.7rem;
+}
+
+header a {
+    color: #ffdd6a;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#user {
+    text-align: center;
+}
+
+.head {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    border: 0.15rem solid #b1aab9;
+    margin-left: 6.5rem;
+    margin-top: 3.35rem;
+}
+
+#username {
+    display: block;
+    font-size: 0.8rem;
+    color: #fff;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    margin-top: 0.55rem;
+    font-weight: bold;
+}
+
+.num {
+    font-size: 0.7rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    color: #fff;
+    display: inline-block;
+}
+
+#num {
+    color: #ffdd6a;
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+    font-weight: bold;
+}
+
+.send {
+    padding-top: 7.625rem;
+    padding-left: 0.65rem;
+    position: relative;
+}
+
+#txt {
+    width: 14.5rem;
+    border: 0.075rem solid #000000;
+    border-radius: 0.75rem;
+    height: 1.65rem;
+    text-indent: 1rem;
+}
+
+#send {
+    width: 4.8rem;
+    height: 1.75rem;
+    background: url("../images/send.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0.85rem;
+}
+
+#box {
+    margin-top: 1.3rem;
+    padding-left: 0.7rem;
+    position: relative;
+    padding-right: 0.85rem;
+}
+
+#box ul li {
+    float: left;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    padding: 0 0.7rem;
+    border: 0.05rem dashed #898989;
+    margin-right: 0.275rem;
+    border-radius: 0.65rem;
+    font-size: 0.65rem;
+    color: #898989;
+    margin-bottom: 0.25rem;
+    background: #fff;
+}
+
+#huan {
+    display: block;
+    width: 3.05rem;
+    height: 0.7rem;
+    background: url("../images/huan.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 1.6rem;
+    top: 2.3rem;
+}
+
+#ul_fir {
+    display: block;
+}
+
+#ul_sec {
+    display: none;
+}
+
+#btn_are {
+    text-align: center;
+    height: 2.6rem;
+    margin-top: 0.55rem;
+}
+
+#create, #manage {
+    width: 12.4rem;
+    height: 2.6rem;
+    display: block;
+    margin-left:3.25rem;
+}
+
+#create {
+    background: url("../images/btn1.png") no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+#manage {
+    background: url("../images/btn2.png") no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#opc {
+    width: 18.75rem;
+    height: 32rem;
+    position: absolute;
+    top: -0.8rem;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+#managebox {
+    width: 17.2rem;
+    height: 21.625rem;
+    background: url("../images/manage.png") no-repeat;
+    background-size: cover;
+    border-radius: 0.75rem;
+    margin-top: 2.575rem;
+    margin-left: 0.75rem;
+    padding-top: 3.75rem;
+    position: relative;
+}
+
+#close {
+    display: block;
+    width: 2.125rem;
+    height: 2.075rem;
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+}
+
+#delete {
+    width: 12.4rem;
+    height: 2.575rem;
+    display: block;
+    bottom: 0rem;
+    left: 2.2rem;
+    position: absolute;
+}
+#managebox{
+}
+#managebox ul {
+    margin-left: 1.4rem;
+    max-height: 18rem;
+    overflow-y: scroll;
+}
+
+#managebox ul li {
+    width: 15.675rem;
+    height: 1.975rem;
+    line-height: 1.975rem;
+    border-bottom: 0.05rem solid #dcdcdc;
+}
+
+#managebox ul li span {
+    font-size: 0.75rem;
+    color: #000;
+    float: left;
+}
+
+.radio {
+    width: 0.85rem;
+    height: 0.85rem;
+    margin-right: 0.5rem;
+    float: left;
+    margin-top: 0.55rem;
+}
+.txtcontain {
+    height: 50px;
+    display: inline-block;
+    margin: 0px 48px 0px 0;
+    position: absolute;
+    -webkit-transition: all .3s linear;
+}
+.txtfirst {
+    width: 40px;
+    height: 46px;
+    margin: 1px 0 0 0;
+    background-image: url("../images/flow1.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+}
+.txtmid {
+    white-space: nowrap;
+    height: 36px;
+    font-family: arial,sans-serif;
+    font-size: 0.9rem;
+    line-height: 36px;
+    color: #554236;
+    /*font: 20px/36px arial,sans-serif;*/
+    display: inline-block;
+    margin: 10px 0 0 0;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    background: #dedce0;
+    border:0.05rem solid #000000;
+    border-radius: 0.65rem;
+
+}
+#content{
+    width: 18.75rem;
+    height: 270px;
+    position: absolute;
+    z-index: 20;
+    overflow: hidden;
+    top:1rem;
+}
+#content div{
+    position: absolute;
+    margin-left:100px;
+    margin-top: 15px;
+    z-index:auto;
+    width: 200px;
+    display: none;
+}
+@keyframes conGo {
+    from{
+        left:500px;
+    }
+    to{
+        left: -250px;
+    }
+}
+#content div .fa{
+    color: #b1b1b1;
+    margin-right:0.25rem;
+    user-select:none;
+}
+#content div b{
+    position: absolute;
+    top:-1rem;
+    left:-1.5rem;
+    width: 2.2rem;
+    height:2.075rem;
+    background-size: cover;
+    user-select:none;
+}
+#content div .flow2{
+    background: url("../images/flow2.png") no-repeat;
+    background-size: cover;
+}
+#content div .flow1{
+    background: url("../images/flow1.png") no-repeat;
+    background-size: cover;
+}
+#content div .flow3{
+    background: url("../images/flow3.png") no-repeat;
+    background-size: cover;
+}
+#content div .text{
+    white-space: nowrap;
+    font-size: 0.75rem;
+    color: #000000;
+    padding: 0.25rem 0.875rem;
+    background: #dedce0;
+    border:0.05rem solid #000000;
+    border-radius: 0.65rem;
+    user-select:none;
+}
+#music{
+    width: 1.475rem;
+    height: 1.475rem;
+    position: absolute;
+    bottom: 0.55rem;
+    right: 0.75rem;
+    background: url("../images/music_1.png") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+#bgm{
+    display: none;
+}
+@-webkit-keyframes text_donghua
+{
+    0% {opacity: 0;-webkit-transform:translate(0,0);}
+    50% {opacity: 1;-webkit-transform:translate(0,-20px);}
+    100% {opacity: 0;-webkit-transform:translate(0,-50px);}
+}
+@-webkit-keyframes fly{
+    0%{
+        opacity:0;
+        -webkit-transform: translateY(-20px) rotateZ(15deg);
+    }
+    50%{
+        opacity:.75;
+        -webkit-transform: scale(2) translateX(10px) translateY(-30px) rotateZ(-15deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform: scale(2) translateX(30px) translateY(-50px) rotateZ(15deg);
+    }
+}
+#content div .fa-heart{
+    color: #fe6164;
+}

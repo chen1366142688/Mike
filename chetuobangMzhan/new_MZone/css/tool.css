@@ -1,0 +1,112 @@
+body{
+    width:18.75rem;
+    height:100%;
+}
+header span{
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #a7a7c1;
+}
+header{
+    height: 3.125rem;
+    line-height:3.125rem;
+    text-indent: 0.9rem;
+}
+.main{
+    height: 24.15rem;
+    max-height: 24.15rem;
+    overflow-y: scroll;
+}
+nav{
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+    height: 1.775rem;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 2.1rem #cccccc;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+nav a{
+    flex:1;
+    text-align: center;
+    color: #a4a4a4;
+    width:1.5rem;
+    height: 1.775rem;
+}
+nav a p{
+    width:1.2rem;
+    height: 1.1rem;
+    margin: 0 auto;
+}
+nav a span{
+    font-size: 0.6rem;
+    height: 0.6rem;
+    line-height:0.6rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+.home{
+    background: url("../images/tool_25.png") no-repeat;
+    background-size: 100%;
+}
+.menu{
+    background: url("../images/tool_27.png") no-repeat;
+    background-size: 100%;
+}
+.carlife{
+    background: url("../images/M_demo-0523_15.png") no-repeat;
+    background-size: 100%;
+}
+.mine{
+    background: url("../images/M_demo-0523_17.png") no-repeat;
+    background-size: 100%;
+}
+.cwz,.ccb{
+    width:8.5rem;
+    height:6rem;
+    box-shadow: 0rem 0rem 0.3rem #e7e7e7;
+}
+.cwz{
+    background: url("../images/tool_03.png") no-repeat;
+    background-size: 100%;
+    margin-left: 0.75rem;
+}
+.ccb{
+    background: url("../images/tool_05.png") no-repeat;
+    background-size: 100%;
+    margin-left: 0.225rem;
+}
+.area2{
+    margin-left:0.75rem;
+    margin-top: 1.325rem;
+}
+.area2 a{
+    text-indent: -999em;
+}
+.cx{
+    width: 17.35rem;
+    height:5.2rem;
+    background: url("../images/tool_14.png") no-repeat;
+    background-size: 100%;
+}
+.bj{
+    width:17.225rem;
+    height:4.8rem;
+    background: url("../images/tool_19.png") no-repeat;
+    background-size: 100%;
+    margin-top: 0.625rem;
+    box-shadow: 0rem 0rem 0.25rem #eaeaea;
+}
+.ad{
+    width:17.225rem;
+    height:4.8rem;
+    background: url("../images/tool_22.png") no-repeat;
+    background-size: 100%;
+    margin-top: 0.625rem;
+    box-shadow: 0 0.675rem 0.675rem #dedede;
+}
+.active{
+    color: #7ba4ee;
+}
