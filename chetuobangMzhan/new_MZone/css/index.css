@@ -7,6 +7,12 @@ body{
     height: 26.925rem;
     max-height: 26.925rem;
     overflow-y: scroll;
+    -moz-overflow-scrolling:touch;
+    -o-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:touch;
+}
+.main>div:last-of-type{
+    margin-bottom: 3rem;
 }
 .cxx{
     background: url("../images/cxx_bg.png") no-repeat;
@@ -109,12 +115,11 @@ body{
     color: #828282;
     padding-left: 0.8rem;
     font-weight: bold;
-    line-height:0.9rem;
+    line-height:0.85rem;
     margin-top:0.75rem;
+    height: 1.6rem;
     max-height: 1.6rem;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 nav{
     padding-top: 0.6rem;

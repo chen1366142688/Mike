@@ -85,6 +85,9 @@ nav a span{
 .area2 a{
     text-indent: -999em;
 }
+.area2>a:last-of-type{
+    margin-bottom: 3rem;
+}
 .cx{
     width: 17.35rem;
     height:5.2rem;

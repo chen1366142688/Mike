@@ -140,11 +140,12 @@ $.ajax({
 //请求文章内容
     $.ajax({
         type:"GET",
-        url:"https://scms.chetuobang.com/index.php?m=list&a=index&id=5",
+        url:"https://scms.chetuobang.com/index.php?m=list&a=index&page=1",
         data:"",
         success:function(data){
             //console.log("请求成功，正在处理响应数据");
             var Article=$.parseJSON( data );
+            console.log(Article);
             if(Article.code==200){
                 var articleItem=Article.info;
                 for(var i=0,articleItems="";i<articleItem.length;i++){
@@ -230,8 +231,92 @@ function doResponseX(xhr){
             $('#number1').css('display','block');
         }
 }
+/*
+var page=1;
+    $(".main").bind('scroll',function(){
+        var $this =$(this),
+            viewH =$(this).height(),//可见高度
+            contentH =$(this).get(0).scrollHeight,//内容高度
+            scrollTop =$(this).scrollTop();//滚动高度
+        //if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容
+        if(scrollTop/(contentH -viewH)>=1){ //到达底部100px时,加载新内容
+            // 这里加载数据..
+            //alert("tiger");
+            page++;
+            if(page>23){return false;}
+            $.ajax({
+                type:"GET",
+                url:"https://scms.chetuobang.com/index.php?m=list&a=index&page="+page,
+                data:"",
+                success:function(data){
+                    //console.log("请求成功，正在处理响应数据");
+                    var Article=$.parseJSON( data );
+                    //console.log(Article);
+                    if(Article.code==200){
+                        var articleItem=Article.info;
+                        for(var i=0,articleItems="";i<articleItem.length;i++){
+                            //console.log(articleItem[i].object_id);
+                            articleItems +="<div class='content'><a href='content.html?object_id="+articleItem[i].object_id+"'><img src='"+articleItem[i].link+articleItem[i].smeta.thumb1+"' class='news_pic'><div class='con_area'><div class='con_tit'>"+articleItem[i].post_title+"</div><p class='con_p'>"+articleItem[i].post_excerpt+"</p></div></a></div>";
+                        }
 
+                        //console.log(Article.info);
+                        $('.main').append(articleItems);
+                    }else if(Article.code==401){
+                        var mess="<div style='text-align: center;margin-bottom: 1rem'>"+Article.msg+"</div>";
+                        $('.main').append(mess);
+                    }
+                    //console.log(Article)
+                },
+                error:function(info){
+                    //console.log("请求失败了")
+                }
+            });
+        }
+    });
+*/
 
+// dropload
+var page=1;
+var dropload = $('.content').dropload({
+
+    loadDownFn : function(me){
+        page++;
+        if(page>23){return false;}
+        $.ajax({
+            type: 'GET',
+            async:true,
+            url: 'https://scms.chetuobang.com/index.php?m=list&a=index&page='+page,
+            data:"",
+            success: function(data){
+                var Article=$.parseJSON( data );
+                if(Article.code==200){
+                    var articleItem=Article.info;
+                    for(var i=0,articleItems="";i<articleItem.length;i++){
+                        //console.log(articleItem[i].object_id);
+                        articleItems +="<div class='content'><a href='content.html?object_id="+articleItem[i].object_id+"'><img src='"+articleItem[i].link+articleItem[i].smeta.thumb1+"' class='news_pic'><div class='con_area'><div class='con_tit'>"+articleItem[i].post_title+"</div><p class='con_p'>"+articleItem[i].post_excerpt+"</p></div></a></div>";
+                    }
+
+                    $('.main').append(articleItems);
+                }else if(Article.code==401){
+                    var mess="<div style='text-align: center;margin-bottom: 1rem'>"+Article.msg+"</div>";
+                    $('.main').append(mess);
+                }
+                // 为了测试，延迟1秒加载
+                setTimeout(function(){
+                    $('.main').append(articleItems);
+                    // 每次数据加载完，必须重置
+                    dropload.resetload();
+                },1000);
+            },
+            error: function(xhr, type){
+                //alert('Ajax error!');
+                // 即使加载出错，也得重置
+                dropload.resetload();
+            }
+        });
+    },
+
+});
 
 
 

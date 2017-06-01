@@ -170,3 +170,71 @@ nav a span{
     right: 0;
     color: #ffcc00;
 }
+.userinfo {
+    width: 18.075rem;
+    margin: 0 auto;
+    border: 0.025rem solid #fff;
+    box-shadow: 0 0 0.25rem #eaeaea;
+    margin-bottom: 3rem;
+}
+
+.userinfo li {
+    border-bottom: 0.025rem solid #ccc;
+}
+
+.userinfo li a {
+    height: 2.825rem;
+    line-height: 2.825rem;
+    display: block;
+    background: #f6f6f6;
+    position: relative;
+}
+
+.userinfo li a span {
+    font-size: 0.7rem;
+    color: #ccc;
+    font-weight: bold;
+    margin-left: 1.1rem;
+}
+.userinfo li a b {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #666666;
+    margin-left: 1.3rem;
+}
+
+.userinfo li a .lable1 {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 1.3rem;
+    padding: 0.3rem 0.9rem;
+    background: #ccffff;
+    color: #66cccc;
+    border-radius: 0.2rem;
+}
+.userinfo li a .lable2 {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.9rem;
+    background: #ffffcc;
+    color: #ffcc99;
+    border-radius: 0.2rem;
+}
+.userinfo li a .red {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 0.675rem;
+    padding: 0.3rem 0.9rem;
+    color: #ff6666;
+    border-radius: 0.2rem;
+}
+.userinfo li a i {
+    width: 0.325rem;
+    height: 1.15rem;
+    background: url("../images/right.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 1.15rem;
+    right: 0.875rem;
+}

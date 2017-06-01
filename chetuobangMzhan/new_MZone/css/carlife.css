@@ -72,6 +72,10 @@ nav a span{
 }
 .area a{
     text-indent: -999rem;
+    border-radius: 0.3rem;
+}
+.area>a:last-of-type{
+    margin-bottom: 3rem;
 }
 .btn1,.btn2,.btn3,.btn4{
     width:17.225rem;
