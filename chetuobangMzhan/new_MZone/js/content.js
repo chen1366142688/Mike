@@ -30,7 +30,9 @@ $(function(){
             //console.log("请求失败")
         }
     });
+
 });
+
 function escapeChars(str) {
     str = str.replace(/&amp;/g, '&');
     str = str.replace(/&lt;/g, '<');

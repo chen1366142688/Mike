@@ -160,7 +160,7 @@
 
 </div>
 <nav>
-    <a href="index.html">
+    <a class="hm" href="javaScript:;">
         <p class="home"></p>
         <span class="active">主页</span>
     </a>
@@ -186,7 +186,51 @@
 
 <script src="js/dropload.min.js"></script>
 <script>
+    $(function(){
+        // dropload
+        var page=0;
+        var dropload = $('.main').dropload({
 
+            loadDownFn : function(me){
+                page++;
+                alert(11);
+                if(page>23){return false;}
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://scms.chetuobang.com/index.php?m=list&a=index&page='+page,
+                    data:"",
+                    async:false,
+                    success: function(data){
+                        //alert("kko333")
+                        var Article=$.parseJSON( data );
+                        var articleItem=Article.info;
+                        if(Article.code==200){
+                            for(var i=0,articleItems="";i<articleItem.length;i++){
+                                //console.log(articleItem[i].object_id);
+                                articleItems +="<div class='content'><a href='content.html?object_id="+articleItem[i].object_id+"'><img src='"+articleItem[i].link+articleItem[i].smeta.thumb1+"' class='news_pic'><div class='con_area'><div class='con_tit'>"+articleItem[i].post_title+"</div><p class='con_p'>"+articleItem[i].post_excerpt+"</p></div></a></div>";
+                            }
+                        }else if(Article.code==401){
+                            var mess="<div style='text-align: center;margin-bottom: 1rem'>"+Article.msg+"</div>";
+                            $('.main').append(mess);
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function(){
+                            $('.main').append(articleItems);
+                            // 每次数据加载完，必须重置
+                            dropload.resetload();
+                        },800);
 
+                    },
+                    error: function(xhr, type){
+                        //alert('Ajax error!');
+                        // 即使加载出错，也得重置
+                        dropload.resetload();
+                    }
+                });
+            },
+
+        });
+    });
 </script>
+<script src="js/gong.js"></script>
 </html>

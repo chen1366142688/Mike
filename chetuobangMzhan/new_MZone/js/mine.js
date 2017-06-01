@@ -1,6 +1,6 @@
 var unionid=sessionStorage.uid;
 var token=sessionStorage.token;
-
+console.log(unionid);
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
     if(xhr.readyState==4){

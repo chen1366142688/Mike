@@ -138,7 +138,7 @@ $.ajax({
 });
 
 //请求文章内容
-    $.ajax({
+   /* $.ajax({
         type:"GET",
         url:"https://scms.chetuobang.com/index.php?m=list&a=index&page=1",
         data:"",
@@ -161,7 +161,7 @@ $.ajax({
         error:function(info){
             //console.log("请求失败了")
         }
-    });
+    });*/
 
 });
 
@@ -275,7 +275,7 @@ var page=1;
     });
 */
 
-// dropload
+/*
 var page=1;
 var dropload = $('.content').dropload({
 
@@ -296,6 +296,7 @@ var dropload = $('.content').dropload({
                         articleItems +="<div class='content'><a href='content.html?object_id="+articleItem[i].object_id+"'><img src='"+articleItem[i].link+articleItem[i].smeta.thumb1+"' class='news_pic'><div class='con_area'><div class='con_tit'>"+articleItem[i].post_title+"</div><p class='con_p'>"+articleItem[i].post_excerpt+"</p></div></a></div>";
                     }
 
+                    //console.log(Article.info);
                     $('.main').append(articleItems);
                 }else if(Article.code==401){
                     var mess="<div style='text-align: center;margin-bottom: 1rem'>"+Article.msg+"</div>";
@@ -316,7 +317,7 @@ var dropload = $('.content').dropload({
         });
     },
 
-});
+});*/
 
 
 
