@@ -26,7 +26,7 @@ $(function(){
         }
         $.ajax({
             type:"get",
-            url:"http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+result.plate+"/"+result.engine+"/"+result.evin+"/"+phone+"/cleanpunish",
+            url:"https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+result.plate+"/"+result.engine+"/"+result.evin+"/"+phone+"/cleanpunish",
             data:{"uid":uid,"plate":result.plate,"engine":result.engine},
             dataType:"json",
             success:function(data){

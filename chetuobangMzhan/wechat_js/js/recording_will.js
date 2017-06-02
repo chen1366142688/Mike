@@ -18,9 +18,9 @@ $(function(){
     var plate;
     plate = Request["plate"];
     var url,ul,ull;
-    url="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/violate";
+    url="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/violate";
     //ul="http://192.168.90.16:9090/chetuobang/qwz/"+uid+"/"+plate+"/violate?callback=?";
-    //ull="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/violate?callback=?"
+    //ull="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/violate?callback=?"
     $.ajax({
         type:"get",
         url:url,

@@ -1,0 +1,266 @@
+/**index.wxss**/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.dis{
+    display: none;
+}
+/*清浮动*/
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+page{
+    background-color:#efefef;
+}
+.header{
+    width: 750rpx;
+    height: 430rpx;
+    background: url(https://appletcwz.chetuobang.com/images/bg.png) no-repeat;
+    background-size: 100%;  
+}
+.ucenter{
+    padding: 44rpx;
+    background: #fff;
+    margin-top:6rpx;
+}
+.userpic{
+    width: 125rpx;
+    height: 125rpx;
+}
+.headpic{
+    width: 125rpx;
+    height: 125rpx;
+    border-radius: 50%;
+    background: #000;
+}
+.userinfo{
+    margin-left: 27rpx;
+    width: 290rpx;
+    height: 125rpx;
+}
+.username {
+    font-size: 34rpx;
+    font-family: "PingFang SC";
+    font-weight: bold;
+    color: #535353;
+    display: block;
+    line-height: 34rpx;
+    margin-top: 22rpx;
+    margin-bottom: 16rpx;
+}
+.usertype1, .usertype2 {
+    height: 33rpx;
+    line-height: 33rpx;
+    font-size: 24rpx;
+    font-family: "PingFang SC";
+    width: 146rpx;
+    border-radius: 4rpx;
+    text-align: center;
+}
+.usertype1 {
+    background: #bbbbbb;
+    color: #fff;
+    display: block;
+}
+.usertype2 {
+    background: #ff772d;
+    color: #fff;
+    display: none;
+}
+.recordingbtn {
+    width: 212rpx;
+    height: 58rpx;
+    border: 3rpx solid #3b7eec;
+    color: #3b7eec;
+    font-size: 24rpx;
+    display: inline-block;
+    text-align: center;
+    line-height: 58rpx;
+    border-radius: 30rpx;
+    margin-top: 30rpx;
+    background: #fff
+}
+#carinfo {
+    padding-top: 40rpx;
+    background: #fff;
+    margin-top: 7rpx;
+    margin-bottom: 7rpx;
+    padding-left: 50rpx;
+    padding-right: 32rpx;
+    padding-bottom: 26rpx;
+    display: block;
+}
+.carhead {
+    height: 34rpx;
+}
+#licenselate {
+    font-size: 34rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-weight: bold;
+}
+.modify {
+    width: 24rpx;
+    height: 24rpx;
+    background: url(https://appletcwz.chetuobang.com/images/cwz-0412_03.jpg);
+    background-size: cover;
+    display: inline-block;
+    margin-right: 28rpx;
+}
+.delete {
+    width: 24rpx;
+    height: 24rpx;
+    background: url(https://appletcwz.chetuobang.com/images/cwz-0412_05.jpg);
+    display: inline-block;
+    background-size: cover;
+    margin-right: 28rpx;
+    margin-left: 28rpx;
+}
+.lookmain {
+    font-size:24rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    color: #3b7eec;
+    margin-top: 4rpx;
+    margin-left: 28rpx;
+    display: inline-block;
+}
+.line{
+    display: inline-block;
+    font-size: 24rpx;
+}
+.ownerinfo{
+    margin-top: 40rpx;
+}
+#engine,#frame{
+    font-weight: bold;
+    color: #434343;
+    font-size: 30rpx;    
+}
+.ownerkind {
+    width: 212rpx;
+    font-size: 30rpx;
+    color: #535353;
+}
+.cj{
+    margin-top:5rpx;
+}
+.list{
+    margin-top:24rpx;
+}
+.list view{
+    width: 220rpx;
+    text-align: center;
+    float: left;
+    font-size: 30rpx;
+}
+.list view .bold{
+    font-weight: bold;
+}
+.list view .tit{
+    font-size: 24rpx;
+    color: #bbbbbb;
+    margin-top: 5rpx;
+}
+#frequency, #money {
+    border-right: 1rpx solid #ccc;
+}
+#nocarinfo {
+    background: #efefef;
+    height: 70rpx;
+    color: #535353;
+    padding-left: 30rpx;
+    line-height: 70rpx;
+    font-size: 24rpx;
+}
+.addcarinfo {
+    height: 102rpx;
+    background: url(https://appletcwz.chetuobang.com/images/addcarinfo.png) no-repeat;
+    background-size: cover;
+    display: block;
+    width: 750rpx;
+    margin-top:7rpx;
+}
+.cAdd .please {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    margin-left: 26rpx;
+    color: #535353;
+    font-size: 24rpx;
+}
+#sbui {
+    background: #fff;
+    padding-left: 26rpx;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+}
+.phone {
+    width: 444rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    font-size: 30rpx;
+    color: #969696;
+    border-radius: 8rpx;
+    border: 2rpx solid #dcdcdc;
+    padding-left: 30rpx;
+}
+.btn{
+     display: inline-block;
+    width: 208rpx;
+    height: 76rpx;
+    line-height: 76rpx;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8rpx;
+    margin-left: 13rpx;
+    font-size: 30rpx;
+    border: none;
+   background-color: #3b7eec; 
+}
+.btnSendCode {
+    display: inline-block;
+    width: 208rpx;
+    height: 76rpx;
+    line-height: 76rpx;
+    text-align: center;
+    background-color: #a4a4a4;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8rpx;
+    margin-left: 13rpx;
+    font-size: 30rpx;
+    border: none;
+}
+#code {
+    border-radius: 8rpx;
+    margin-top: 18rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    font-size: 30rpx;
+    color: #969696;
+    width: 666rpx;
+    border: 2rpx solid #dcdcdc;
+    padding-left: 30rpx;
+}
+#bindphone {
+    display: inline-block;
+    width: 700rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    text-align: center;
+    background-color: #3b7eec;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8rpx;
+    margin-top: 15rpx;
+    font-size: 32rpx;
+}

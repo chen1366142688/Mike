@@ -31,7 +31,7 @@ function doResponse(xhr){
     }
     var user_text="<img src="+pic+">";
     $(".headpic").append(user_text);
-    var user_info='<span>'+name+'</span>';
+    var user_info='<span class="fl">'+name+'</span>';
     $(".username").prepend(user_info);
     $(".signature").html(country);
 

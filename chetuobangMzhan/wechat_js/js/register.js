@@ -86,7 +86,7 @@ window.onload=function () {
             var uid=sessionStorage.uid;
             $.ajax({
                 type:"get",
-                url:"http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+tel+"/mobile",
+                url:"https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+tel+"/mobile",
                 data:"",
                 dataType:"jsonp",
                 success:function(data){

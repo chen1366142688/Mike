@@ -51,9 +51,15 @@ $("#submit").click(function(){
         };
         return json;
     }
-    var url="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/plate";
+    var url="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/plate";
     //var ul="http://192.168.90.16:9090/chetuobang/qwz/"+uid+"/plate";
-    if(plate&&engine&&evin&&brand){
+     var re=/^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{5}$/;
+    /*if(plate.search(re)==-1)
+    {
+        alert("输入的车牌号格式不正确");
+        return false;
+    }*/
+    if((plate.search(re) !=-1) && engine && evin && brand){
         var data_json_test = JSON.stringify(GetJsonData());
         console.log(data_json_test);
         $.ajax({
@@ -64,7 +70,8 @@ $("#submit").click(function(){
             success:function(data){
                 if(data.status==1){
                     console.log(data);
-                    self.location = document.referrer;
+                    //self.location = document.referrer;
+                    history.go(-1);
                 }else{
                     alert("添加失败");
                 }
@@ -75,7 +82,7 @@ $("#submit").click(function(){
             }
         });
     }else{
-        alert("信息填写不够完整！");
+        alert("信息填写不够完整或车牌错误！");
         return false;
     }
 });

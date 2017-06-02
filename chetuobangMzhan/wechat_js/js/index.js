@@ -48,8 +48,8 @@ IsLoad(url,function(res){
         }
 
         //调用户车辆信息
-        url="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+unionid+"/violatesublime";
-        //var ul="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+unionid+"/violatesublime?callback=?";
+        url="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+unionid+"/violatesublime";
+        //var ul="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+unionid+"/violatesublime?callback=?";
         $.ajax({
             type:"get",
             url:url,
@@ -82,7 +82,7 @@ IsLoad(url,function(res){
                                 var plate=$(this).parent().prev().html();
                                 console.log(plate);
                                 var uid=sessionStorage.uid;
-                                var ul="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/plate";
+                                var ul="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/plate";
                                 $.ajax({
                                     type:"post",
                                     url:ul,
@@ -130,7 +130,7 @@ function ge(){
     var uid=sessionStorage.uid;
     $.ajax({
         type:"get",
-        url:"http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/mobile",
+        url:"https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/mobile",
         data:"",
         dataType:"json",
         success:function(data){

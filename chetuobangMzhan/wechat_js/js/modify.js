@@ -31,7 +31,7 @@ function modify(){
     var uid=sessionStorage.uid;
     var plate=sessionStorage.ppt;
     console.log(plate,engin,evin,num);
-    var ul="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/plate";
+    var ul="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/"+plate+"/plate";
     $.ajax({
         type:"post",
         url:ul,
@@ -69,8 +69,8 @@ function modify(){
             };
             return json;
         }
-        //var url="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/plate";
-        var ul="http://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/plate";
+        //var url="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/plate";
+        var ul="https://wzcx.chetuobang.com:9090/chetuobang/qwz/"+uid+"/plate";
         if(plate&&engin&&evin&&num){
             var data_json_test = JSON.stringify(GetJsonData());
             console.log(data_json_test);

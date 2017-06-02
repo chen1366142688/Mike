@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class="header">
+</view>
+<view class="cAdd" hidden="{{MobileInfo ? true : false}}">
+  <view class="please">请先绑定手机号</view>
+  <view id="sbui">
+    <view class="wraper clearfix">
+      <input id="tel" class="phone fl" value="{{telphone}}" placeholder="请输入手机号" bindfocus="fs" bindinput="kd"/>
+      <button id="btnSendCode" class="{{bug}}" type="button" bindtap="rigister">{{verifyCodeTime}}</button>
+    </view>
+    <view class="yzm">
+      <input type="text" id="code" value="{{Verification}}" placeholder="请输入验证码" bindfocus="yz" bindinput="kb"/>
+    </view>
+    <view id="bindphone" bindtap="iphone">
+      绑定手机号
+    </view>
+  </view>
+</view>
+<view class="ucenter clearfix">
+  <view class="userpic fl">
+    <image src="{{userInfo.avatarUrl}}" class="headpic userInfo-avataUrl"></image>
+  </view>
+  <view class="userinfo fl">
+    <span class="username userInfo-nickname">{{userInfo.nickName}}</span>
+    <div class="usertype1">非订阅用户</div>
+    <div class="usertype2">包月用户</div>
+  </view>
+  <view class="recording fl">
+    <button href="recording.html" class="recordingbtn" bindtap="result">违章记录</button>
+  </view>
+</view>
+<view  id="carinfo"  class="{{info}}{{index}}" wx:for="{{vateLimeInfo}}">
+  <view class="carhead clearfix">
+      <view id="licenselate" class="fl">{{item.plate}}</view>
+      <view class="menu fr">
+          <view  bindtap="modify" id="xiuGai{{index}}" class="modify"></view>
+          <view class="line">|</view>
+          <view bindtap="del"  id="info{{index}}" class="delete"></view>
+          <view class="line">|</view>
+          <view wx:if="{{carinfo == true}}" id="lookmain{{index}}" class="lookmain">请绑定手机号</view>
+          <view wx:else bindtap="res" id="lookmain{{index}}" class="lookmain">未处理违章</view>
+
+      </view>
+  </view>
+  <view class="ownerinfo">
+    <view class="clearfix">
+      <view class="ownerkind fl">发动机号：</view>
+      <view id="engine" class="number fl">{{item.engine}}</view>
+    </view>
+    <view class="cj clearfix">
+      <view class="ownerkind fl">车架号：</view>
+      <view id="frame" class="number fl">{{item.evin}}</view>
+    </view>
+    <view class="clearfix">
+      <view class="ownerkind fl">车型：</view>
+      <view id="engine" class="number fl">{{item.brand}}</view>
+    </view>
+  </view>
+  <view class="list clearfix">
+      <view id="frequency">
+          <view class="bold" wx:if="{{carinfo == true}}">*次</view>
+          <view class="bold" wx:else >{{item.amount}}次</view>
+          <view class="tit">违章次数</view>
+      </view>
+      <view id="money">
+          <view class="bold" wx:if="{{carinfo == true}}">*元</view>
+          <view class="bold" wx:else>{{item.punishMoney}}元</view>
+          <view class="tit">罚款金额</view>
+      </view>
+      <view id="deduction">
+          <view class="bold" wx:if="{{carinfo == true}}">*分</view>
+          <view class="bold" wx:else>{{item.punishPoint}}分</view>
+          <view class="tit">扣分情况</view>
+      </view>
+  </view>
+</view>
+<!--<view id="nocarinfo" hidden="{{car}}">
+        
+</view>-->
+<view class="addcarinfo"  bindtap="toast"></view>
