@@ -2,13 +2,18 @@ body{
     background-color: #f9f9f9;
 }
 .main,.c_main_two{
-    width: 100%;
-    border-bottom:1px solid #ddd;
-    height:7.325rem;
+    width:18.75rem;
+    border-bottom:0.01rem solid #ddd;
+    border-top:0.01rem solid #ddd;
+    height:5.25rem;
     margin:0.5rem 0;
     padding:1rem 0;
+    background: #fff;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+.bean{
+    font-size: 0.75rem;
 }
 .c_main_two{
    border:1px solid #ddd;
@@ -27,14 +32,16 @@ body{
 .c_date span{
    float: left;
     color: #cccccc;
+    font-size: 0.65rem;
 }
 .c_date p{
     float:right;
-    font-size:1.5rem;
+    font-size:1rem;
     color: #ff4f31;
 }
 .num{
     color: #3e3e3e;
+    font-size: 0.725rem;
 }
 .num b{
     font-family: "Adobe Heiti Std";

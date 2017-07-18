@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/switchcity/switchcity"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#697686",
+    "navigationBarTitleText": "油价",
+    "navigationBarTextStyle":"#fff"
+  }
+}

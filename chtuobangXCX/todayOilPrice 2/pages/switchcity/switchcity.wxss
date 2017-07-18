@@ -1,0 +1,157 @@
+page{
+    font-family: "PingFang SC";
+}
+/*清浮动*/
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.searchLetter{
+    position: fixed;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    z-index: 1;
+    display: none;
+}
+.searchLetter view{
+    height: 70rpx;
+}
+.touchClass{
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+}
+.showSlectedLetter{
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius:10px; 
+    font-size: 26px;
+    z-index: 1
+}
+.selection{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.item_letter{
+    background-color: #f4f4f4;
+    height: 50rpx;
+    padding-left: 50rpx;
+    font-size: 26rpx;
+    color: #aeaeae;  
+    line-height: 50rpx;
+}
+.item_city{
+    padding-left: 40rpx;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    font-size: 32rpx;
+    color: #4f5761;
+    border-bottom: 1rpx solid #ddd;
+}
+.cancel{
+    font-size:26rpx;
+    color: #4f5761;
+     display: inline-block;
+    background-color:#f4f4f4;
+   height: 73rpx;
+   line-height: 73rpx;
+   width:75rpx;
+   text-align: right;
+}
+.cancels{
+    font-size:26rpx;
+    color: #4f5761;
+     display: inline-block;
+    background-color:#f4f4f4;
+   height: 20rpx;
+   line-height: 20rpx;
+   width:20rpx;
+   margin-right: 24rpx;
+}
+.now_geo{
+    margin-left: 50rpx;
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color:#aeaeae;
+    margin-bottom: 30rpx;
+}
+.nowGeoCity{
+    font-size: 32rpx;
+    color: #4f5761;
+    margin-right: 80rpx;
+    margin-top: 30rpx;
+}
+.hot_city{
+    height: 50rpx;
+    background: #f4f4f4;
+    line-height: 50rpx;
+}
+.hotIcon{
+    margin-top: 15rpx;
+    margin-right: 10rpx; 
+    width: 17rpx;
+    height: 20rpx;
+    margin-left: 56rpx;
+}
+.textHot{
+    font-size: 26rpx;
+    color:#aeaeae;
+}
+.hotcity_list{
+    padding-left: 50rpx;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    font-size: 32rpx;
+    color: #4f5761;
+    border-bottom: 1rpx solid #ddd;
+}
+.bbn{
+    border-bottom: none;
+}
+search{
+  display: inline-block;
+  
+}
+.search{
+  margin-top: 40rpx;
+}
+.search input{
+  display: inline-block;
+  background-color:#f4f4f4;
+  position:relative;
+  padding: 0rpx 0rpx 0rpx 70rpx;
+  font-size: 26rpx;
+  width: 500rpx;
+  height: 70rpx;
+  margin-left: 50rpx;
+}
+.search-input icon{
+  position:absolute;
+left:20rpx;
+top:20rpx;
+}

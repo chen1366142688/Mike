@@ -3,31 +3,39 @@ body{
 }
 .main{
     width:100%;
-    border-bottom:1px solid #ddd;
+    border-bottom:0.025rem solid #d7d7d7;
 }
 .c_nice{
     width:100%;
     margin: 1rem 0;
+    height:3.875rem;
     padding: 0 1.125rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+.c_item,.c_yue span{
+    font-size: 0.75rem;
+}
 .c_yue{
     text-align: center;
+    margin-top:0.7rem;
 }
 .c_yue b{
-    font-size: 3rem;
+    font-size: 1.55rem;
     color: #fe4e48;
     font-weight:normal;
 }
 .c_section{
     width:100%;
     margin-top: 1rem;
-    padding: 0 1.125rem;
+    padding: 0 0.625rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+}
+.overflow{
+
 }
 .overflow:after {
     content: "";
@@ -37,8 +45,14 @@ body{
     clear: both;
     height: 0;
 }
+#ab{
+    color:#ff4f31;
+    font-size: 0.75rem;
+    float: left;
+}
 .overflow a{
     float: right;
+    font-size: 0.75rem;
 }
 .article{
     width:100%;
@@ -46,19 +60,25 @@ body{
 }
 .article li{
     height:6.25rem;
-    border:1px solid #ff9e5d;
-    border-radius: 0.4rem;
+    border:0.025rem solid #ff9e5d;
+    border-radius: 0.375rem;
     display: inline-block;
     text-align: center;
-    width:30%;
-    font-size: 1.3rem;
-    margin:1rem 0;
+    width:5.4rem;
+    margin-bottom:0.625rem;
 }
-.article li:nth-child(2),.article li:nth-child(5){
-    margin:0 0.5rem;
+.article li:nth-child(2){
+    margin:0 0.22rem;
+}
+.article li:nth-child(5){
+    margin:0 0.22rem;
 }
 .article li b,.article li span,.article li a{
     display: block;
+}
+.article li span{
+    font-size: 0.75rem;
+    margin-bottom: 0.375rem;
 }
 .article li:first-child b{
     height:3rem;
@@ -92,6 +112,14 @@ body{
     background-size: 3rem;
     background-position:50% 50%;
 }
+.article li:nth-child(5) b{
+    height:3rem;
+    line-height:3rem;
+    text-align: center;
+    background: url("../images/dou6.png") no-repeat;
+    background-size: 3rem;
+    background-position:50% 50%;
+}
 .article li:last-child b{
     height:3rem;
     line-height:3rem;
@@ -100,8 +128,8 @@ body{
     background-size: 3rem;
     background-position:50% 50%;
 }
-.article li a{
-    width:6rem;
+.article li .shopping{
+    width:5rem;
     height:1.5rem;
     line-height:1.5rem;
      text-align: center;
@@ -109,6 +137,7 @@ body{
      border-radius:0.625rem;
      background-color:#ff4f31;
     margin:0 auto;
+    font-size: 0.75rem;
 }
 
 
@@ -116,13 +145,13 @@ body{
 
 /*弹出*/
 #Recharge_window{
-    width: 19rem;
-    height:10rem;
+    width: 15.45rem;
+    height:9.1rem;
     background: #fff9f6;
-    border: 0.05rem solid #afafaf;
+    border: 0.025rem solid #afafaf;
     border-radius: 2.3rem;
-    border-bottom-left-radius: 1rem ;
-    border-bottom-right-radius:1rem ;
+    border-bottom-left-radius: 0.875rem ;
+    border-bottom-right-radius:1.2rem ;
     text-align: center;
     margin-top:5.625rem;
     margin-left:auto;
@@ -134,12 +163,11 @@ body{
     height: 1.9rem;
     border-radius: 50%;
     border: 0.05rem solid #fe9843;
-    border-bottom: none;
     position: absolute;
     top: 0;
     right: 0;
     background: #fff9f6;
-    box-shadow: 0 0 0.3rem #ccc;
+    box-shadow: 0 0.3rem 0.5rem #eba8d1;
 }
 .close_cyou .x {
     width: 0.5rem;
@@ -153,7 +181,7 @@ body{
 .cyoutext{
     margin-top: 1.35rem;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 13.025rem;
     height:2.25rem;
 }
@@ -171,17 +199,17 @@ body{
 }
 .twobutton a{
     display: inline-block;
-    width:9.5rem;
-    height:2.5rem;
+    width:7.7rem;
+    height:2.1rem;
     float: left;
-    line-height:2.5rem;
+    line-height:2.1rem;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.047rem;
 }
 #exchange{
     background: #ff6235;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 0.875rem;
+    border-top-left-radius: 0.875rem;
 }
 #cancel{
     background: #bbbbbb;
@@ -203,4 +231,5 @@ body{
 .twobutton{
     position: fixed;
     bottom:0;
+    width:15.45rem;
 }

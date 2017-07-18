@@ -1,0 +1,169 @@
+page{
+    background: #f5f5f5;
+    position: relative;
+    height: 100%;
+}
+.noOrder{
+    padding-top: 270rpx;
+}
+.noOrderTxt{
+    font-size: 30rpx;
+    color: #a7a7a7;
+    text-align: center;
+    margin-top: 20rpx;
+}
+.orders{
+    font-size: 26rpx;
+    color: #2b2b2b;
+    margin-top: 20rpx;
+}
+.all{
+    margin-left: 30rpx;
+}
+.orderList{
+    margin-top: 20rpx;
+}
+.orderListLi{
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.cardImg{
+    padding: 40rpx 30rpx;
+}
+.card{
+    width:80rpx;
+    height:51rpx;
+}
+.cardData{
+    width: 580rpx;
+    padding-right: 30rpx;
+}
+.cardNumber{
+    font-size: 30rpx;
+    color:#252525;
+    font-weight: bold;
+    margin-top: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+.orderPrice{
+    font-size: 36rpx;
+    font-weight: bold;
+    margin-top: 30rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+}
+.datatime{
+    height: 22rpx;
+    line-height: 22rpx;
+    font-size: 22rpx;
+    color: #919191;
+    margin-top: 20rpx;
+}
+.state{
+    font-size: 22rpx;
+    height: 22rpx;
+    line-height: 22rpx;
+    margin-top: 20rpx;
+    margin-left: 252rpx;
+}
+.success{
+    color: #86d43b;
+}
+.stateFail{
+    position: absolute;
+    bottom: 30rpx;
+    right: 30rpx;
+   height: 22rpx;
+}
+.stateFail image{
+    width:22rpx;
+    height:22rpx;
+}
+.failTxt{
+    font-size: 22rpx;
+    color: #ff5361;
+    height: 22rpx;
+    line-height: 22rpx;
+    margin-right:10rpx;    
+}
+.failReason{
+    width:750rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.service{
+    margin-top: 50rpx;
+}
+.serviceTxt{
+    margin-left: 320rpx;
+    font-size: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    color: #8e8e8e;
+    margin-bottom:64rpx;
+}
+.hasWrited{
+    color: #000;
+}
+.choosed{
+    border: 4rpx solid #86d53c;
+    color:#86d53c !important;
+    font-weight: bold;
+    width: 322rpx;
+}
+.green{
+    color: #86d53c;
+}
+.btnLight{
+    background: #86d53c;
+}
+.serviceWindow{
+    position: absolute;
+    width: 750rpx;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.serviceBox{
+    background: #fff;
+    width: 430rpx;
+    margin: 0 auto;
+    margin-top: 240rpx;
+    text-align: center;
+    padding-top: 40rpx;
+    padding: 40rpx 50rpx;
+    position: relative;
+}
+.serviceTit{
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    margin-bottom: 50rpx;
+}
+.serviceP{
+    font-size: 26rpx;
+    line-height: 36rpx;
+    text-align: left;
+}
+.mb26{
+    margin-bottom: 26rpx;
+}
+.scrollArea{
+    max-height: 440rpx;
+    overflow-y: scroll;
+}
+.closeBtn{
+    position: absolute;
+    top: 5rpx;
+    right: 30rpx;
+    font-weight: bold;
+    font-size: 50rpx;
+}

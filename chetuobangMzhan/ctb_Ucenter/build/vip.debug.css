@@ -1,0 +1,23 @@
+img {
+  width: 10rem;
+  height: 16.08rem;
+}
+
+body {
+  position: relative;
+}
+
+.moneygo {
+  position: absolute;
+  bottom: 3.32rem;
+  width: 10rem;
+  height: 1.066667rem;
+  display: block;
+}
+
+.letsgo {
+  position: absolute;
+  top: 13.253333rem;
+  width: 10rem;
+  height: 1.506667rem;
+}

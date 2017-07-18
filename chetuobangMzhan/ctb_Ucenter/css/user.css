@@ -1,0 +1,130 @@
+nav a:nth-child(1){
+    background: url("../images/tools_19.png") no-repeat center 24px;
+    background-size: 42px 42px;
+}
+nav a:nth-child(4){
+    background: url("../images/user_19.png") no-repeat center 24px;
+    background-size: 40px 42px;
+}
+body{
+    padding-top: 53px;
+    background: #fbfbfb;
+}
+.head{
+    width: 646px;
+    margin:0 auto;
+    background: #ffffff;
+    text-align: center;
+    margin-bottom: 76px;
+}
+.head img{
+    width: 182px;
+    height: 182px;
+    border:2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 10px #ebebeb;
+    margin-top: 50px;
+}
+.username{
+    text-align: center;
+    margin-top:20px;
+}
+.username div{
+    color: #000000;
+    font-size: 30px;
+    max-width: 182px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 182px;
+    margin-left:224px;
+    font-weight: bold;
+}
+.vip{
+    background: url("../images/user_09.png") no-repeat;
+    width: 57px;
+    height: 26px;
+    display: inline-block;
+    background-size: cover;
+}
+.yjh{
+    text-align: center;
+    padding: 0 160px;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+    margin-top: 20px;
+}
+.tab{
+    display: flex;
+    border-top: 2px solid #a9e536;
+    padding-top: 36px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+.tab a{
+    flex:1;
+    text-align: center;
+}
+.tab a div{
+    font-size: 26px;
+    color: #585858;
+    margin-bottom: 26px;
+}
+.tab a span{
+    font-size: 30px;
+    font-weight: bold;
+    height: 30px;
+    line-height:30px;
+}
+.yel{
+    color: #ffd513;
+}
+ul{
+    max-height: 398px;
+    overflow-y: scroll;
+    padding-bottom: 40px;
+}
+li{
+    width: 750px;
+    height: 102px;
+    line-height:102px;
+    background: #fff url("../images/user_13.png") no-repeat 688px center;
+    background-size: 13px 26px;
+    margin-bottom: 5px;
+}
+li a span{
+    margin-left:55px;
+    width: 224px;
+    text-align: left;
+    display: inline-block;
+    font-size: 26px;
+    color: #bebebe;
+    font-weight: bold;
+}
+li a b{
+    font-weight: bold;
+    font-size: 26px;
+    color: #5f5f5f;
+}
+.what_vip{
+    padding: 4px 26px;
+    border-radius: 8px;
+    color: #fa3434;
+    background: #ffd013;
+}
+.red{
+    color: #ff5959;
+}
+ul>li:last-of-type{
+    margin-bottom: 115px;
+}
+li a{
+    width: 750px;
+    height: 102px;
+    line-height:102px;
+    display: inline-block;
+}

@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  border-top: 0.026667rem solid #a9e536;
+  position: fixed;
+  bottom: 0;
+  width: 10rem;
+  background: #fff;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  padding-top: 1.013333rem;
+  padding-bottom: 0.266667rem;
+}
+
+nav span {
+  font-size: 0.266667rem;
+  line-height: 0.266667rem;
+  height: 0.266667rem;
+  display: inline-block;
+  color: #bdbdbd;
+}
+
+.active {
+  color: #a9e536;
+}
+
+nav a:nth-child(1) {
+  background: url("../images/M_demo-0607_07.png") no-repeat center 0.32rem;
+  background-size: 0.56rem 0.56rem;
+}
+
+nav a:nth-child(2) {
+  background: url("../images/M_demo-0607_09.png") no-repeat center 0.32rem;
+  background-size: 0.56rem 0.56rem;
+}
+
+nav a:nth-child(3) {
+  background: url("../images/M_demo-0607_11.png") no-repeat center 0.32rem;
+  background-size: 0.64rem 0.56rem;
+}
+
+nav a:nth-child(4) {
+  background: url("../images/M_demo-0607_13.png") no-repeat center 0.32rem;
+  background-size: 0.56rem 0.56rem;
+}

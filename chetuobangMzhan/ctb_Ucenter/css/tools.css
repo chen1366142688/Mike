@@ -1,0 +1,54 @@
+.area{
+    max-height: 1089px;
+    overflow-y: scroll;
+}
+.btn_area1 a{
+    width: 335px;
+    height: 240px;
+    text-indent: -999px;
+    margin-top: 46px;
+}
+.btn_area1 a:nth-child(1){
+    background: url("../images/tools_03.png") no-repeat;
+    background-size: cover;
+    margin-left:30px;
+}
+.btn_area1 a:nth-child(2){
+    background: url("../images/tools_05.png") no-repeat;
+    background-size: cover;
+    margin-left:20px;
+}
+.btn_area2 a{
+    text-indent: -999px;
+    display: block;
+    margin-left:31px;
+}
+.buy{
+    width: 694px;
+    height: 207px;
+    background: url("../images/tools_10.png") no-repeat;
+    background-size: cover;
+    margin-top:20px;
+}
+.car_price{
+    width: 689px;
+    height: 192px;
+    background: url("../images/tools_13.png") no-repeat;
+    background-size: cover;
+    margin-top: 25px;
+}
+.ad{
+    width: 689px;
+    height: 192px;
+    background: url("../images/tools_16.png") no-repeat;
+    background-size: cover;
+    margin-top:25px;
+}
+nav a:nth-child(1){
+    background: url("../images/tools_19.png") no-repeat center 24px;
+    background-size: 42px 42px;
+}
+nav a:nth-child(2){
+    background: url("../images/tools_21.png") no-repeat center 24px;
+    background-size: 42px 42px;
+}

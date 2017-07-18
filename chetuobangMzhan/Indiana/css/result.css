@@ -1,63 +1,63 @@
 body{
     width:100%;
     height:100%;
-    background: url("../images/background.png") no-repeat;
-    -webkit-background-size:inherit;
-    background-size:inherit;
+    background: url("../images/background.png");
 }
 .c_on{
-    width: 100%;
-    padding: 1.5rem 1.125rem;
+    width: 18.25rem;
+    padding:0 0.5rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 .c_on1{
-    width:100%;
-    height:24rem;
+    width:17.75rem;
+    height:18.9rem;
     background-color: #ffffff;
-    border-radius: 1rem;
-    padding:0.45rem;
+    border-radius: 0.7rem;
+    padding:0.325rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 .c_on2{
-    width:100%;
-    height:100%;
-    border:1px dotted #e4393c;
-    border-radius: 1rem;
+    width:17.125rem;
+    height:18.2rem;
+    border:0.1rem dotted #e4393c;
+    border-radius: 0.95rem;
     padding:0.95rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 .c_transfrom{
     width:80%;
-    height:4rem;
+    height:2.25rem;
     background: url("../images/transfrom.png") no-repeat;
     background-size: 100%;
     z-index: 10;
     margin: 0 auto;
     transform: translateY(1rem);
-    -webkit-transform: translateY(60%);
+    -webkit-transform: translateY(70%);
     text-align: center;
-    line-height:3.4rem;
+    line-height:2.25rem;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 0.851rem;
 }
 .c_contenter{
-    border-bottom: 1px solid #ddd;
-    padding:1rem 0 0.3rem 0;
+    border-bottom: 0.025rem solid #d7d7d7;
+    padding:0.8rem 0 0.75rem 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    height:3.75rem;
+    width:15rem;
 }
 .c_contenter p:first-child{
     color: #777777;
-    font-size: 1.1rem;
+    font-size: 0.75rem;
 }
 .c_contenter .c_number{
     color: #3e3e3e;
     font-family:Helvetica ;
-    font-size: 1.6rem;
-    margin-top: 0.3rem;
+    font-size: 1.25rem;
+    width:15rem;
 }
 .c_contentt p:first-child,.c_contentt .c_b,.c_contentt .c_a{
     display: inline-block;
@@ -65,9 +65,10 @@ body{
 .c_contentt .c_b{
     background-color:#a9a9a9;
     color: #fff;
-    border-radius: 0.3rem;
-    padding:0 0.5rem;
+    border-radius: 0.2rem;
+    padding:0.2rem;
     box-sizing: border-box;
+    font-size: 0.5rem;
     -webkit-box-sizing: border-box;
 }
 
@@ -77,6 +78,8 @@ body{
 }
 .c_c{
     overflow: hidden;
+    font-size: 0.6rem;
+    margin-top:0.8rem;
 }
 .c_connnn .c_number{
     width:2.5rem;
@@ -86,6 +89,7 @@ body{
     background-color: #fe4e48;
     border-radius: 50%;
     margin-right: 1rem;
+    margin-top:0.75rem;
 }
 #c_num{
     color: #fff;
@@ -100,5 +104,15 @@ body{
     color: #777777;
 }
 .c_rig{
-    vertical-align: bottom;
+    vertical-align: middle;
+}
+.c_rig b:first-child{
+    font-size: 0.7rem;
+    margin-bottom:0.2rem;
+}
+.c_rig b:last-child{
+    font-size: 0.6rem;
+}
+.c_connnn{
+    border-bottom: 0;
 }

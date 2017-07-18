@@ -1,0 +1,55 @@
+<view class="routeListTop {{page}}">
+
+<view hidden="{{deletes}}" class="usualWay mt6 clearfix" wx:for="{{route}}" >
+<!--style="margin-top:{{item.margin}}px" -->
+    <view class="box-title">
+        <image src="../../images/manage_icon_name.png" style="width:25rpx;height:29rpx;"  class="icon fl"></image>
+    <view class="typeName fl">名称</view>
+    <view class="wayDataTitle fl">{{item.titleRoute}}</view>
+    </view>
+    <view class="box clearfix mb30">
+        <image src="../../images/popup_icon_end.png" style="width:25rpx;height:32rpx;" class="icon fl"></image>
+    <view class="typeName fl">起点</view>
+    <view class="wayData fl">{{item.startAddress}}</view>
+    </view>
+    <view class="box clearfix">
+        <image src="../../images/popup_icon_start.png" style="width:25rpx;height:32rpx;" class="icon fl"></image>
+    <view class="typeName fl">终点</view>
+    <view class="wayData fl">{{item.endAddress}}</view>
+    </view>
+    <image src="../../images/manage_btn_delete.png"  style="width:60rpx;height:60rpx;" class="delete_btn" data-value="{{item.id}}" bindtap="deleteRoute"></image>
+</view>
+<view class="mainWindow" hidden="{{add}}">
+    <view class="top">
+        <image src="../../images/popup_logo.png" style="width:120rpx;height:50rpx;margin-top:30rpx;margin-left:190rpx;"></image>
+    </view>
+    <form bindsubmit="insertRoute" bindreset="formResetaction">
+    <view class="typeInp">
+        <input  bindtap="routeName" name="route"  type="text" placeholder="请给你的路线起个名字" class="typeWay">默认路线</input>
+    </view>
+    <view class="start clearfix">
+        <image src="../../images/popup_icon_end.png" class="fl" style="width:25rpx;height:32rpx;"></image>
+        <view class="startView fl">
+            {{startName}}
+        </view>
+    </view>
+    <view class="end clearfix">
+        <image src="../../images/popup_icon_start.png" class="fl" style="width:25rpx;height:32rpx;"></image>
+        <view class="startView fl">
+            {{endName}}
+        </view>
+    </view>
+    <view class="btnArea clearfix">
+        <button formType='reset' class="cancel fl">取消</button>
+        <button formType='submit' class="sure f1">确定</button>
+    </view>
+    </form>
+</view>
+<view hidden="{{insertLimitStatus}}" class="alertWindow">
+    常用路线数量已经达到上限
+</view>
+</view>
+
+
+
+

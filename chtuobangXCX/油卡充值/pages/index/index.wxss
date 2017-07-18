@@ -1,0 +1,282 @@
+page{
+    position: relative;
+}
+.city{
+    position: absolute;
+    top: 62rpx;
+    left: 50rpx;
+    font-size: 36rpx;
+    color: #252525;
+    height: 36rpx;
+    line-height: 36rpx;
+}
+.todayText{
+    position: absolute;
+    top: 118rpx;
+    left: 50rpx;
+    font-size: 26rpx;
+    color: #252525;
+    height: 26rpx;
+    line-height: 26rpx;
+}
+.Nt_oil93{
+    position: absolute;
+    top: 65rpx;
+    right: 50rpx;
+}
+.Nt_oil97{
+    position: absolute;
+    top: 110rpx;
+    right: 50rpx;
+}
+.Onumber{
+    margin-right: 40rpx;
+    font-size: 30rpx;
+    color: #333d49;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+#NtOliPrice{
+    font-size: 30rpx;
+    color: #333d49;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-right: 16rpx;
+}
+#NsOliPrice{
+    font-size: 30rpx;
+    color: #333d49;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-right: 16rpx;
+}
+.Oprice{
+    font-size: 22rpx;
+    color: #9d9d9d;
+}
+.search{
+  position: relative;
+}
+.search input{
+    display: inline-block;
+    position:relative;
+    font-size: 32rpx;
+    width: 610rpx;
+    height: 80rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    border: 1px solid #999;
+    margin-top: 30rpx;
+    border-radius: 2rpx;
+    border-right:0;
+}
+.search-input icon{
+    position:absolute;
+    right:20rpx;
+    top:25rpx;
+}
+.history{
+    position: absolute;
+    top: 116rpx;
+    left: 30rpx;
+    box-shadow: 0 0 6rpx #6e6e6e;
+    z-index: 3;
+    background: #fff;
+}
+.list{
+    width: 692rpx;
+    border-bottom: 1px solid #eee;    
+}
+.list image{
+  margin-right: 20rpx;
+}
+.cardName{
+    font-size: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    color: #919191;
+    margin-right: 68rpx;
+    margin-top: 40rpx;
+    margin-left: 21rpx;
+    margin-bottom: 40rpx;
+}
+.cardNumber{
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    color: #919191;
+    margin-right:115rpx;
+    margin-top: 40rpx;
+}
+.clearAll{
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    text-align: center;
+    margin-top: 35rpx;
+    margin-bottom: 35rpx;
+    color: #919191;
+}
+.chargeArea{
+    padding: 0 30rpx;
+}
+.chargeTxt{
+    font-size: 32rpx;
+    color: #999;
+    height: 32rpx;
+    line-height: 32rpx;
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+}
+.box{
+  margin-right: -30rpx;
+  margin-bottom: -30rpx;
+}
+.monryBtn{
+    width: 326rpx;
+    height: 130rpx;
+    border: 1px solid #999;
+    line-height: 130rpx;
+    text-align: center;
+    position: relative;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+}
+.rmb{
+    margin-left: 80rpx;
+    font-size: 40rpx;
+    color: #999;
+    margin-top: 5rpx;
+}
+.hundred{
+    font-size: 60rpx;
+    color: #999;
+}
+.selectPNG{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ml30{
+    margin-left: 30rpx;
+}
+.mt30{
+    margin-top: 30rpx;
+}
+.nextArea{
+    margin-top: 40rpx;
+    background:#f5f5f5;
+    padding-top: 50rpx;
+}
+.nextBtn{
+    width: 690rpx;
+    height: 100rpx;
+    font-size: 36rpx;
+    color:#fff;
+    line-height: 100rpx;
+    background: #c1c3c5;
+}
+.service{
+    margin-top: 50rpx;
+}
+.serviceTxt{
+    margin-left: 320rpx;
+    font-size: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    color: #8e8e8e;
+    margin-bottom:64rpx;
+}
+/* .hasWrited{
+    color: #000;
+} */
+#choosed{
+    border: 4rpx solid #86d53c;
+    color:#86d53c;
+    font-weight: bold;
+    width: 322rpx;
+}
+.btnLight{
+    background: #86d53c;
+}
+.serviceWindow{
+    position: absolute;
+    width: 750rpx;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.serviceBox{
+    background: #fff;
+    width: 430rpx;
+    margin: 0 auto;
+    margin-top: 240rpx;
+    text-align: center;
+    padding-top: 40rpx;
+    padding: 40rpx 50rpx;
+    position: relative;
+}
+.serviceTit{
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    margin-bottom: 50rpx;
+}
+.serviceP{
+    font-size: 26rpx;
+    line-height: 36rpx;
+    text-align: left;
+}
+.mb26{
+    margin-bottom: 26rpx;
+}
+.scrollArea{
+    max-height: 440rpx;
+    overflow-y: scroll;
+}
+.closeBtn{
+    position: absolute;
+    top: 5rpx;
+    right: 30rpx;
+    font-weight: bold;
+    font-size: 50rpx;
+}
+.times{
+  display: inline-block;
+    position:relative;
+    font-size: 32rpx;
+    width: 79rpx;
+    height: 80rpx;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #999;
+    margin-top: 30rpx;
+    margin-left:-1rpx;
+    border-radius: 2rpx;
+    border-left:0;
+}
+.iconTimes{
+  width:40rpx;
+  height: 40rpx;
+  /* transform:scale(0.8); */
+  z-index: 2;
+  position: absolute;
+  top:20rpx;
+  right:15rpx;
+}
+#green{
+  color: #86d53c;
+}
+.bian{
+  color: #fff;
+  background-color:#86d53c;
+}
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+color:rgba(255, 255, 255, 1);
+background-color:#c1c3c5;
+
+}

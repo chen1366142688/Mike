@@ -1,0 +1,20 @@
+page{
+    font-family: "PingFang SC";
+}
+image{
+    display: block;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}

@@ -1,0 +1,53 @@
+<view class="body">
+  <image src="../../images/img_bg.png" class="img_bg"></image>
+  <view class="city_btn" bindtap="select">
+    <image src="../../images/icon_locate.png" class="icon_1 fl"></image>
+    <view class="city_name fl" >{{location}}</view>
+    <image src="../../images/icon_more.png" class="icon_2 fl"></image>
+  </view>
+  <view class="today_text">
+   <view class="text_1 fl">今日油价</view>
+   <view class="text_2 fl">{{date}}</view>
+  </view>
+<view class="containers" hidden="{{from1}}">
+    <view class="oil">
+      <view class="fl number">89</view><view class="fl fh">#</view><view class="fl hz">汽油</view>
+      <image src="../../images/icon_up.png" class="up" hidden="{{up}}"></image>
+      <image src="../../images/icon_down.png" class="down" hidden="{{down}}"></image>
+      <view class="red_area fr">
+          <view class="money_data fl">{{qiyou1}}</view>
+          <view class="money_text fl">（元/升）</view>
+      </view>
+    </view>
+    <view class="oil">
+      <view class="fl number">92</view><view class="fl fh">#</view><view class="fl hz">汽油</view>
+      <image src="../../images/icon_up.png" class="up" hidden="{{up2}}"></image>
+      <image src="../../images/icon_down.png" class="down" hidden="{{down2}}"></image>
+      <view class="red_area fr">
+          <view class="money_data fl">{{qiyou2}}</view>
+          <view class="money_text fl">（元/升）</view>
+      </view>
+    </view>
+    <view class="oil">
+      <view class="fl number">95</view><view class="fl fh">#</view><view class="fl hz">汽油</view>
+      <image src="../../images/icon_up.png" class="up" hidden="{{up3}}"></image>
+      <image src="../../images/icon_down.png" class="down" hidden="{{down3}}"></image>
+      <view class="red_area fr">
+          <view class="money_data fl">{{qiyou3}}</view>
+          <view class="money_text fl">（元/升）</view>
+      </view>
+    </view>
+    <view class="oil">
+      <view class="fl number">0</view><view class="fl fh">#</view><view class="fl hz">柴油</view>
+      <image src="../../images/icon_up.png" class="up" hidden="{{up4}}"></image>
+      <image src="../../images/icon_down.png" class="down" hidden="{{down4}}"></image>
+      <view class="red_area fr">
+          <view class="money_data fl">{{chaiYou}}</view>
+          <view class="money_text fl">（元/升）</view>
+      </view>
+    </view>
+  </view>
+  <view class="shuoming">以上价格由人工采集，仅供参考</view>
+  <view class="no" hidden="{{from2}}">当前城市今日暂时没有油价信息</view>
+  <image src="../../images/logo.png" class="logo"></image>
+</view>

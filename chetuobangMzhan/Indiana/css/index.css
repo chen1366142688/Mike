@@ -1,3 +1,80 @@
+body{
+    position: relative;
+    height: 30.15rem;
+}
+.tit{
+    position: absolute;
+    top:6.8rem;
+    z-index: 4;
+    left: 2.125rem;
+    font-size: 0.75rem;
+    color: #fff;
+}
+.new_btn_a{
+    color:#fff;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+.new_btn{
+    position: absolute;
+    top:5rem;
+    right:1.75rem;
+    z-index:20;
+    font-weight: bold;
+}
+.close_cyou {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    border: 0.05rem solid #fe9843;
+    position: absolute;
+    top: 2.775rem;
+    right: 0.6rem;
+    background: #fff9f6;
+    box-shadow: 0rem 0.35rem 0.35rem #ead6cf;
+}
+
+.close_cyou .x {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/close.png") no-repeat center #fff9f6;
+    background-size: 100%;
+    display: block;
+    margin-top: 0.65rem;
+    margin-left: 0.75rem;
+}
+.index_alert{
+    width: 18.2rem;
+    height: 100%;
+    background: rgba(76, 76, 76, 0.5);
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    padding-top: 2.7rem;
+    position: absolute;
+    padding-left: 0.55rem;
+}
+.index_alert_con{
+    width: 17.525rem;
+    height:22.025rem;
+    background: url("../images/index_alert.png") no-repeat;
+    background-size: cover;
+    border-radius: 2.8rem;
+}
+#go_to_act{
+    width: 12.5rem;
+    height: 2.1rem;
+    position: absolute;
+    bottom:6.65rem;
+    left:3.35rem;
+}
+.tit span{
+    color: #ffdc4e;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
 nav{
     height:1.6rem ;
     line-height:1.6rem;
@@ -17,28 +94,48 @@ nav a{
 .main{
     width:100%;
     background: url("../images/bg.png") no-repeat;
-    -webkit-background-size:100%;
-    background-size:100%;
+    background-size:cover;
     padding-top:6.6rem;
     position: relative;
     text-align: center;
 }
 .gas{
     width: 12.25rem;
-    height: 11.7rem;
-    background: url("../images/gas.png") no-repeat;
+    height: 11.95rem;
+    background: url("../images/gas2.png") no-repeat;
     background-size: cover;
     margin-left:2.45rem;
     position: relative;
 }
+.light{
+    width: 5.2rem;
+    height: 3rem;
+    position: absolute;
+    top:2.3rem;
+    left: 4.4rem;
+    background-size: cover;
+    animation: lightgo 0.5s  infinite;
+    -webkit-animation: lightgo 0.5s  infinite;
+}
+@keyframes lightgo {
+    0%{
+        background: url("../images/light1.png") no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background: url("../images/light2.png") no-repeat;
+        background-size: cover;
+    }
+}
 .gas_num{
     position: absolute;
-    top:2.93rem;
+    top:2.8rem;
     left:5.35rem;
     font-size: 1.15rem;
     color: #ffe750;
     font-style: italic;
     font-family: "Helvetica";
+    animation: sss 0.5s ease-in infinite;
 }
 .user{
     width: 2.9rem;
@@ -50,19 +147,21 @@ nav a{
     position: absolute;
     top:14.15rem;
     right:1.05rem;
+    box-shadow: 0.1rem 0.3rem 0.55rem #ffd0c9;
 }
 #join_btn{
-    margin-top:0.5rem;
+    margin-top:0.425rem;
     width:12.5rem;
     height:2.2rem;
     border:none;
-    background: #ff7538;
+    background: #ff6335;
     font-size: 1rem;
     color:#fff;
     line-height:2.2rem;
     border-radius: 1rem;
     display: inline-block;
     font-family: "Yuanti SC";
+    box-shadow: 0 0.575rem 0.575rem #ffdfd9;
 }
 .buy{
     width:17.1rem;
@@ -90,7 +189,8 @@ nav a{
     position: absolute;
     color: #fe4e48;
     width:3.1rem;
-    height:1.85rem;
+    height:2.4rem;
+    line-height: 2.4rem;
     top:2.5rem;
     left: 1.4rem;
 }
@@ -98,16 +198,39 @@ nav a{
     font-family: "Helvetica";
     float: left;
     font-weight: bold;
+    position: absolute;
+    top:0;
+    left:0;
+    color: #fe4e48;
+}
+.buy .d{
+    font-size: 2.4rem;
+    left:2.6rem;
+    top:1.6rem;
 }
 #price_yuan{
     font-size: 1.75rem;
     margin-left: 0.25rem;
     font-family: "Helvetica";
+    position: absolute;
+    top:2.225rem;
+    left:1.325rem;
+    color: #fe4e48;
 }
 .d{
     font-size: 1.75rem;
     font-family: "Helvetica";
 }
 #price_jiaofen{
-    font-size: 1rem;
+    font-size: 1.2rem;
+    top:2.25rem;
+    left: 3.1rem;
+}
+@keyframes sss {
+    0%{
+        color: #867823;
+    }
+    100%{
+        color: #ffe750;
+    }
 }

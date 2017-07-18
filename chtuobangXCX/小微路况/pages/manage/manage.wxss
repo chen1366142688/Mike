@@ -1,0 +1,192 @@
+page{
+  background-color: #f7f5f5;
+}
+.usualWay{
+    padding-top:30rpx;
+    padding-bottom: 30rpx;
+    border-top:2rpx solid #d0d0d0;
+    border-bottom: 2rpx solid #d0d0d0;
+    /*box-shadow: 0rpx 6rpx #999999;*/
+    box-shadow:5px 5px 5px rgba(208,208,208,.5);
+    position: relative;
+    background-color: #fff;
+}
+.usualWay .icon{
+    margin-left: 50rpx;
+    margin-right: 14rpx;
+} 
+.usualWay #icon{
+    margin-left: 50rpx;
+    margin-right: 12rpx;
+}
+.typeName{
+    font-size: 30rpx;
+    color: #9c9c9c;
+    margin-right: 20rpx;
+}
+.wayData{
+    font-size: 30rpx;
+    color: #333d49;
+    /* height: 25px; */
+    /* overflow: hidden; */
+    max-width: 395rpx;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+.wayDataTitle{
+    font-size: 34rpx;
+    color: #333d49;
+    height: 25px;
+    overflow: hidden;
+    max-width: 397rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box{
+    min-height: 34rpx;
+    max-height: 500px;
+    max-width: 800rpx;
+    line-height: 34rpx;
+    /* float: left */
+}
+.box-title{
+    height: 34rpx;
+    line-height: 34rpx;
+    margin-bottom: 30rpx;
+}
+.mt6{
+    margin-top: 30rpx;
+}
+.mt30{
+    margin-top: 30rpx;
+}
+.delete_btn{
+    position: absolute;
+    right: 50rpx;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.alertWindow{
+    position:absolute;
+    top: 450rpx;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 560rpx;
+    text-align: center;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 32rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    border-radius: 10rpx;
+}
+.routeListTop :first-child{
+  margin-top:0;
+}
+
+
+
+/**
+*添加路线的弹出框
+*/
+
+.page{
+    background: rgba(0,0,0,.255);
+    position: relative;
+    font-family: "PingFang SC";
+    width:100%;
+    min-height:1200rpx;
+}
+image{
+    display: block;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.mainWindow{
+    width: 500rpx;
+    height: 460rpx;
+    border-radius: 10rpx;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top:300rpx;
+    transform: translateX(-50%);
+   /* margin-top: 296rpx;*/
+    padding-top: 30rpx;
+}
+.top{
+    text-align: center;
+}
+.typeWay{
+    width: 420rpx;
+    text-align: center;
+    margin: 0 auto;
+    background: #f2f2f2;
+    font-size: 32rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-top: 20rpx;
+}
+.start{
+    margin-top: 40rpx;   
+    margin-left: 40rpx; 
+}
+.end{
+    margin-left: 40rpx;
+}
+.startView{
+    color: #333d49;
+    font-size: 30rpx;
+    max-height: 76rpx;
+    overflow: hidden;
+    line-height: 36rpx;
+    width: 375rpx;
+    margin-left: 20rpx;
+    height: 76rpx;  
+}
+.cancel{
+    width: 250.5rpx;
+    background: #d2d2d2;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 0;
+    border-bottom-left-radius: 10rpx;
+}
+.sure{
+    width: 251rpx;
+    background: #a0d53c;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 0;
+    border-bottom-right-radius: 10rpx;
+}
+.btnArea{
+    position: absolute;
+    bottom: 0;
+}
+button::after {
+  border:0;
+  border-radius: 0;
+}
+.mb30{
+  margin-bottom: 30rpx;
+}
+

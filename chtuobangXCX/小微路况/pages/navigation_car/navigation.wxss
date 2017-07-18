@@ -1,0 +1,136 @@
+.flex-style{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-item{
+  height: 35rpx; 
+  line-height: 35rpx;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1
+}
+.flex-item.active{
+  color:#0091ff;
+}
+#map_box{
+  position:absolute;
+  height:800rpx;
+  top: 100rpx;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  
+}
+.navi_map{
+  position:absolute;
+  width: 100%;
+  height:100%;
+}
+.text_box{
+  position:absolute;
+  height: 90rpx;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+}
+.text_box .text{
+  margin: 15rpx;
+}
+.detail_button{
+  position:absolute;
+  bottom: 30rpx;
+  right: 10rpx;
+  padding: 3rpx 5rpx;
+  color: #fff;
+  background: #0091ff;
+  width:50rpx;
+  text-align:center;
+  border-radius:5rpx;
+}
+page{
+    border-top: 1rpx solid #f5f5f5;
+    padding-top: 25rpx;
+}
+.add{
+    width: 215rpx;
+    border-right: 2rpx solid #d2d2d2;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.addIcon{
+    margin-top: 4rpx;
+    margin-left: 40rpx;
+    margin-right: 10rpx;
+}
+.add_unadd{
+    font-size: 30rpx;
+    color: #333d49;
+}
+.add_added{
+    font-size: 30rpx;
+    color: #333d49;
+    overflow: hidden;
+    height: 30px;
+    line-height: 25px;
+    text-align:center;
+}
+.add_adding{
+    font-size: 30rpx;
+    color: #999999;
+    overflow: hidden;
+    height: 30px;
+    line-height: 25px;
+    text-align:center;
+}
+.notAdd{
+    width: 215rpx;
+    text-align: center;
+    color: #999999;
+}
+.addWayArea{
+    position:absolute; 
+    height:155rpx;
+    bottom: 40rpx;
+    left: 0;
+    padding-left: 50rpx;
+    right: 0;
+}
+.addWayArea_text{
+    font-size: 24rpx;
+    padding-bottom: 10rpx;
+    color: #333d49;
+    font-weight: bold;
+}
+.whereToGo{
+    display: block;
+    margin-top:10rpx;
+}
+.whereGoInp{
+    margin-left: 30rpx;
+    font-size: 28rpx;
+    height: 40rpx;
+    line-height: 44rpx;
+    margin-bottom: -10rpx;
+    width: 500rpx;
+    border-bottom: 1rpx solid #d2d2d2;
+    overflow-x: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+}
+.mb10{
+    margin-bottom:10rpx;
+}
+.color9{
+    color:#999999;
+}
+.addBtn{
+    position: absolute;
+    right: 50rpx;
+    top: 65rpx;
+}
+.result{
+  margin-right:60rpx;
+}

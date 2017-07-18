@@ -1,0 +1,76 @@
+<view class="cardNumber clearfix">
+    <view class="cnTxt fl">加油卡号</view>
+    <view class="NumberData fr">{{carNumber}}</view>
+</view>
+<view class="cardType clearfix">
+    <view class="cnTxt fl mt30">油卡类型</view>
+    <view class="NumberData fr mt30">{{one}}</view>
+</view>
+<view class="alert">
+    请仔细核对加油卡卡号，确认后再提交订单
+</view>
+<view class="phoneNumber clearfix">
+    <view class="cnTxt fl">手机号</view>
+    <input type="number" class="phoneData fl" value='{{mobile}}' placeholder="请输入手机号" bindblur="mobileInputEvent"></input>
+</view>
+<view class="phoneNumber pr clearfix" style="height:118rpx;" hidden="{{yanz}}">
+    <view class="cnTxt fl">验证码</view>
+    <input type="number" class="phoneData fl" placeholder="请输入验证码" bindblur="saveCode"></input>
+    <button class="sendBtn {{color}}" bindtap="vertifyCode">{{VerifyCode}}</button>
+</view>
+
+<view class="payMoney clearfix">
+    <view class="pmTxt mt55 fl">支付金额</view>
+    <view class="NumberData fr">{{money}}元</view>
+</view>
+<button class="submitBtn" bindtap="bindMobile">确认购买</button>
+<view class="protocol">
+    <icon type="success" size="15" color="{{color}}" bindtap="icon" class="icon_success fl" />
+    <view class="pTxt fl">同意</view>
+    <view class="pTxt2 fl" bindtap="open">《服务协议》</view>
+</view>
+<!--服务协议  -->
+<view class="serviceWindow" hidden="{{Prompt}}">
+       <view class="serviceBox">
+           <view class="serviceTit">车托帮油卡充值服务协议</view>
+           <view class="scrollArea">
+                <view class="serviceP mb26">
+                    本协议是车托帮的用户或者会员（以下简称用户）和车托帮就加油卡等相关事宜所订立的油卡充值服务协议，请您仔细阅读本协议，您勾选”已阅读并同意“复选框后，本协议即构成双方有约束力的法律文件。
+                </view>
+                <view class="serviceP mb26">
+                    一、协议声明
+                </view>
+                <view class="serviceP mb26">
+                    1、车托帮通过互联网依法为用户提供油卡充值、订单查询等服务，用户在完全同意本协议及车托帮规定的情况下，方有权使用车托帮充值服务。
+                </view>
+                <view class="serviceP mb26">
+                    2、您勾选充值页面下“已阅读并同意”复选框后，即视为您已阅读、了解并完全同意本协议的各项内容，并具有独立承担法律责任的能力。
+                </view>
+                <view class="serviceP mb26">
+                    3、车托帮在必要时可修改本协议，并在车托帮软件上进行公告，即公告之日起生效。如您继续使用油卡充值服务，则视为您已接受修订的充值协议。
+                </view>
+                <view class="serviceP mb26">
+                    二、服务说明
+                </view>
+                <view class="serviceP mb26">
+                    1、车托帮通过互联网依法为用户提供油卡充值、订单查询等服务，用户在完全同意本协议及车托帮规定的情况下，方有权使用车托帮充值服务。
+                </view>
+                <view class="serviceP mb26">
+                    2、车托帮油卡充值服务仅支持中国石油发行的个人记名主卡和车队卡主卡、中国石化多用户卡中的主卡和单用户卡，加油卡的具体使用规则详见中国石化及中国石油加油卡章程，因用户使用加油卡发生任何问题的，与车托帮无关。
+                </view>
+                <view class="serviceP mb26">
+                    3、用户需完成手机号验证，即可启用油卡充值服务。
+                </view>
+                <view class="serviceP mb26">
+                    4、充值完成后请您携加油卡到中国石油、中石化任意发卡充值网点，将油卡充值资金圈存到加油卡中，即可使用充值资金。
+                </view>
+                <view class="serviceP mb26">
+                    5、如有疑问，请咨询客户电话010-xxxxxxxxx。
+                </view>
+           </view>
+           <view class="closeBtn" data-close="{{one}}" bindtap="close">
+                ×
+           </view>
+       </view>
+
+    </view>

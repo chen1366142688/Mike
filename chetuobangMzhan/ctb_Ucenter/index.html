@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="build/flexible_css.debug.js"></script>
+    <script src="build/flexible.debug.js"></script>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="build/common.debug.css" rel="stylesheet"/>
+    <link href="build/index.debug.css" rel="stylesheet"/>
+    <title>车托帮</title>
+</head>
+<body>
+<div id="t_xx">
+    <div class="today"><!--2017年5月22日（星期一）--></div>
+    <div class="xx_text">今日限行</div>
+    <div class="box clearfix">
+        <span class="area_icon fl"></span>
+        <select id="city" class="fl" onchange="A(this)">
+
+        </select>
+    </div>
+    <div id="num1"><!--2--></div>
+    <div id="num2"><!--7--></div>
+</div>
+<div class="outer">
+    <div class="inner">
+
+    </div>
+</div>
+<nav>
+    <a class="hm" href="javaScript:;"><span class="active">车托帮</span></a>
+    <a href="tools.html"><span>工具</span></a>
+    <a href="car_life.html"><span>车生活</span></a>
+    <a href="user_center.html"><span>我的</span></a>
+</nav>
+</body>
+<!--<script src="js/rem.js"></script>-->
+<script src="https://api.map.baidu.com/api?v=2.0&ak=pUdpk24ECioDBguRBSAAvjuvMOUluvD5"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/index.js"></script>
+
+<script src="js/dropload.min.js"></script>
+<script>
+    $(function(){
+        // dropload
+        var page=0;
+        var dropload = $('.inner').dropload({
+
+            loadDownFn : function(me){
+                page++;
+                //alert(11);
+               // if(page>23){return false;}
+                $('.dropload-down').css('display','none');
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://scms.chetuobang.com/index.php?m=list&a=index&page='+page,
+                    data:"",
+                    //async:false,
+                    success: function(data){
+                        //alert("kko333")
+                        var Article=$.parseJSON( data );
+                        var articleItem=Article.info;
+                        if(Article.code==200){
+                            for(var i=0,articleItems="";i<articleItem.length;i++){
+                                //console.log(articleItem[i].object_id);
+                                /*articleItems +="<div class='content'><a href='content.html?object_id="+articleItem[i].object_id+"'><img src='"+articleItem[i].link+articleItem[i].smeta.thumb1+"' class='news_pic'><div class='con_area'><div class='con_tit'>"+articleItem[i].post_title+"</div><p class='con_p'>"+articleItem[i].post_excerpt+"</p></div></a></div>";*/
+                    articleItems+="<a class='item' href='article.html?object_id="+articleItem[i].object_id+"'><div class='con'><img src='"+articleItem[i].link+articleItem[i].smeta.thumb1+"' class='item_pic'/><div class='con_area'><div class='con_tit'>"+articleItem[i].post_title+"</div><p class='con_p'>"+articleItem[i].post_excerpt+"</p></div></div></a>"
+                            }
+                        }else if(Article.code==401){
+                            var mess="<div style='text-align: center;margin-bottom: 1rem'>"+Article.msg+"</div>";
+                            $('.inner').append(mess);
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function(){
+                            $('.inner').append(articleItems);
+                            // 每次数据加载完，必须重置
+                            dropload.resetload();
+                        },800);
+
+                    },
+                    error: function(xhr, type){
+                        //alert('Ajax error!');
+                        // 即使加载出错，也得重置
+                        dropload.resetload();
+                    }
+                });
+            },
+
+        });
+    });
+</script>
+<script src="js/gong.js"></script>
+</html>

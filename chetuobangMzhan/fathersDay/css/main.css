@@ -1,0 +1,43 @@
+#content{
+    width:667px;
+    height:455px;
+    background: url("../images/model.png") no-repeat;
+    background-size: 100%;
+    margin:0 auto;
+    position: relative;
+    margin-top:50px;
+}
+.qr_code{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background: url("../images/QR.png") no-repeat;
+    background-size: 100%;
+    top:321px;
+    left: 94px;
+}
+.head_photo{
+    width: 75px;
+    height:75px;
+    border-radius: 50%;
+    border:1px solid #fff;
+    position: absolute;
+    top:136px;
+    left: 297px;
+}
+.type{
+    width: 82px;
+    height: 82px;
+    background: url("../images/1.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top:206px;
+    left: 218px;
+}
+h2{
+    font-size: 44px;
+    height: 44px;
+    line-height:44px;
+    margin-top: 72px;
+    margin-bottom:120px;
+}

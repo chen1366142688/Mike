@@ -1,0 +1,47 @@
+<view class="header clearfix">
+<view class="bug" hidden="{{bug}}" style="text-align:center;color:#e4393c;height:70rpx; ">授权失败，请删除重新关注</view>
+    <view class="add fl">
+        <image src="../../images/hm_btn_add.png" style="width:40rpx;height:40rpx;display:none" class="addIcon fl" hidden="{{route[0].style_img}}"></image>
+        <view bindtap="activeRoute" data-id="{{route[0]}}" class="{{route[0].style_font}}">{{route[0].titleRoute}}</view>
+    </view>
+    <view class="add fl">
+    <image src="../../images/hm_btn_add.png" style="width:40rpx;height:40rpx;display:none" class="addIcon fl" hidden="{{route[1].style_img}}"></image>
+        <view  bindtap="activeRoute" data-id="{{route[1]}}"  class="{{route[1].style_font}}">{{route[1].titleRoute}}</view>
+    </view>
+    <view class="add fl">
+    <image src="../../images/hm_btn_add.png" style="width:40rpx;height:40rpx;display:none" class="addIcon fl" hidden="{{route[2].style_img}}"></image>
+        <view  bindtap="activeRoute" data-id="{{route[2]}}" class="{{route[2].style_font}}">{{route[2].titleRoute}}</view>
+    </view>
+    <view class="img fl" bindtap="delete">
+    <image src="../../images/hm_icon_undelete.png" style="width:40rpx;height:40rpx;margin-left:30rpx;margin-top:4rpx;" class="fl" ></image>
+    </view>
+</view>
+<view id="map_box">
+  <map class="navi_map" longitude="{{longitude}}" latitude="{{latitude}}" scale="10" markers="{{markers}}" polyline="{{polyline}}"></map>
+</view>
+<view class="addWayArea">
+    <view class="addWayArea_text" hidden="{{query}}">
+        请查询一条路线
+    </view>
+    <!--未输入地点状态是请查询一条路线，输入完则为结果-->
+    <view class="addWayArea_text clearfix" hidden="{{result}}">
+        <view class="result fl">{{cost}}</view>
+        <view class="result ml60 fl">{{distance}} </view>
+        <view class="result ml60 fl">{{duration}}</view>
+    </view>
+    <view class="whereToGo clearfix  ">
+        <image src="../../images/popup_icon_end.png" style="width:25rpx;height:32rpx;margin-top:10rpx;" class="fl"></image>
+        <text data-value="{{start_name}}" bindtap="start" class="whereGoInp mb10 fl">{{start_name}}</text>
+        <!--<input type="text" placeholder="从哪出发" value = "{{start_name}}" class="whereGoInp mb10 fl" maxlength="16" bindfocus="start"/>-->
+    </view>
+    <view class="whereToGo clearfix ">
+        <image src="../../images/popup_icon_start.png" style="width:25rpx;height:32rpx;margin-top:10rpx;" class="fl"></image>
+        <text data-value="{{end_name}}" bindtap="end" class="whereGoInp bbn fl">{{end_name}}</text>
+        <!--<input  type="text" placeholder="要到哪去" value = "{{end_name}}"  class="whereGoInp bbn fl" maxlength="16" bindfocus="end"/>-->
+    </view>
+    <view class="addBtn">
+        <!--两个按钮状态-->
+       <image src="../../images/hm_btn_unadd.png" style="width:60rpx;height:60rpx;" hidden="{{init}}" bindtap="add"></image>
+       <image src="../../images/hm_btn_add.png" style="width:60rpx;height:60rpx;" hidden="{{inits}}" bindtap="add"></image>
+    </view>
+</view>

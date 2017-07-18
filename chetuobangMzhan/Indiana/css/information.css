@@ -7,31 +7,71 @@
 }
 .main p{
     color: #777777;
+    font-size: 0.7rem;
 }
-.c_from{
-    width:100%;
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size:0.90rem;
 }
-.c_from input,.c_from textarea{
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size:0.90rem;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size:0.90rem;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size:0.90rem;
+}
+.personal,#ph,#ad{
+    display:none;
+}
+#phone{
+    height:2.25rem;
     display: block;
-    border:1px solid #dddddd;
-    border-radius: 0.4rem;
+    border:0.025rem solid transparent;
+    border-radius: 0.3rem;
     background-color: #dddddd;
-    width:100%;
+    width:15.25rem;
     margin:1rem 0;
-    text-indent: 1rem;
+    padding-left: 1rem;
+    font-size: 0.9rem;
     overflow: hidden;
 }
-.c_from input:first-child{
-    height:2.25rem;
-}
-.c_from textarea{
+#address{
     height:5.8rem;
+    width:15.25rem;
+    display: block;
+    border:0.025rem solid transparent;
+    border-radius: 0.4rem;
+    background-color: #dddddd;
+    margin:1rem 0;
+    padding-left: 1rem;
+    overflow: hidden;
+    padding-top:0.3rem;
+    resize:none;
+    font-size: 0.9rem;
 }
-.c_from input:last-child{
-    height:3rem;
-    background-color: #ff4f31;
-    color: #fff;
-    font-size: 1.1rem;
-    font-family: "Yuanti SC light 8.0d1e4";
+#submit{
+    display: block;
+    width:16.25rem;
+    font-size:0.9rem;
+    height:2.75rem;
+    line-height: 2.75rem;
+    font-family: "Yuanti SC";
+    border:1px solid transparent;
     border-radius:2rem;
+    text-align: center;
+    background-color: #a4a4a4;
+    color: #fff;
+}
+
+.main span{
+    display: block;
+    font-size: 0.7rem;
+    line-height: 2rem;
+}
+#ph{
+    margin-top:1rem;
+}
+#ad{
+    margin-bottom:1rem;
 }

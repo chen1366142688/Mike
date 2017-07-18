@@ -1,0 +1,11 @@
+<view class="headPic clearfix">
+    <image src="{{userInfo.avatarUrl}}" background-size="cover" class="fl head"></image>
+    <view class="username">
+        昵称：{{userInfo.nickName}}
+    </view>
+</view>
+<view class="userPhone clearfix" bindtap="binPhone">
+    <image src="../../img/icon_phone.png" class="fl"></image>
+    <view class="txt ml20 fl">手机号</view>
+    <view class="txt mr30 fr" >{{phoneNumber}}</view>
+</view>

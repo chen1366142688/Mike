@@ -1,0 +1,5 @@
+<view class="head">
+    <image src="{{userInfo.avatarUrl}}" ></image>
+</view>
+<view class="txt1">您已绑定手机号码</view>
+<view class="txt2">{{phoneNum}}</view>

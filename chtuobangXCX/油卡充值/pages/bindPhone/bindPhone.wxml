@@ -1,0 +1,49 @@
+<view class="head">
+    <image src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+</view>
+<view class="phoneNumber clearfix">
+    <view class="cnTxt fl">手机号</view>
+    <input name="mobile" type="number" class="phoneData fl" placeholder="请输入手机号" maxlength="11" bindblur="mobileInputEvent" ></input>
+</view>
+<view class="phoneNumber pr clearfix" style="height:118rpx;">
+    <view class="cnTxt fl">验证码</view>
+    <input type="number" class="phoneData fl" placeholder="请输入验证码"  bindblur="saveCode"></input>
+    <button class="sendBtn {{btnIsClick}}" bindtap="vertifyCode">{{VerifyCode}}</button>
+</view>
+<button class="submitBtn " bindtap="bindMobile">绑定</button>
+<view class="protocol clearfix">
+    <icon type="success" size="15" color="#4d8ef1" class="icon_success fl"/>
+    <view class="pTxt fl">我已阅读并同意</view>
+    <view class="pTxt2 fl">《用户协议》</view>
+</view>
+<view class="bindSuccess" hidden="{{hide}}">
+    <view class="successBox">
+        <image src="../../img/mine_popup_success.png"></image>
+        <view class="closeBtn" bindtap="closeWindow">
+                ×
+        </view>
+        <view class="cztit">
+            操作提示
+        </view>
+        <view class="cztit">
+            绑定成功
+        </view>
+        <button class="okBtn" bindtap="suer">确定</button>
+    </view>
+</view>
+<view class="bindUnSuccess" hidden="failHidden">
+    <view class="successBox">
+        <image src="../../img/mine_popup_failed.png"></image>
+        <view class="closeBtn" bindtap="closeWindow">
+                ×
+        </view>
+        <view class="cztit">
+            操作提示
+        </view>
+        <view class="cztit">
+            绑定失败，请重新绑定
+        </view>
+        <button class="okBtn" bindtap="closeWindow">确定</button>
+    </view>
+</view>
+

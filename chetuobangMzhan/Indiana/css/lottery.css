@@ -1,4 +1,4 @@
-body{
+body {
     width: 100%;
     background: url("../images/bg3.png") no-repeat;
     text-align: center;
@@ -6,182 +6,314 @@ body{
     padding-top: 1.5rem;
     background-size: cover;
 }
-#head1{
+
+#head1 {
     display: none;
 }
-#number2{
+
+#number2 {
 
     font-size: 1rem;
 }
-header{
+
+header {
     font-size: 1rem;
     font-style: italic;
     color: #fff;
 }
-#number{
+
+#number {
     color: #ffe750;
     font-size: 1rem;
-    margin:0 0.35rem;
+    margin: 0 0.35rem;
 }
-.clock{
-    width:7.375rem;
-    height:2.275rem;
+
+.clock {
+    width: 7.375rem;
+    height: 2.275rem;
     background: url("../images/clock.png") no-repeat;
     background-size: 100%;
     margin: 0.5rem auto;
-    line-height:2.275rem;
+    line-height: 2.275rem;
     position: relative;
 }
-.clock span{
+
+.clock span {
     font-size: 1rem;
     font-family: "Helvetica";
     color: #ffffff;
     display: block;
     position: absolute;
     height: 1rem;
-    line-height:1rem;
-    top:0.65rem;
+    line-height: 1rem;
+    top: 0.65rem;
 }
-#h{
-    left:0.45rem;
+
+#h {
+    left: 0.45rem;
 }
-#m{
-    left:3.2rem;
+
+#m {
+    left: 3.2rem;
 }
-#s{
+
+#s {
     right: 0.45rem;
 }
-.text{
-    font-size:0.7rem;
-    color:#fff;
+
+.text {
+    font-size: 0.7rem;
+    color: #fff;
     height: 1rem;
-    line-height:1rem;
+    line-height: 1rem;
 }
-#gasnumber{
+
+#gasnumber {
     color: #ffe750;
     font-size: 0.7rem;
     font-family: "Helvetica";
 }
-.party1{
-    width:16.3rem;
-    padding:0.325rem;
+
+.party1 {
+    width: 16.3rem;
+    padding: 0.325rem;
     background: #fff;
     border-radius: 0.75rem;
-    margin:0 auto;
-    margin-top:0.65rem;
+    margin: 0 auto;
+    margin-top: 0.65rem;
 }
-.mynumber{
-    border:0.1rem dotted #ff4f31;
+
+.mynumber {
+    border: 0.1rem dotted #ff4f31;
     border-radius: 0.75rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.925rem;
 }
-.mynumber span{
-    font-size: 0.825rem;
-    margin-left:1.15rem;
-    margin-top:0.5rem;
+
+.mynumber span {
+    font-size: 0.85rem;
+    margin-left: 1.15rem;
+    margin-top: 0.5rem;
     display: block;
-    width: 5.05rem;
+    width: 5.2rem;
 }
-.mynumber .number{
-    margin-top:1.375rem;
+
+.mynumber .number {
+    margin-top: 0.75rem;
+    overflow: hidden;
 }
-.mynumber ul{
-    width: 13.1rem;
-    margin:0 auto;
+
+.mynumber ul {
+    width: 14.975rem;
+    margin: 0 auto;
+    margin-left:0.9rem;
 }
-.mynumber ul li{
+
+.mynumber ul li {
     float: left;
-    width: 2.25rem;
-    height:2.25rem;
-    line-height:2.25rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
     text-align: center;
-    border:0.05rem solid #ff9e5d;
+    border: 0.05rem solid #ff9e5d;
     border-radius: 50%;
     background: #ffffff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: "Helvetica";
-    margin:0 0.15rem 0.15rem 0.05rem;
+    margin: 0 0.15rem 0.15rem 0.05rem;
     color: #ff9e5d;
     font-weight: bold;
 }
-.party2{
-    width:16.3rem;
-    padding:0.325rem;
+
+.party2 {
+    width: 16.3rem;
+    padding: 0.325rem;
     background: #fff;
     border-radius: 0.75rem;
-    margin:0 auto;
-    margin-top:0.65rem;
+    margin: 0 auto;
+    margin-top: 0.65rem;
 }
-.party_area{
-    border:0.1rem dotted #ff4f31;
+
+.party_area {
+    border: 0.1rem dotted #ff4f31;
     border-radius: 0.75rem;
     padding: 0.7rem 1rem;
 }
-.tit .t1,.tit .t2,.tit .t3{
-    font-size: 0.6rem;
+
+.tit .t1, .tit .t2, .tit .t3 {
+    font-size: 0.7rem;
     color: #a4a4a4;
 }
-.tit .t1{
-    margin-left:0.8rem;
+
+.tit .t1 {
+    margin-left: 0.625rem;
+    width: 1.5rem;
 }
-.tit .t2{
-    margin-left:2.525rem;
+
+.tit .t2 {
+    margin-left:1.6rem;
+    width: 5rem;
 }
-.tit .t3{
-    margin-left:4rem;
+
+.tit .t3 {
+    margin-left: 1.8rem;
 }
-.party_area ul{
-    margin-top:0.6rem;
+
+.party_area ul {
+    margin-top: 0.6rem;
     overflow-x: hidden;
 }
-.party_area ul li{
-    width:14.9rem;
-    height:2.325rem;
+
+.party_area ul li {
+    width: 14.9rem;
+    height: 2.5rem;
 }
-.party_area ul li:nth-child(odd){
+
+.party_area ul li:nth-child(odd) {
     border-radius: 0.2rem;
     background: #ebebeb;
 }
-.party_area ul li:nth-child(even){
+
+.party_area ul li:nth-child(even) {
 }
-.party_area ul li span{
+
+.party_area ul li span {
     display: block;
     float: left;
 }
-.no{
-    width:1.5rem;
-    height:1.5rem;
+
+#username {
+    max-width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#userinfo {
+    margin-top: 0.3rem;
+    text-align: center;
+    max-width: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.no {
+    width: 1.5rem;
+    height: 1.5rem;
     color: #ff9e5d;
     border-radius: 50%;
-    border:0.05rem solid #ff9e5d;
-    line-height:1.5rem;
+    border: 0.05rem solid #ff9e5d;
+    line-height: 1.5rem;
     font-family: "Helvetica";
-    font-size: 0.5rem;
-    margin-top:0.4rem;
-    margin-left:0.6rem;
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+    margin-left: 0.6rem;
     background: #fff;
 }
-.userinfo{
+
+.userinfo {
     width: 5rem;
-    margin-left:1rem;
+    margin-left: 1.6rem;
 }
-.userinfo b{
+
+.userinfo b {
     display: block;
 }
-.time{
-    margin-left:1rem;
-    margin-top:0.925rem;
+
+.time {
+    margin-left: 1.2rem;
+    margin-top: 0.8rem;
     font-family: Helvetica;
+    width: 3.8rem;
 }
-.mt05{
-    margin-top:0.5rem;
+
+.mt05 {
+    margin-top: 0.5rem;
 }
-#gasnumber2{
+
+#gasnumber2 {
     color: #ffe750;
     font-size: 0.7rem;
 }
-.lookmain{
-    margin-left:12.125rem;
+
+.lookmain {
+    margin-left: 12.125rem;
     color: #ffe750;
     font-size: 0.65rem;
+}
+
+#no, #userinfo, #time {
+    float: left;
+}
+
+#userarea {
+    margin-top: 0rem;
+}
+
+.my_num {
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    margin-top: 0.65rem;
+}
+.lotteryed{
+    border-top:0.025rem solid #d7d7d7;
+    width: 14.975rem;
+    margin:0 auto;
+    margin-top: 0.75rem;
+    padding-top:1rem;
+}
+.l_num{
+    font-size: 0.75rem;
+    color:#3e3e3e;
+    text-align: left;
+    margin-left: 0.5rem;
+}
+.who{
+    margin-top: 0.625rem;
+    height: 1.5rem;
+    line-height:1.5rem;
+}
+.mmp{
+    width: 7rem;
+    margin-left: 0.75rem;
+}
+.who_number{
+    width: 1.5rem;
+    background: #fe4e48;
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    line-height:1.5rem;
+    margin-left:1.05rem;
+}
+.who_name{
+    margin-left:0.85rem;
+    max-width:2rem ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.who_area{
+    margin-left:0.25rem;
+    max-width: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.who .who_time{
+    margin-right:0.9rem;
+    font-size: 0.6rem;
+    font-family: "Helvetica";
+}
+#userarea,#time{
+    font-size: 0.6rem;
+}
+.who div{
+    font-size: 0.7rem;
+}
+#username{
+    font-size: 0.8rem;
 }

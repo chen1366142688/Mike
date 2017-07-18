@@ -1,0 +1,62 @@
+<view class="noOrder" hidden="{{no}}">
+    <image src="../../img/list_bg_nolist.png" style="width:304rpx;height:202rpx;margin:0 auto;"></image>
+    <view class="noOrderTxt">当前还没有充值记录</view>
+</view>
+<view class="orders">
+    <view class="all" hidden="{{nos}}">共充值{{len}}次</view>
+    <view class="orderList">
+        <view class="orderListLi clearfix" wx:for="{{results}}">
+            <view class="cardImg fl">
+              <image src="../../img/list_card_shihua.png" class="card" wx:if="{{item.channel == 0}}"></image>
+              <image src="../../img/list_card_shiyou.png" class="card" wx:elif="{{item.channel == 2}}"></image> 
+            </view>
+        <view class="cardData fl">
+        <view class="data1 clearfix">
+            <view class="cardNumber fl">{{item.cardNum}}</view>
+            <view class="orderPrice fr">{{item.payAmount}}元</view>
+        </view>
+        <view class="data2 clearfix">
+            <view class="datatime fl">{{item.time}}</view>
+            <view class="state success fr" wx:if="{{item.orderStatus == 2}}">充值成功</view>
+             <view class="state ing fr" wx:if="{{item.orderStatus == 1}}">充值中</view>
+             <view class="stateFail fr" wx:if="{{item.orderStatus == 3}}" bindtap="failReason">
+                <view class="failTxt fl" >充值失败</view>
+                <image src="../../img/icon_list_detail.png"></image>
+            </view>
+        </view>    
+            
+        </view>
+            
+        </view>
+         
+        
+    </view >
+</view>
+<view class="failReason" hidden="{{hide}}">
+     <view class="serviceBox" >
+           <view class="serviceTit">充值失败</view>
+           <view class="scrollArea">
+                <view class="serviceP mb26">
+                    1.网络不稳定 
+                </view>
+                <view class="serviceP mb26">
+                    2.没有充值到您的卡里,可能由于您的账户余额不足
+                </view>
+                <view class="serviceP mb26">
+                    3.副卡、增值税票卡不支持在线充值副卡、增值税票卡不支持在线充值
+                </view>
+                <view class="serviceP mb26">
+                    请与我们联系,电话:86460712
+                </view>
+                <view class="serviceP mb26">
+                    5.副卡、增值税票卡不支持在线充值副卡、增值税票卡不支持在线充值
+                </view>
+                <view class="serviceP mb26">
+                    5.副卡、增值税票卡不支持在线充值副卡、增值税票卡不支持在线充值
+                </view>
+           </view>
+           <view class="closeBtn" bindtap="closeWindow">
+                ×
+           </view>
+       </view>
+</view>

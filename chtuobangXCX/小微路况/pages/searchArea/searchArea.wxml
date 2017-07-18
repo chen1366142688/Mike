@@ -1,0 +1,21 @@
+<view class="search clearfix"> 
+    <input bindinput="bindInput" class="search-input fl" placeholder="请输入你要查询的地址" id="mainInput" value="{{userInput}}" bindtap="bindFocus" >
+        <icon type="search" size="15" color="#4f5761" class="search-icon inside"/>
+    </input>
+    <view class="cancel fl" id="clearValue" bindtap="clearInput">取消</view>
+</view>
+<view hidden="{{cancel}}" bindtap="bindSearch" data-keywords="{{i.name}}" class="text_box" wx:for="{{tips}}" wx:for-item="i">
+  {{i.name}}
+</view>
+<view style="background:#f0f0f0;height:20rpx;"></view>
+<view class="history" hidden="{{roteList}}" wx:for="{{history}}">
+    <view class="history_list" bindtap="bindSearch" data-value="{{item}}">
+        {{item.address}}
+    </view>
+</view>
+<view class="clear" bindtap="clear" hidden="{{clearHistory}}">
+        清空历史记录
+    </view>
+<view class="noHistory" hidden="{{noHistory}}">
+    没有历史记录
+</view>

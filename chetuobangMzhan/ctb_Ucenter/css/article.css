@@ -1,0 +1,21 @@
+body{
+    background: #fff;
+}
+.main{
+    max-height: 1091px;
+    overflow-y: scroll;
+    margin-bottom: 115px;
+    padding:22px 10px 0 10px;
+}
+.main img{
+    width: 723px;
+    height: 358px;
+    margin:0 auto;
+}
+.main .tit{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom:20px;
+    max-height: 70px;
+    text-indent: 2em;
+}

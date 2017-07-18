@@ -1,0 +1,27 @@
+<view class="mainWindow">
+    <view class="top">
+        <image src="../../images/popup_logo.png" style="width:120rpx;height:50rpx;margin-top:30rpx;margin-left:190rpx;"></image>
+    </view>
+    <form bindsubmit="insertRoute" bindreset="formResetaction">
+    <view class="typeInp">
+        <input maxlength="6" name="route"  type="text" placeholder="默认路线" class="typeWay">默认路线</input>
+    </view>
+    <view class="start clearfix">
+        <image src="../../images/popup_icon_end.png" class="fl" style="width:25rpx;height:32rpx;"></image>
+        <view class="startView fl">
+            {{startName}}
+        </view>
+    </view>
+    <view class="end clearfix">
+        <image src="../../images/popup_icon_start.png" class="fl" style="width:25rpx;height:32rpx;"></image>
+        <view class="startView fl">
+            {{endName}}
+        </view>
+    </view>
+    <view class="btnArea clearfix">
+        <button formType='reset' class="cancel fl">取消</button>
+        <button formType='submit' class="sure f1">确定</button>
+        <!--<view class="sure fl">确定</view>-->
+    </view>
+    </form>
+</view>

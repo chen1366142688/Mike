@@ -1,0 +1,134 @@
+body {
+  background: #f2f2f2;
+  height: 100%;
+  position: relative;
+}
+
+#t_xx {
+  padding-top: 0.866667rem;
+  padding-left: 0.613333rem;
+  position: relative;
+  padding-bottom: 1.066667rem;
+}
+
+.today {
+  font-size: 0.426667rem;
+  color: #12acdf;
+  font-weight: bold;
+  height: 0.426667rem;
+  line-height: 0.426667rem;
+}
+
+.xx_text {
+  position: absolute;
+  top: 0.72rem;
+  color: #12acdf;
+  right: 0.773333rem;
+  font-weight: bold;
+  font-size: 0.32rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+}
+
+.box {
+  margin-top: 0.4rem;
+}
+
+.area_icon {
+  width: 0.306667rem;
+  height: 0.4rem;
+  background: url("../images/M_demo-0607_03.png") no-repeat;
+  background-size: cover;
+  margin-top: 0.053333rem;
+}
+
+#city {
+  font-size: 0.346667rem;
+  color: #12acdf;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  margin-left: 0.16rem;
+  width: 1.333333rem;
+}
+
+#num1,
+#num2 {
+  width: 0.933333rem;
+  height: 0.933333rem;
+  position: absolute;
+  border: 0.026667rem solid #12acdf;
+  font-weight: bold;
+  border-radius: 50%;
+  line-height: 0.933333rem;
+  text-align: center;
+  color: #12acdf;
+  top: 1.36rem;
+  font-size: 0.466667rem;
+}
+
+#num1 {
+  right: 1.866667rem;
+}
+
+#num2 {
+  right: 0.706667rem;
+}
+
+.outer {
+  padding: 0 0.293333rem;
+}
+
+.item_pic {
+  width: 8.813333rem;
+  height: 4.373333rem;
+  margin: 0 auto;
+}
+
+.con {
+  background: #fff;
+  width: 9.373333rem;
+  border-top: 0.293333rem solid #fff;
+  padding-bottom: 0.533333rem;
+  margin-bottom: 0.253333rem;
+}
+
+.con_tit {
+  font-size: 0.426667rem;
+  font-weight: bold;
+  margin-top: 0.373333rem;
+  margin-left: 0.453333rem;
+  max-width: 8.44rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.con_p {
+  margin-top: 0.333333rem;
+  margin-left: 0.453333rem;
+  color: #828282;
+  font-size: 0.32rem;
+  max-height: 0.933333rem;
+  line-height: 0.466667rem;
+  overflow: hidden;
+  padding-right: 0.4rem;
+}
+
+.inner {
+  height: 11.28rem;
+  max-height: 11.28rem;
+  overflow-y: scroll;
+}
+
+.inner>.item:last-of-type .con {
+  margin-bottom: 1.533333rem;
+}
+
+.dropload-down {
+  display: none;
+}

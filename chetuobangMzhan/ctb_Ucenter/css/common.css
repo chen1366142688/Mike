@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    border-top: 2px solid #a9e536;
+    position: fixed;
+    bottom: 0;
+    width: 750px;
+    background: #fff;
+}
+nav a{
+    flex: 1;
+    text-align: center;
+    padding-top: 76px;
+    padding-bottom: 20px;
+}
+nav span{
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+    color: #bdbdbd;
+}
+.active{
+    color: #a9e536;
+}
+nav a:nth-child(1){
+    background: url("../images/M_demo-0607_07.png") no-repeat center 24px;
+    background-size: 42px 42px;
+}
+nav a:nth-child(2){
+    background: url("../images/M_demo-0607_09.png") no-repeat center 24px;
+    background-size: 42px 42px;
+}
+nav a:nth-child(3){
+    background: url("../images/M_demo-0607_11.png") no-repeat center 24px;
+    background-size: 48px 42px;
+}
+nav a:nth-child(4){
+    background: url("../images/M_demo-0607_13.png") no-repeat center 24px;
+    background-size: 42px 42px;
+}

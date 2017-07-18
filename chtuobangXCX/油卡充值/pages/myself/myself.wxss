@@ -1,0 +1,46 @@
+page{
+    background: #f5f5f5;
+}
+.headPic{
+    border-top: 1rpx solid #dbdbdb;
+    height: 160rpx;
+    line-height: 160rpx;
+    background: #fff;
+}
+.head{
+    width: 84rpx;
+    height: 84rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-top: 38rpx;
+    border-radius: 50%;
+}
+.username{
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    display: inline-block;
+    color: #252525;
+}
+.userPhone{
+    background: #fff;
+    margin-top: 20rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.userPhone image{
+    margin-left: 30rpx;
+    width:25rpx;
+    height:36rpx;
+    margin-top: 32rpx;
+}
+.txt{
+    font-size: 32rpx;
+    color: #919191;
+}
+.ml20{
+    margin-left: 20rpx;
+}
+.mr30{
+    margin-right:30rpx;
+}

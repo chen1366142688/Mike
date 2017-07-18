@@ -1,0 +1,24 @@
+body {
+  background: #fff;
+}
+
+.main {
+  max-height: 14.546667rem;
+  overflow-y: scroll;
+  margin-bottom: 1.533333rem;
+  padding: 0.293333rem 0.133333rem 0 0.133333rem;
+}
+
+.main img {
+  width: 9.64rem;
+  height: 4.773333rem;
+  margin: 0 auto;
+}
+
+.main .tit {
+  font-size: 0.426667rem;
+  font-weight: bold;
+  margin-bottom: 0.266667rem;
+  max-height: 0.933333rem;
+  text-indent: 2em;
+}

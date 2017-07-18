@@ -1,0 +1,116 @@
+body{
+    background: #f2f2f2;
+    height: 100%;
+    position: relative;
+}
+#t_xx{
+    padding-top: 65px;
+    padding-left: 46px;
+    position: relative;
+    padding-bottom: 80px;
+}
+.today{
+    font-size: 32px;
+    color: #12acdf;
+    font-weight: bold;
+    height: 32px;
+    line-height:32px;
+}
+.xx_text{
+    position: absolute;
+    top:54px;
+    color: #12acdf;
+    right:58px;
+    font-weight: bold;
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+.box{
+    margin-top:30px;
+}
+.area_icon{
+    width: 23px;
+    height: 30px;
+    background: url("../images/M_demo-0607_03.png") no-repeat;
+    background-size: cover;
+    margin-top: 4px;
+}
+#city{
+    font-size: 26px;
+    color: #12acdf;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    margin-left: 12px;
+    width:100px;
+}
+#num1,#num2{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border:2px solid #12acdf;
+    font-weight: bold;
+    border-radius: 50%;
+    line-height:70px;
+    text-align: center;
+    color: #12acdf;
+    top:102px;
+    font-size: 35px;
+}
+#num1{
+    right: 140px;
+}
+#num2{
+    right: 53px;
+}
+.outer{
+    padding: 0 22px;
+}
+.item_pic{
+    width: 661px;
+    height: 328px;
+    margin: 0 auto;
+}
+.con{
+    background: #fff;
+    width: 703px;
+    border-top: 22px solid #fff;
+    padding-bottom: 40px;
+    margin-bottom: 19px;
+}
+.con_tit{
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 28px;
+    margin-left: 34px;
+    max-width: 633px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.con_p{
+    margin-top:25px;
+    margin-left:34px;
+    color: #828282;
+    font-size: 24px;
+    max-height: 70px;
+    line-height: 35px;
+    overflow: hidden;
+    padding-right: 30px;
+}
+.inner{
+    height: 846px;
+    max-height: 846px;
+    overflow-y: scroll;
+}
+.inner>.item:last-of-type .con{
+    margin-bottom: 115px;
+}
+.dropload-down{
+    display: none;
+}

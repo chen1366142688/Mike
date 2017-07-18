@@ -1,0 +1,44 @@
+.head{
+    border-top: 1rpx solid #dbdbdb;
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #dbdbdb;
+}
+.head image{
+    width: 285rpx;
+    height: 196rpx;
+    margin:0 auto;
+    margin-top: 80rpx;
+}
+.list{
+    margin-top: 30rpx;
+}
+.txt1{
+    font-size: 36rpx;
+    text-align: center;
+    margin-top: 30rpx;
+}
+.fs26{
+    font-size: 26rpx;
+}
+.fs36{
+    font-size: 36rpx;
+}
+.type{
+    font-size: 26rpx;
+    color: #919191;
+    margin-left: 50rpx;
+}
+.data{
+    font-size: 26rpx;
+    color: #252525;
+    margin-right: 50rpx;
+}
+.okBtn{
+    width: 690rpx;
+    height: 100rpx;
+    color: #fff;
+    background: #86d53c;
+    line-height: 100rpx;
+    border-radius: 2rpx;
+    margin-top: 70rpx;
+}

@@ -1,0 +1,138 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+page{
+    background: #b7bdc4;
+    font-family: "PingFang SC";    
+}
+.body{
+  position: relative;
+}
+.img_bg{
+  width: 750rpx;
+  height: 364rpx;
+  border-top: 1rpx solid #87919e;
+  display: block;
+}
+.city_btn{
+  position: absolute;
+  top: 100rpx;
+  height: 80rpx;
+  border: 2px solid #fff;
+  left: 50%;
+  transform:translateX(-50%);
+  padding: 0 30rpx;
+}
+.icon_1{
+  width: 22rpx;
+  height: 29rpx;
+  margin-top: 24rpx;
+  margin-right: 10rpx;
+}
+.icon_2{
+  width: 26rpx;
+  height: 14rpx;
+  margin-top:35rpx;
+}
+.city_name{
+  font-size: 36rpx;
+  color:#fff;
+  margin-top: 14rpx;
+  margin-right: 10rpx;
+}
+.today_text{
+    position: absolute;
+    top: 310rpx;
+}
+.text_1{
+    margin-left: 50rpx;
+    font-size: 36rpx;
+    color: #323d49;
+    margin-right: 20rpx;
+}
+.text_2{
+    color: #333d49;
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}
+.oil{
+    height: 150rpx;
+    line-height: 150rpx;
+    position: relative;
+    background: #697686;
+    margin-bottom: 10rpx;
+}
+.oil:nth-child(1 ){
+    margin-bottom: 1
+}
+.number{
+    font-size: 40rpx;
+    color: #fff;
+    margin-left: 50rpx;
+    width:46rpx;
+}
+.fh{
+    font-size: 24rpx;
+    color:#fff;
+    position: absolute;
+    top: -8rpx;
+    left: 114rpx;
+    height: 24rpx;
+}
+.hz{
+    margin-left: 63rpx;
+    font-size: 26rpx;
+    color:#fff; 
+}
+.red_area{
+    margin-right: 40rpx;
+    width: 280rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+    background: #df6668;
+    line-height: 100rpx;
+    position: relative;
+    margin-top: 25rpx;
+}
+.money_data{
+    margin-left:  20rpx;
+    font-size: 60rpx;
+    color: #fff;
+    font-weight: bold;
+}
+.money_text{
+    font-size: 22rpx;
+    color: #fff;
+    position: absolute;
+    top: 10rpx;
+    right: 32rpx;
+}
+.up,.down{
+    width: 23rpx;
+    height: 22rpx;
+    margin-left: 170rpx;
+}
+
+.logo{
+    width: 190rpx;
+    height: 42rpx;
+    margin-top: 100rpx;
+    margin-left: 510rpx;
+}
+.no{
+  font-size:36rpx;
+  margin-top: 200rpx;
+  text-align: center;
+  color: #808790;
+  height: 534rpx;
+}
+.shuoming{
+  position: absolute;
+  bottom: 110rpx;
+  left: 50rpx;
+  font-size: 26rpx;
+  color: #80878f;
+}

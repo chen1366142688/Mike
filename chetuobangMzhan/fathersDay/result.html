@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>images</title>
+	<!-- html2canvas就是这样一款前端插件,它的原理是将Dom节点在Canvas里边画出来 -->
+	<script src="js/html2canvas.min.js"></script>
+
+	<!-- 将canvas图片保存成图片 -->
+	<script src="js/canvas2image.js"></script>
+	<script src="js/base64.js"></script>
+	<style>
+		#content{
+			border-radius: 3px;
+		}
+		.myword{
+			color: green;
+			border: 1px solid gray;
+			border-radius: 3px;
+			text-align: center;
+			margin-left: 26px;
+			margin-top: 10px;
+			float: left;
+			padding: 5px;
+		}
+		.ah{
+			display: block;
+			text-align: center;
+			color: #666;
+		}
+		#btnSave,#Download{
+			margin: 10px 0 10px 26px;
+		}
+		.tx,.bt{
+			border: 1px solid #999;
+			width: 100px;
+			height: 20px;
+			margin-left: 26px;
+			margin-bottom: 10px;
+			border-radius: 3px;
+		}
+		.bt{
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+		}
+		#Download{
+			width:100px;
+			height:50px;
+		}
+	</style>
+</head>
+<body>
+	<div id=content style="width:80%;height:300px;border:1px gray solid">
+	    <span class="myword">Hello world</span>
+	    <br>
+		<img class="img" src=""  alt="头像" style="width:50px;height:50px;border:1px gray solid;border-radius:50%">
+	    <input type="text" class="tx">
+		<br />
+	    <input type="button" class="bt" value="提交">
+	</div>
+	<button id="btnSave">转换成图片</button>
+	<div id="images"></div>
+	<button id="Download">Download</button>
+	<div class="dd"></div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+	var ssh=sessionStorage.src;
+	var img=$(".img").attr("src",ssh);
+	console.log(img);
+
+/*生成canvas图形*/
+
+// 获取按钮id
+var btnSave = document.getElementById("btnSave");
+// 获取内容id
+var content = document.getElementById("content");
+// 进行canvas生成
+btnSave.onclick = function(){
+	html2canvas(content, {
+        onrendered: function(canvas) {
+        	//添加属性
+        	canvas.setAttribute('id','thecanvas');
+			//读取属性值
+			// var value= canvas.getAttribute('id');
+            document.getElementById('images').appendChild(canvas);
+        }
+	});
+}
+</script>
+<script>
+
+var Download = document.getElementById("Download");
+Download.onclick = function(){
+	var oCanvas = document.getElementById("thecanvas");
+
+	/*自动保存为png*/
+	// 获取图片资源
+	var img_data1 = Canvas2Image.saveAsPNG(oCanvas, true).getAttribute('src');
+	console.log(img_data1);
+	saveFile(img_data1, 'abc');
+
+
+	/*下面的为原生的保存，不带格式名*/
+	// 这将会提示用户保存PNG图片
+	// Canvas2Image.saveAsPNG(oCanvas);
+}
+// 保存文件函数
+var saveFile = function(data, filename){
+    var save_link = document.createElement('img');
+    console.log(save_link);
+    $('.dd').append(save_link);
+    save_link.src = data;
+    save_link.download = filename;
+   
+    var event = document.createEvent('MouseEvents');
+    event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    save_link.dispatchEvent(event);
+};
+</script>
+</html>

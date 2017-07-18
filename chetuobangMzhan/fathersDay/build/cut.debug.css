@@ -1,0 +1,80 @@
+body {
+  margin: 0.266667rem;
+  text-align: center;
+}
+
+#clipArea {
+  margin: 0.266667rem;
+  height: 8rem;
+}
+
+#view {
+  margin: 0 auto;
+  width: 2.666667rem;
+  height: 2.666667rem;
+  border-radius: 50%;
+}
+
+.upData {
+  display: block;
+  color: #fff;
+  font-size: 0.4rem;
+  text-align: center;
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  margin: 0.266667rem auto 0 auto;
+  border: 0.013333rem solid darkgreen;
+  border-radius: 0.04rem;
+  background-color: #33a139;
+}
+
+/*#file{
+    height: 50px;
+    line-height:50px;
+    margin: 5px;
+    background: #33a139;
+    border: 0;
+    padding: 0 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #fff;
+}*/
+
+#clipBtn {
+  height: 0.826667rem;
+  line-height: 0.826667rem;
+  background: #33a139;
+  padding: 0 0.533333rem;
+  border-radius: 0.106667rem;
+  color: #fff;
+  border: 0.013333rem solid #000000;
+  margin-right: 1.333333rem;
+}
+
+.file {
+  position: relative;
+  display: inline-block;
+  background: #33a139;
+  border-radius: 0.106667rem;
+  padding: 0 0.533333rem;
+  overflow: hidden;
+  color: #ffffff;
+  text-decoration: none;
+  text-indent: 0;
+  height: 0.773333rem;
+  line-height: 0.773333rem;
+  margin-left: 1.333333rem;
+  border: 0.013333rem solid #000000;
+}
+
+.file input {
+  position: absolute;
+  font-size: 1.333333rem;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.box {
+  margin-bottom: 0.266667rem;
+}

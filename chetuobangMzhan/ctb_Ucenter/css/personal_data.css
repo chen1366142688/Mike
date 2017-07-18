@@ -1,0 +1,97 @@
+.fav_1{
+    padding: 30px 0;
+    border-bottom: 4px solid #f2f2f2;
+}
+.top{
+    margin-left:40px;
+}
+.fav_1 i{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url("../images/icon_my_love@2x.png") no-repeat;
+    background-size: 100%;
+}
+.fav_1 span{
+    font-size: 26px;
+    color: #bcbcbc;
+    margin-top: 15px;
+    margin-left:20px;
+}
+.highlights{
+    margin-left:120px;
+}
+.highlights b{
+    display: inline-block;
+    color: #fff;
+    width: 100px;
+    height: 32px;
+    border-radius: 14px;
+    line-height:32px;
+    text-align: center;
+    font-size: 22px ;
+}
+.highlights b:nth-child(1){
+    background: #a5e42f;
+}
+.highlights b:nth-child(2){
+    background: #ff7d13;
+    margin-left:20px;
+}
+.highlights b:nth-child(3){
+    background: #ff5959;
+    margin-left:20px;
+}
+ul li{
+    border-bottom: 4px solid #f2f2f2;
+}
+ul li i{
+    width: 60px;
+    height: 60px;
+    margin:30px 0px 30px 40px;
+}
+ul li span{
+    font-size: 26px;
+    color: #bcbcbc;
+    margin-left:20px;
+    margin-top: 45px;
+    width: 106px;
+}
+ul li b{
+    font-size: 30px;
+    color: #3d3d3d;
+    margin-left: 40px;
+    margin-top: 45px;
+
+}
+ul li:nth-child(1) i{
+    background: url("../images/icon_my_brand@2x.png") no-repeat;
+    background-size: 100%;
+}
+ul li:nth-child(2) i{
+    background: url("../images/icon_my_car@2x.png") no-repeat;
+    background-size: 100%;
+}
+ul li:nth-child(3){
+    border-top: 30px solid #f2f2f2;
+}
+ul li:nth-child(3) i{
+    background: url("../images/icon_my_cause@2x.png") no-repeat;
+    background-size: 100%;
+}
+ul li:nth-child(4) i{
+    background: url("../images/icon_my_money@2x.png") no-repeat;
+    background-size: 100%;
+}
+ul li:nth-child(5) i{
+    background: url("../images/icon_icon_education@2x.png") no-repeat;
+    background-size: 100%;
+}
+ul li:nth-child(6) i{
+    background: url("../images/icon_my_school@2x.png") no-repeat;
+    background-size: 100%;
+}
+ul li:nth-child(7) i{
+    background: url("../images/icon_my_life@2x.png") no-repeat;
+    background-size: 100%;
+}

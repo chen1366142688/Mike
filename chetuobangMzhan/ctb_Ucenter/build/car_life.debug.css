@@ -1,0 +1,50 @@
+nav a:nth-child(1) {
+  background: url("../images/tools_19.png") no-repeat center 0.32rem;
+  background-size: 0.56rem 0.56rem;
+}
+
+nav a:nth-child(3) {
+  background: url("../images/car_life_17.png") no-repeat center 0.32rem;
+  background-size: 0.64rem 0.56rem;
+}
+
+.btn_area {
+  padding-top: 0.56rem;
+}
+
+.btn_area a {
+  display: block;
+  text-indent: -13.32rem;
+  margin-left: 0.4rem;
+}
+
+.btn_area a:nth-child(1) {
+  background: url("../images/car_life_03.png") no-repeat;
+  width: 9.186667rem;
+  height: 3.626667rem;
+  background-size: cover;
+}
+
+.btn_area a:nth-child(2) {
+  background: url("../images/car_life_06.png") no-repeat;
+  width: 9.186667rem;
+  height: 2.56rem;
+  background-size: cover;
+  margin-top: 0.48rem;
+}
+
+.btn_area a:nth-child(3) {
+  background: url("../images/car_life_08.png") no-repeat;
+  width: 9.186667rem;
+  height: 2.56rem;
+  background-size: cover;
+  margin-top: 0.333333rem;
+}
+
+.btn_area a:nth-child(4) {
+  background: url("../images/car_life_10.png") no-repeat;
+  width: 9.186667rem;
+  height: 2.88rem;
+  background-size: cover;
+  margin-top: 0.066667rem;
+}

@@ -1,0 +1,22 @@
+<view class="head">
+    <image src="../../img/icon_buy_sucess.png"></image>
+    <view class="txt1">付款成功</view>
+    <view class="txt1 fs26">您的充值将会在一个工作日内到账，请注意查收</view>
+</view>
+<view class="list clearfix">
+    <view class="type fl">充值金额</view>
+    <view class="data fr" style="font-size:36rpx;">￥500</view>
+</view>
+<view class="list clearfix">
+    <view class="type fl">充值时间</view>
+    <view class="data fr">2017-06-17   14:53:21</view>
+</view>
+<view class="list clearfix">
+    <view class="type fl">充值卡号</view>
+    <view class="data fr">21912826353728291876</view>
+</view>
+<view class="list clearfix">
+    <view class="type fl">手机号码</view>
+    <view class="data fr">15301181735</view>
+</view>
+<button class="okBtn" bindtap="callBackHome">返回首页</button>

@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>油量夺宝</title>
+    <link href="images/icon-ctb.jpg" rel="shortcut icon">
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/index.css" rel="stylesheet"/>
     <script src="js/rem.js"></script>
+    <script>
+        window.onload=function () {
+            var oBtn=document.getElementById('close');
+            var oCon=document.getElementById('index_alert');
+            var oFree=document.getElementById('free');
+            oFree.onclick=function () {
+                oCon.style.display='block';
+            }
+            oBtn.onclick=function () {
+                oCon.style.display='none';
+            }
+        }
+    </script>
 </head>
 <body>
+    <div class="new_btn">
+        <a href="javascript:;" class="new_btn_a" id="free">免费油豆 >></a>
+    </div>
+    <div class="tit">
+        即刻参与夺宝，赢取油豆，<span>免费</span> 给油卡充值！
+    </div>
     <nav>
-        <a href="javascript:;">车主福利</a>
         <a href="javascript:;" class="active">油卡充值</a>
-        <a href="javascript:;">积分商城</a>
-        <a href="javascript:;">游戏中心</a>
+        <a href="http://novel.chetuobang.com/game.html">游戏中心</a>
+        <a href="https://shequ.yunzhijia.com/thirdapp/forum/network/58c763cde4b0f8046d0fd3c3">车主社区</a>
     </nav>
     <div class="main">
         <div class="gas">
-            <span class="gas_num">
-                128
-            </span>
+            <div class="light"></div>
         </div>
         <div>
             <a href="user.html" class="user"></a>
@@ -27,14 +48,22 @@
         <a href="main.html" id="join_btn">立即参与</a>
         <div class="buy">
             <!--Today_Gas_Price-->
-            <div class="today_gas_price">
-                <span id="price_yuan">6</span>
-                <span class="d">.</span>
-                <span id="price_jiaofen">50</span>
-            </div>
+            <div id="price_yuan">6</div>
+            <div class="d">.</div>
+            <div id="price_jiaofen">50</div>
             <a href="pterol.html" class="card_zsh"></a>
             <a href="javascript:;" class="card_zsy"></a>
         </div>
     </div>
+    <div class="index_alert" id="index_alert">
+        <div class="index_alert_con">
+            <a href="javascript:;" class="join_act"></a>
+        </div>
+        <a href="javascript:;" class="close_cyou" id="close">
+            <span class="x"></span>
+        </a>
+        <a href="javascript:;" id="go_to_act"></a>
+    </div>
 </body>
+
 </html>

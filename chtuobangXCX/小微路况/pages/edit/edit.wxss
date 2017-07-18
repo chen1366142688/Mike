@@ -1,0 +1,93 @@
+page{
+    background: rgba(0,0,0,.255);
+    position: relative;
+    font-family: "PingFang SC";
+}
+image{
+    display: block;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.mainWindow{
+    width: 500rpx;
+    height: 460rpx;
+    border-radius: 10rpx;
+    background: #fff;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 296rpx;
+    padding-top: 30rpx;
+}
+.top{
+    text-align: center;
+}
+.typeWay{
+    width: 420rpx;
+    text-align: center;
+    margin: 0 auto;
+    background: #f2f2f2;
+    font-size: 32rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-top: 20rpx;
+}
+.start{
+    margin-top: 40rpx;   
+    margin-left: 40rpx; 
+}
+.end{
+    margin-left: 40rpx;
+}
+.startView{
+    color: #333d49;
+    font-size: 32rpx;
+    max-height: 76rpx;
+    overflow: hidden;
+    line-height: 36rpx;
+    width: 375rpx;
+    margin-left: 20rpx;
+    height: 76rpx;  
+}
+.cancel{
+    width: 250.5rpx;
+    background: #d2d2d2;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 0;
+    border-bottom-left-radius: 10rpx;
+}
+.sure{
+    width: 251rpx;
+    background: #a0d53c;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 0;
+    border-bottom-right-radius: 10rpx;
+}
+.btnArea{
+    position: absolute;
+    bottom: 0;
+}
+button::after {
+  border:0;
+  border-radius: 0;
+}

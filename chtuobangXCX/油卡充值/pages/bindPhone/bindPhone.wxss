@@ -1,0 +1,152 @@
+page{
+    background: #f5f5f5;
+    position: relative;
+    height: 100%;
+}
+.head{
+    border-top: 1rpx solid #f5f5f5;
+    background: #fff;
+    margin: 0rpx auto;
+    padding: 50rpx 0;
+}
+.head image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius:50%;
+    margin: 0 auto;
+}
+.phoneNumber{
+    border-bottom: 1rpx solid #dbdbdb;
+    background: #fff;
+}
+.pr{
+    position: relative;
+}
+.phoneData{
+    font-size: 36rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    color: #252525;
+    padding: 40rpx 0;
+    margin-left: 30rpx;
+}
+.sendBtn{
+    width: 190rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    font-size: 26rpx;
+    text-align: center;
+    margin-right: 30rpx;
+    color: #fff;
+    border-radius: 2rpx;
+    background: #86d53c;
+    position: absolute;
+    top: 35rpx;
+    right: 0rpx;
+    border: 2rpx solid #86d53c;
+}
+.active{
+    background: #fff;
+    color: #919191;
+    border:2rpx solid #979797;
+}
+button:after{
+    border-radius: 0;
+    border: none;
+}
+.cnTxt{
+    font-size: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    margin-left: 30rpx;
+    margin-top: 50rpx;
+    color: #919191;
+}
+.submitBtn{
+    width: 690rpx;
+    height: 100rpx;
+    background: #86d53c;
+    color: #fff;
+    margin-top: 40rpx;
+    font-size: 36rpx;
+    border-radius: 2rpx;
+    line-height: 100rpx;
+}
+.protocol{
+    margin-top: 30rpx;
+}
+.pTxt{
+    font-size: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    color: #919191; 
+    margin-left: 10rpx;
+    margin-top: 5rpx;
+}
+.pTxt2{
+    font-size: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    color: #3d76ed; 
+    margin-top: 5rpx;
+}
+.icon_success{
+    margin-left: 30rpx;
+}
+.cannotclick{
+    background: #fff;
+    color: #919191;
+    border-color:#979797;
+}
+.bindSuccess,.bindUnSuccess{
+    width: 750rpx;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.successBox{
+    padding-top: 50rpx;
+    width: 530rpx;
+    background: #fff;
+    margin: 0 auto;
+    padding-bottom: 30rpx;
+    position: relative;    
+    top: 50%;
+    transform: translateY(-50%);
+}
+.successBox image{
+    width: 290rpx;
+    height: 240rpx;
+    margin: 0 auto;
+}
+.closeBtn{
+    position: absolute;
+    top: 5rpx;
+    right: 30rpx;
+    font-weight: bold;
+    font-size: 50rpx;
+}
+.cztit{
+    font-size: 36rpx;
+    color: #252525;
+    text-align: center;
+    height: 36rpx;
+    line-height: 36rpx;
+    margin-top: 20rpx;
+}
+.okBtn{
+    width: 470rpx;
+    height: 80rpx;
+    color: #fff;
+    background: #86d53c;
+    line-height: 80rpx;
+    border-radius: 2rpx;
+    margin-top: 70rpx;
+
+}
+.btnIsClick{
+  background-color: #ccc;
+}

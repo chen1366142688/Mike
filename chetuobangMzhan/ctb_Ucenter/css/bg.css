@@ -1,0 +1,28 @@
+.byjl{
+    width: 750px;
+    height: 1724px;
+    background: url("../images/byjl.png") no-repeat;
+    background-size: 100%;
+}
+.csc{
+    width: 750px;
+    height:3080px;
+    background: url("../images/csc.png") no-repeat;
+    background-size: 100%;
+}
+.hycz,.jrcs,.yldb{
+    width: 750px;
+    height: 2112px;
+}
+.hycz{
+    background: url("../images/hycz.png") no-repeat;
+    background-size: 100%;
+}
+.jrcs{
+    background: url("../images/jrcs.png") no-repeat;
+    background-size: 100%;
+}
+.yldb{
+    background: url("../images/yldb.png") no-repeat;
+    background-size: 100%;
+}

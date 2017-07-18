@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
+console.log(app.globalData)
 Page({
   data: {
     motto: 'Hello World',
@@ -292,63 +293,53 @@ Page({
 
   
 //onload时候执行的函数
-  onLoad: function () {
+  onLoad: function (options) {
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo,vateLime) {
+    app.getUserInfo(function (userInfo) {
       //更新数据
       that.setData({
         userInfo: userInfo,
-        vateLime: vateLime
+        // vateLime: app.globalData.vateLime
+
       })
     })
     that.setData({
       vateLime:app.globalData.vateLime
     })
-    console.log(that.data.vateLime.data.openid)
+    
+    console.log("https://appletcwz.chetuobang.com/chetuobang/qwz/" + that.data.vateLime + "/mobile")
     //请求用户是否绑定手机号
     wx.request({
-      url: "https://appletcwz.chetuobang.com/chetuobang/qwz/" + that.data.vateLime.data.openid+"/mobile",
-      data: { "openid": that.data.vateLime.data.openid },
+      url: "https://appletcwz.chetuobang.com/chetuobang/qwz/" + that.data.vateLime+"/mobile",
+      data: { "openid": that.data.vateLime },
       method: 'GET',
       success: function (res) {
+        console.log("用户的个人手机信息绑定为")
+        console.log(res);
         var mob = JSON.parse(res.data.message);
-        console.log(mob.mobile)
         that.setData({
           MobileInfo: mob.mobile
         })
-        console.log(that.data.MobileInfo)
+       
       }
     })
     
     //请求用户绑定的车辆信息
+    console.log("https://appletcwz.chetuobang.com/chetuobang/qwz/" + that.data.vateLime + "/violatesublime")
     wx.request({
-      url: "https://appletcwz.chetuobang.com/chetuobang/qwz/" + that.data.vateLime.data.openid+"/violatesublime",
-      data: { "uid": that.data.vateLime.data.openid},
+      url: "https://appletcwz.chetuobang.com/chetuobang/qwz/" + that.data.vateLime+"/violatesublime",
+      data: { "uid": that.data.vateLime},
       method: 'GET',
       success: function (res) {
+        console.log("请求的是用户绑定的车辆信息")
+        console.log(res);
         var carMessage = JSON.parse(res.data.message);
         that.setData({
           vateLimeInfo: carMessage
         })
       }
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

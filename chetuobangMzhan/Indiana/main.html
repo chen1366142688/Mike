@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>油量夺宝</title>
+    <link href="images/icon-ctb.jpg" rel="shortcut icon">
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/main.css" rel="stylesheet"/>
 </head>
@@ -26,12 +31,14 @@
             </div>
             <div id="cannotjoin">
                 <!--不能参与活动#cannotjoin变为display：block-->
-                <!--封盘时显示的期数-->
-                <span>第<b id="act_num">50002-5</b>期已开奖</span>
+            </div>
+            <div id="haslotteryed">
+                <!--已经开奖和本期参与的油量-->
+                <div id="thisgas">144</div>
             </div>
             <!--参加人数-->
-            <div id="joined_people">
-                678
+            <div class="joined_people">
+                <span id="joined_people">12</span>
             </div>
             <!--油量-->
             <div id="gas_liter">
@@ -47,8 +54,8 @@
             <button id="cut" class="fl">-</button>
             <div id="num" class="fl">
                 <!--油量单位 js表达式-->
-                <input class="numbermain" id="number1" type="text" value="1">升/
-                <input class="numbermain w04" id="number2" type="text" value="100">油豆
+                <input class="numbermain" id="number1" type="text" value="1" disabled="true"><span class="sheng">升/</span>
+                <input class="numbermain w04" id="number2" type="text" value="100" disabled="true">油豆
             </div>
             <!--加法-->
             <button id="add" class="fl">+</button>
@@ -105,11 +112,6 @@
                         <li>124</li>
                         <li>543</li>
                         <li>842</li>
-                        <li>1</li>
-                        <li>34</li>
-                        <li>124</li>
-                        <li>543</li>
-                        <li>842</li>
                     </ul>
                 </div>
                 <div class="twobtn mt255">
@@ -148,12 +150,8 @@
         <a href="javascript:;" id="howtoplay" class="bl1">玩法介绍</a>
         <!--对应#calue-->
         <a href="javascript:;" id="calculate">计算公式</a>
-        <a href="javascript:;" id="playerskill" class="br1">玩家技巧</a>
     </footer>
     <div id="nav">
-        <!--<div class="firstCon" id="first">-->
-            <!--<span id="Bignum">100025-<b>1</b> </span>-->
-        <!--</div>-->
         <div class="AnotherNO active" aid="100000" id="1">1</div>
         <div class="AnotherNO" aid="100000" id="2">2</div>
         <div class="AnotherNO" aid="100000" id="3">3</div>
@@ -184,9 +182,4 @@
 <script src="js/rem.js"></script>
 <script src="js/jquery1.8.3.js"></script>
 <script src="js/main.js"></script>
-<script>
-    window.onload=function () {
-
-    }
-</script>
 </html>

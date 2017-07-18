@@ -19,7 +19,8 @@ App({
             grant_type: "authorization_code"
           },
           success: function (res) {
-            that.globalData.vateLime = res
+            console.log(res.data)
+            that.globalData.vateLime = res.data.openid 
           },
         })
       }

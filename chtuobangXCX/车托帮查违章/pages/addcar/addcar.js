@@ -135,7 +135,7 @@ play:function(e){
    if(chePai==""||chePai=="请输入车牌号"||cheJia==""||cheJia=="请输入车架号"||faDong==""||faDong=="请输入发动机号"||cheXing==""||cheXing=="请输入车型"){
       return false;
    }else{
-     var uid = that.data.openidInfo.data.openid;
+     var uid = app.globalData.vateLime;
          wx.request({
        url: "https://appletcwz.chetuobang.com/chetuobang/qwz/"+uid+"/plate",
        data: {
@@ -163,7 +163,7 @@ play:function(e){
   that.setData({
     openidInfo:app.globalData.vateLime
   })
-  console.log(that.data.openidInfo.data.openid)
+  
   var plate=options.plate;
   var chePai=plate.slice(1,8);
   var ch=plate.slice(0,1);

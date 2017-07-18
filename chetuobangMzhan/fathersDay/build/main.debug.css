@@ -1,0 +1,47 @@
+#content {
+  width: 8.893333rem;
+  height: 6.066667rem;
+  background: url("../images/model.png") no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 0.666667rem;
+}
+
+.qr_code {
+  position: absolute;
+  width: 0.746667rem;
+  height: 0.746667rem;
+  background: url("../images/QR.png") no-repeat;
+  background-size: 100%;
+  top: 4.28rem;
+  left: 1.253333rem;
+}
+
+.head_photo {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.013333rem solid #fff;
+  position: absolute;
+  top: 1.813333rem;
+  left: 3.96rem;
+}
+
+.type {
+  width: 1.093333rem;
+  height: 1.093333rem;
+  background: url("../images/1.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 2.746667rem;
+  left: 2.906667rem;
+}
+
+h2 {
+  font-size: 0.586667rem;
+  height: 0.586667rem;
+  line-height: 0.586667rem;
+  margin-top: 0.96rem;
+  margin-bottom: 1.6rem;
+}

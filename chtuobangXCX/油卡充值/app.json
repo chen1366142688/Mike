@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/charge/charge",
+    "pages/order/order",
+    "pages/myself/myself",
+    "pages/hasBindPhone/hasBindPhone",
+    "pages/chargeSuccess/chargeSuccess",
+    "pages/bindPhone/bindPhone"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#cbfbcb",
+    "navigationBarTitleText": "油卡充值",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#86d43b",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "油卡充值",
+      "iconPath": "img/icon_card_unselect.png",
+      "selectedIconPath": "img/icon_card_select.png"
+    },{
+        "pagePath":"pages/order/order",
+        "iconPath":"img/icon_list_unselect.png",
+        "selectedIconPath":"img/icon_list_select.png",
+        "text":"充值订单"
+    },
+    {
+        "pagePath": "pages/myself/myself",
+        "iconPath": "img/icon_mine_unselect.png",
+        "selectedIconPath": "img/icon_mine_select.png",
+        "text": "我的"
+    }]
+  }
+}

@@ -1,0 +1,83 @@
+<view class="oilPriceArea">
+    <image src="../../img/hm_bg_img.png" style="width:750rpx; height:284rpx;"></image>
+    <view class="city clearfix">
+        <view class="fl" style="font-size:36rpx;height:36rpx;line-height:36rpx;">{{motto}}</view>
+        <image src="../../img/icon_locate.png" style="width:22rpx;height:29rpx;margin-left:20rpx;" class="fl"></image>
+    </view>
+    <view class="todayText">今日油价</view>
+    <view class="Nt_oil93 clearfix">
+        <view class="Onumber fl">92#</view>
+        <view class="Oprice fl">
+            <view class="fl" id="NtOliPrice">{{price92}}</view><view class="fl">元/升</view>
+        </view>
+    </view>
+    <view class="Nt_oil97 clearfix">
+        <view class="Onumber fl">95#</view>
+        <view class="Oprice fl">
+            <view class="fl" id="NsOliPrice">{{price95}}</view><view class="fl">元/升</view>
+        </view>
+    </view>
+    <view class="search clearfix">
+        <input type="number" class="search-input fl" bindfocus="historyList" bindblur="reg" bindinput="historyRecord" placeholder="请输入19位中石化/中石油油卡卡号" id="mainInput" value="{{cardNumber}}">
+        <!--<icon type="clear"  size="15" color="#999" class="search-icon inside"/>  -->
+        </input>
+         <view  class="times" bindtap="clearInput">
+              <image class="iconTimes" src="../../img/hm_icon_cancel.png"></image>
+            </view>
+        <view class="history" hidden="{{historys}}" >
+            <view class="list clearfix" wx:for="{{historyLists}}">
+            <view class="cardName fl" wx:if="{{item.oilCardChannel == 0 }}">中石化</view>
+            <view class="cardName fl" wx:else="{{item.oilCardChannel == 2 }}">中石油</view>
+            <view class="cardNumber fl" bindtap="carNumberTap" data-card="{{item.oilCardNumber}}">{{item.oilCardNumber}}</view>
+            <image src="../../img/hm_icon_hisory.png"  class="fr" style="width:32rpx;height:32rpx;margin-top:40rpx;"></image>
+        </view>
+        <view class="clearAll" bindtap="clear">清空历史</view>
+            </view>
+    </view>
+    <view class="chargeArea clearfix">
+        <view class="chargeTxt">
+            充值金额（元）
+        </view>
+        <view class="box" wx:for="{{money}}" bindtap="Amount">
+          <view class="monryBtn fl " id="{{cssObj[index].choosed}}" data-value="{{item}}" data-id='{{index}}'>
+              <view class="rmb fl " id="{{cssObj[index].green}}" data-value="{{item}}" data-id='{{index}}'>￥</view>
+              <view class="hundred fl" id="{{cssObj[index].green}}" data-id='{{index}}' data-value="{{item}}">{{item}}</view>
+              <image src="../../img/hm_icon_rechange_select.png" class="selectPNG" hidden="{{cssObj[index].selected}}"></image>
+          </view>
+        </view>
+       
+    </view>
+    <view class="nextArea"> 
+        <button class="nextBtn {{bian}}" disabled="{{disabled}}" bindtap="submit">下一步</button>
+        <view class="service clearfix">
+        <view class="serviceTxt fl" bindtap="open">服务说明</view>
+        <image src="../../img/icon_detail.png" style="width:26rpx; height:26rpx;margin-left:10rpx;" class="fl"></image>
+    </view>
+    </view>
+    <view class="serviceWindow" hidden="{{Prompt}}">
+       <view class="serviceBox">
+           <view class="serviceTit">服务说明</view>
+           <view class="scrollArea">
+                <view class="serviceP mb26">
+                    1.副卡、增值税票卡不支持在线充值
+                </view>
+                <view class="serviceP mb26">
+                    2.充值成功后，在加油前把加油卡交给油站工作人员协助圈寸
+                </view>
+                <view class="serviceP mb26">
+                    3.支付成功后将于一个工作日内到账，超过24小时未到账请与我们联系：电话号码（周一至周五9:30-18；30）
+                </view>
+                <view class="serviceP mb26">
+                    4.22:30—02：00进行系统维护，充值后将延迟到账
+                </view>
+                <view class="serviceP mb26">
+                    5.本服务为代充服务，故任何情况下不提供充值发票。
+                </view>
+           </view>
+           <view class="closeBtn" data-close="{{one}}" bindtap="close">
+                ×
+           </view>
+       </view>
+
+    </view>
+</view>

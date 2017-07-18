@@ -1,0 +1,116 @@
+.fav_1 {
+  padding: 0.4rem 0;
+  border-bottom: 0.053333rem solid #f2f2f2;
+}
+
+.top {
+  margin-left: 0.533333rem;
+}
+
+.fav_1 i {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url("../images/icon_my_love@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+.fav_1 span {
+  font-size: 0.346667rem;
+  color: #bcbcbc;
+  margin-top: 0.2rem;
+  margin-left: 0.266667rem;
+}
+
+.highlights {
+  margin-left: 1.6rem;
+}
+
+.highlights b {
+  display: inline-block;
+  color: #fff;
+  width: 1.333333rem;
+  height: 0.426667rem;
+  border-radius: 0.186667rem;
+  line-height: 0.426667rem;
+  text-align: center;
+  font-size: 0.293333rem;
+}
+
+.highlights b:nth-child(1) {
+  background: #a5e42f;
+}
+
+.highlights b:nth-child(2) {
+  background: #ff7d13;
+  margin-left: 0.266667rem;
+}
+
+.highlights b:nth-child(3) {
+  background: #ff5959;
+  margin-left: 0.266667rem;
+}
+
+ul li {
+  border-bottom: 0.053333rem solid #f2f2f2;
+}
+
+ul li i {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0.4rem 0 0.4rem 0.533333rem;
+}
+
+ul li span {
+  font-size: 0.346667rem;
+  color: #bcbcbc;
+  margin-left: 0.266667rem;
+  margin-top: 0.6rem;
+  width: 1.413333rem;
+}
+
+ul li b {
+  font-size: 0.4rem;
+  color: #3d3d3d;
+  margin-left: 0.533333rem;
+  margin-top: 0.6rem;
+}
+
+ul li:nth-child(1) i {
+  background: url("../images/icon_my_brand@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+ul li:nth-child(2) i {
+  background: url("../images/icon_my_car@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+ul li:nth-child(3) {
+  border-top: 0.4rem solid #f2f2f2;
+}
+
+ul li:nth-child(3) i {
+  background: url("../images/icon_my_cause@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+ul li:nth-child(4) i {
+  background: url("../images/icon_my_money@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+ul li:nth-child(5) i {
+  background: url("../images/icon_icon_education@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+ul li:nth-child(6) i {
+  background: url("../images/icon_my_school@2x.png") no-repeat;
+  background-size: 100%;
+}
+
+ul li:nth-child(7) i {
+  background: url("../images/icon_my_life@2x.png") no-repeat;
+  background-size: 100%;
+}

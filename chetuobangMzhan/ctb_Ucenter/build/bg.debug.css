@@ -1,0 +1,35 @@
+.byjl {
+  width: 10rem;
+  height: 22.986667rem;
+  background: url("../images/byjl.png") no-repeat;
+  background-size: 100%;
+}
+
+.csc {
+  width: 10rem;
+  height: 41.066667rem;
+  background: url("../images/csc.png") no-repeat;
+  background-size: 100%;
+}
+
+.hycz,
+.jrcs,
+.yldb {
+  width: 10rem;
+  height: 28.16rem;
+}
+
+.hycz {
+  background: url("../images/hycz.png") no-repeat;
+  background-size: 100%;
+}
+
+.jrcs {
+  background: url("../images/jrcs.png") no-repeat;
+  background-size: 100%;
+}
+
+.yldb {
+  background: url("../images/yldb.png") no-repeat;
+  background-size: 100%;
+}

@@ -1,0 +1,57 @@
+html{
+    background: #eeeeee;
+}
+body{
+    width: 750px;
+    background:#eeeeee;
+    background-size: 100%;
+    height: 100%;
+    text-align: center;
+}
+#head{
+    width: 340px;
+    height: 340px;
+    margin:0 auto;
+    border-radius: 50%;
+    background: #fff;
+    border:1px solid #000;
+}
+.box{
+    position: relative;
+    margin-bottom: 68px;
+}
+.box span{
+    position: absolute;
+    width:78px ;
+    height: 78px;
+    border-radius: 50%;
+    bottom: -36px;
+    left: 336px;
+    background: url("../images/add_03.png") no-repeat;
+    background-size: 100%;
+}
+p{
+    font-size: 50px;
+    color: #000;
+    height:50px;
+    line-height:50px;
+}
+.p2{
+    margin-top:20px ;
+    margin-bottom: 90px ;
+}
+.banner{
+    width: 750px;
+    height: 188px;
+    background: url("../images/index_02.png");
+    background-size: 100%;
+    margin-bottom: 44px;
+}
+.logo{
+    width: 288px;
+    height: 267px;
+    background: url("../images/index_05.png");
+    background-size: 100%;
+    margin:0 auto;
+    margin-bottom: 76px;
+}
