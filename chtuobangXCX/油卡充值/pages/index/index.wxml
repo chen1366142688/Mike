@@ -39,9 +39,9 @@
             充值金额（元）
         </view>
         <view class="box" wx:for="{{money}}" bindtap="Amount">
-          <view class="monryBtn fl " id="{{cssObj[index].choosed}}" data-value="{{item}}" data-id='{{index}}'>
-              <view class="rmb fl " id="{{cssObj[index].green}}" data-value="{{item}}" data-id='{{index}}'>￥</view>
-              <view class="hundred fl" id="{{cssObj[index].green}}" data-id='{{index}}' data-value="{{item}}">{{item}}</view>
+          <view class="monryBtn fl " id="{{cssObj[index].choosed}}" data-value="0.01" data-id='{{index}}'>
+              <view class="rmb fl " id="{{cssObj[index].green}}" data-value="0.01" data-id='{{index}}'>￥</view>
+              <view class="hundred fl" id="{{cssObj[index].green}}" data-id='{{index}}' data-value="0.01">100</view>
               <image src="../../img/hm_icon_rechange_select.png" class="selectPNG" hidden="{{cssObj[index].selected}}"></image>
           </view>
         </view>

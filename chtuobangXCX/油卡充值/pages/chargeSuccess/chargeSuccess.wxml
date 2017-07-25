@@ -5,18 +5,18 @@
 </view>
 <view class="list clearfix">
     <view class="type fl">充值金额</view>
-    <view class="data fr" style="font-size:36rpx;">￥500</view>
+    <view class="data fr" style="font-size:36rpx;">￥{{money}}</view>
 </view>
 <view class="list clearfix">
     <view class="type fl">充值时间</view>
-    <view class="data fr">2017-06-17   14:53:21</view>
+    <view class="data fr">{{date}}</view>
 </view>
 <view class="list clearfix">
     <view class="type fl">充值卡号</view>
-    <view class="data fr">21912826353728291876</view>
+    <view class="data fr">{{carNum}}</view>
 </view>
 <view class="list clearfix">
     <view class="type fl">手机号码</view>
-    <view class="data fr">15301181735</view>
+    <view class="data fr">{{mobile}}</view>
 </view>
 <button class="okBtn" bindtap="callBackHome">返回首页</button>

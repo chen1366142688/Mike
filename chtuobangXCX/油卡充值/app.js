@@ -58,8 +58,6 @@ App({
                 var unionId = re.data.unionId;
                 wx.setStorageSync('openId', re.data.openid)
                 wx.setStorageSync('unionId', unionId)
-                console.log(re.data.unionId)
-
               }
             })
           }

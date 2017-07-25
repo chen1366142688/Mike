@@ -1,7 +1,6 @@
 var app=getApp();
 // pages/charge/charge.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -16,8 +15,9 @@ Page({
     codeNum: 0,
     timeFlag: 0,
     userInfo: {},
-    color:' ',
+    btnColor:'',
     yanz:true,
+    shop:true,
     Prompt: true,
     color:'#4d8ef1',
     yiBangDing:false
@@ -58,9 +58,7 @@ Page({
          url: 'https://oilcard.chetuobang.com/oilcard_recharge/binded/' + unionId,
          method: 'GET',
          header: {'content-type': 'application/json'},
-         data:{
-           
-         },
+         data:{ },
          success:function(res){
            console.log("用户是否绑定手机号")
            console.log(res.data.results.isBind)
@@ -69,15 +67,19 @@ Page({
              console.log("用户绑定了手机号")
              that.setData({
                mobile: res.data.results.mobile,
-               yiBangDing:true
+               yiBangDing:true,
+               btnColor:"btnColor",
+               shop:false
              })
              
             
-           } else if (res.data.results) {
+           } else {
              console.log("用户没有绑定")
              that.setData({
                yanz: false,
-               yiBangDing:false
+               yiBangDing:false,
+               btnColor: "",
+               shop: true
              })
            }
          },
@@ -93,7 +95,6 @@ Page({
           })
         })
   },
-  
   /**
    * 获取用户输入的手机号
   */
@@ -101,29 +102,26 @@ Page({
     var that = this;
     var mobiel_num = e.detail.value;
     console.log(mobiel_num)
-    if (IsTel(mobiel_num)) {
+    if (IsTel(mobiel_num)){
       that.setData({
         btnIsClick: "",
         mobile: mobiel_num,
       })
     } else {
-      wx.showToast({
-        title: '请完善手机号输入',
-      })
+      console.log("手机号不完善")
     }
 
   },
   vertifyCode: function (e) {//验证手机号，发送验证码
   var that=this;
-    if (this.data.timeFlag == 1) {
+    if (that.data.timeFlag == 1) {
       return false;
     }
-    var mobileNum = this.data.mobile;
-    mobileNum = parseInt(mobileNum);
-  that.setData({
-    color:'color'
-  })
-
+    var mobileNum = that.data.mobile;
+    console.log("这是data里的手机号："+mobileNum)
+      that.setData({
+        color:'color'
+      })
     var _Url = "https://sms.chetuobang.com/sms.php?sms_type=1";
     var total_micro_second = 60 * 1000;
 
@@ -138,20 +136,59 @@ Page({
         tel_phone: mobileNum
       },
       success: function (res) {
+        console.log("发送验证码成功：如下：：")
+        console.log(res)
         var redata = res.data;
 
       },
       fail: function (res) {
-        // console.log("error res=")
-        // console.log(res.data)
+        console.log("发送验证码失败：")
+        console.log(res.data)
       }
     });
   },
+  //输入验证码，请求是否正确
   saveCode: function (e) {
+    var that=this;
     var code = e.detail.value;
     this.setData({
       codeNum: code,
     })
+    var mobileNum = this.data.mobile;
+    var vcode = this.data.codeNum;
+    vcode = parseInt(vcode)
+    mobileNum = parseInt(mobileNum);
+    if (mobileNum != "") {
+      var verifyUrl = "https://sms.chetuobang.com/sms.php?sms_type=2";
+      wx.request({
+        url: verifyUrl,
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'data-type':"jsonp",
+        },
+        jsonP:"callback",
+        data: {
+          tel_phone: mobileNum,
+          verify_code: vcode,
+        },
+        success:function(res){
+          console.log(JSON.parse(res.data.slice(9,-1)) )
+          //var d=JSON.parse(res.data);
+          var smsCode = JSON.parse(res.data.slice(9,-1));
+            if (smsCode.code == 200) {
+              console.log("验证成功")
+              that.setData({
+                shop:false,
+                btnColor:"btnColor",
+                yanz:true
+              })
+            }else{
+              console.log("验证手机号失败")
+            }
+        }
+        })
+    }
   },
 /**
  * 弹出用户说明
@@ -199,8 +236,8 @@ Page({
     return false;
   }
     var unionId = wx.getStorageSync('unionId');
-    //var openId = wx.getStorageSync('openId')
-    var openId ='oXMGUjlDaY_8C1mkH4arXMpSw6rQ';
+    var openId = wx.getStorageSync('openId')
+    //var openId ='oXMGUjlDaY_8C1mkH4arXMpSw6rQ';
     var mobileNum = this.data.mobile;
     var topMoney=this.data.money;
     var vcode = this.data.codeNum;
@@ -223,22 +260,23 @@ Page({
       *如果此时拿到的手机还好不为空的话，才发送验证，验证验证码 
       */
       if(yiBangDing == false){
-    if (mobileNum != ""){
-      var verifyUrl = "https://sms.chetuobang.com/sms.php?sms_type=2";
-    wx.request({
-      url: verifyUrl,
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: {
-        tel_phone: mobileNum,
-        verify_code: vcode,
-      },
-      success: function (res) {
-        var redata = res.statusCode;
-        if(redata == 200){
-          console.log("验证成功")
+    //if (mobileNum != ""){
+     // var verifyUrl = "https://sms.chetuobang.com/sms.php?sms_type=2";
+      //wx.request({
+        // url: verifyUrl,
+        // method: 'GET',
+        // headers: {
+        //   'Content-Type': 'application/json'
+        // },
+        // data: {
+        //   tel_phone: mobileNum,
+        //   verify_code: vcode,
+        // },
+      // success: function (res) {
+      //   console.log(res)
+      //   var redata = res.statusCode;
+        // if(redata == 200){
+        //   console.log("验证成功")
           //绑定手机号
           wx.request({
             url: 'https://oilcard.chetuobang.com/oilcard_recharge/bindMobile',
@@ -276,6 +314,7 @@ Page({
                   if ((res.data.code == 1) && res.statusCode == 200) {
                     //购买成功之后，跳转到成功页面
                     console.log(res)
+                    var date = getDate(res.data.results.timeStamp)
                     wx.requestPayment({
                       'timeStamp': res.data.results.timeStamp,
                       'nonceStr': res.data.results.nonceStr,
@@ -286,7 +325,7 @@ Page({
                         console.log("支付成功")
                         console.log(res)
                         wx.navigateTo({
-                          url: '../chargeSuccess/chargeSuccess',
+                          url: '../chargeSuccess/chargeSuccess?mobileNum=' + mobileNum + "&carNumber=" + carNumber + "&topMoney=" + topMoney + "&timeStamp="+date,
                         })
                       },
                       fail: function (res) {
@@ -318,25 +357,25 @@ Page({
               })
             }
           })
-        }
+        //}
        
         
-      },
-      fail: function (res) {
-        console.log("error res=")
-        console.log(res.data)
-      }
-    });//1
-    }else{
-      /**
-        * 提示用户验证失败
-        */
-      wx.showToast({
-        title: '验证失败',
-        icon: 'error',
-        duration: 1500
-      })
-        }
+      // },
+      // fail: function (res) {
+      //   console.log("error res=")
+      //   console.log(res.data)
+      // }
+    //});//1
+    // }else{
+    //   /**
+    //     * 提示用户验证失败
+    //     */
+    //   wx.showToast({
+    //     title: '验证失败',
+    //     icon: 'error',
+    //     duration: 1500
+    //   })
+    //     }
       }else{
         /**
          * 调用充值接口*/
@@ -361,6 +400,7 @@ Page({
           if ((res.data.code == 1) && res.statusCode == 200) {
             //购买成功之后，跳转到成功页面
             console.log(res)
+            var date=getDate(res.data.results.timeStamp)
             wx.requestPayment({
               'timeStamp': res.data.results.timeStamp,
               'nonceStr': res.data.results.nonceStr,
@@ -371,7 +411,7 @@ Page({
                 console.log("支付成功")
                 console.log(res)
                 wx.navigateTo({
-                  url: '../chargeSuccess/chargeSuccess',
+                  url: '../chargeSuccess/chargeSuccess?mobileNum=' + mobileNum + "&carNumber=" + carNumber + "&topMoney=" + topMoney + "&timeStamp="+date,
                 })
               },
               fail: function (res) {
@@ -454,12 +494,19 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: '油卡充值',
+      path: '/pages/charge/charge'
+    }
   }
 })
 function IsTel(s) {
+  var o=0;
+for(var i in s){
+  i++;
+}
   if (s != null) {
-    var length = s.length;
+    var length = i;
     if (length == 11 && /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1})|(14[0-9]{1})|)+\d{8})$/.test(s)) {
       return true;
     } else {
@@ -509,4 +556,8 @@ function date_format(micro_second) {
 function fill_zero_prefix(num) {
   return num < 10 ? "0" + num : num
 }
-
+//转换时间戳.replace(/下午|上午/g, " ")
+function getDate(tm) {
+  var tt = new Date(parseInt(tm) * 1000).toLocaleString().replace(/\//g, "-");
+  return tt;
+} 

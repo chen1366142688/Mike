@@ -6,7 +6,7 @@ page{
     top: 62rpx;
     left: 50rpx;
     font-size: 36rpx;
-    color: #252525;
+    color: #4f5761;
     height: 36rpx;
     line-height: 36rpx;
 }
@@ -15,7 +15,7 @@ page{
     top: 118rpx;
     left: 50rpx;
     font-size: 26rpx;
-    color: #252525;
+    color: #4f5761;
     height: 26rpx;
     line-height: 26rpx;
 }
@@ -193,7 +193,7 @@ page{
     color: #000;
 } */
 #choosed{
-    border: 4rpx solid #86d53c;
+    border: 2rpx solid #86d53c;
     color:#86d53c;
     font-weight: bold;
     width: 322rpx;

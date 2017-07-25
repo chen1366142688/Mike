@@ -34,10 +34,10 @@ Page({
     historyLists:[],
     disabled:true,
     cssObj : {
-
+      
     },
     qian:'',
-    money:[100,200,500,1000],
+    money:[],
     citysLists: [{ "city": "安徽", "code": "818", "initial": "A" }, { "city": "北京", "code": "810", "initial": "B" }, { "city": "福建", "code": "820", "initial": "F" }, { "city": "甘肃", "code": "822", "initial": "G" }, { "city": "广东", "code": "824", "initial": "G" }, { "city": "广西", "code": "826", "initial": "G" }, { "city": "贵州", "code": "828", "initial": "G" }, { "city": "河北", "code": "832", "initial": "H" }, { "city": "河南", "code": "834", "initial": "H" }, { "city": "黑龙江", "code": "836", "initial": "H" }, { "city": "湖北", "code": "838", "initial": "H" }, { "city": "湖南", "code": "840", "initial": "H" }, { "city": "海南", "code": "830", "initial": "H" }, { "city": "吉林", "code": "811", "initial": "J" }, { "city": "江苏", "code": "813", "initial": "J" }, { "city": "江西", "code": "815", "initial": "J" }, { "city": "辽宁", "code": "818", "initial": "L" }, { "city": "宁夏", "code": "821", "initial": "N" }, { "city": "内蒙古", "code": "819", "initial": "N" }, { "city": "青海", "code": "823", "initial": "Q" }, { "city": "山东", "code": "825", "initial": "S" }, { "city": "山西", "code": "827", "initial": "S" }, { "city": "陕西", "code": "829", "initial": "S" }, { "city": "上海", "code": "812", "initial": "S" }, { "city": "四川", "code": "831", "initial": "S" }, { "city": "天津", "code": "814", "initial": "T" }, { "city": "西藏", "code": "833", "initial": "X" }, { "city": "新疆", "code": "835", "initial": "X" }, { "city": "云南", "code": "837", "initial": "Y" }, { "city": "浙江", "code": "839", "initial": "Z" }, { "city": "重庆", "code": "816", "initial": "Z" }],
   },
   onLoad: function () {
@@ -50,6 +50,8 @@ Page({
     */
     wx.getLocation({
       success: function (res) {
+        console.log(1111111)
+        console.log(res)
         var key = config.Config.key;
         var myAmapFun = new amapFile.AMapWX({ key: key });
         myAmapFun.getRegeo({
@@ -57,6 +59,8 @@ Page({
           iconHeight: 32,
           location: res.longitude + "," + res.latitude,
           success: function (data) {
+            console.log("这是用户的当前城市")
+            console.log(data)
             var ThisCity = data[0].regeocodeData.addressComponent.province;
             if (ThisCity.indexOf('省') != -1) {
               ThisCity = ThisCity.slice(0, ThisCity.indexOf('省'));
@@ -86,14 +90,14 @@ Page({
                  * 请求当前城市的油价
                 */
                 codes=citysLists[i].code;
-                //console.log("这儿是当前城市的code:")
-                //console.log(codes) 
+                console.log("这儿是当前城市的code:")
+                console.log(codes) 
                 wx.request({
                   url: 'https://oilprice.chetuobang.com/oil-price/oilPrice?code='+codes,
                   method:"GET",
                   success:function(res){
-                    //console.log("这儿输出的是当前城市的油价")
-                    //console.log(res.data)
+                    console.log("这儿输出的是当前城市的油价")
+                    console.log(res.data)
                     var oilOne = res.data.oil93;
                     var oilTwo = res.data.oil97;
                     that.setData({
@@ -114,12 +118,17 @@ Page({
             }
           },
           fail: function (info) {
-            //console.log("高德定位当前信息失败");
+            console.log("高德定位当前信息失败1");
             //失败回调
-            //console.log(info)
+            console.log(info)
           }
         })
       },
+      fail: function (info) {
+        console.log("高德定位当前信息失败2");
+        //失败回调
+        console.log(info)
+      }
     })
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
@@ -143,37 +152,42 @@ Page({
       data:{},
       success:function(res){
         console.log("请求用户油价列表")
-        console.log(res)
-        // that.setData({
-        //   money: result
-        // })
+        console.log(res.data.results)
+        that.setData({
+          money: res.data.results
+        })
+        var priceData = res.data.results;
+        console.log("这是从data中取出来对油价列表")
+        console.log(priceData)
+        var x = 0;
+        for (var i in priceData) {
+          x++;
+         // console.log(priceData[i])
+        }
+        var cssObjData = {};
+        for (var i = 0; i < x; i++) {
+          var tempObj = {
+            'choosed': "",
+            'green': "",
+            'selected': true,
+          }
+         //2 console.log(i);
+          cssObjData[i] = tempObj;
+        }
+        that.setData({
+          cssObj: cssObjData
+        })
+        wx.setStorageSync("moneyNum", x);
       },
       fail:function(info){
         console.log("服务器出错了")
         console.log(info)
       }
     })
-    var priceData = that.data.money;
+   
     console.log("这是设置的data的money数组；")
-    console.log(priceData)
-    var x = 0;
-    for (var i in priceData){
-      x++;
-    }
-    var cssObjData = {};
-    for (var i = 0; i < x; i++) {
-      var tempObj = {
-        'choosed': "",
-        'green': "",
-        'selected': true,
-      }
-      //console.log(i);
-      cssObjData[i] = tempObj;
-    }
-    this.setData({
-      cssObj:cssObjData
-    })
-    wx.setStorageSync("moneyNum", x);
+    
+    
   },//onlad结尾
   /**
    * 点击关闭服务说明close
@@ -401,46 +415,6 @@ Page({
                  console.log("跳转失败")
                }
              })
-      /**
-       * 跳转到下一步页面,判断用户是否绑定手机号
-       * */
-      //  wx.request({
-      //    url: 'https://oilcard.chetuobang.com/oilcard_recharge/binded/' + unionId,
-      //    method: 'GET',
-      //    header: {'content-type': 'application/json'},
-      //    data:{
-      //      unionId: unionId
-      //    },
-      //    success:function(res){
-      //      console.log("用户是否绑定手机号")
-      //      console.log(res.data.results)
-      //      //用户没有绑定手机号
-      //      if(res.data.results == false){
-      //        console.log("用户没有绑定")
-      //        wx.navigateTo({
-      //          url: '../charge/charge',
-      //          success:function(res){
-      //            console.log("跳转成功")
-      //          },fail:function(info){
-      //            console.log("跳转失败")
-      //          }
-      //        })
-      //      } else if (res.data.results == true) {
-      //        console.log("用户绑定了手机号")
-      //        wx.navigateTo({
-      //          url: 'pages/hasBindPhone/hasBindPhone',
-      //          success: function (res) {
-      //            console.log("跳转成功")
-      //          }, fail: function (info) {
-      //            console.log("跳转失败")
-      //          }
-      //        })
-      //      }
-      //    },
-      //    fail:function(info){
-      //       console.log("请求用户手机绑定状态失败了哦")
-      //    }
-      //  })
     } else if (reg_oneN.test(carNumberInfo) && (qianqian != "")){
       console.log("中石化加油卡号OK")
       wx.navigateTo({
@@ -451,43 +425,6 @@ Page({
                  console.log("跳转失败")
                }
              })
-      // wx.request({
-      //   url: 'https://oilcard.chetuobang.com/oilcard_recharge/binded/' + unionId,
-      //   method: 'GET',
-      //   header: { 'content-type': 'application/json' },
-      //   data: {
-      //     unionId: unionId
-      //   },
-      //   success: function (res) {
-      //     console.log("用户是否绑定手机号")
-      //     console.log(res.data.results)
-      //     //用户没有绑定手机号
-      //     if (res.data.results == false) {
-      //       console.log("用户没有绑定手机号")
-      //       wx.navigateTo({
-      //         url: '..//charge/charge',
-      //         success: function (res) {
-      //           console.log("跳转成功")
-      //         }, fail: function (info) {
-      //           console.log("跳转失败")
-      //         }
-      //       })
-      //     }else if(res.data.results == true){
-      //       console.log("用户绑定了手机号")
-      //       wx.navigateTo({
-      //         url: '..//charge/charge',
-      //         success: function (res) {
-      //           console.log("跳转成功")
-      //         }, fail: function (info) {
-      //           console.log("跳转失败")
-      //         }
-      //       })
-      //     }
-      //   },
-      //   fail:function(info){
-      //     console.log("请求用户手机绑定状态失败了哦")
-      //   }
-      // })
     }
   },
   /**
@@ -500,7 +437,7 @@ Page({
       wx.request({
         url: 'https://oilcard.chetuobang.com/oilcard_recharge/getOilCardList/'+unionId,
         method:'GET',
-        data:{unionId:unionId},
+        data:{},
         success:function(res){
           console.log("请求到了用户的历史消息")
           console.log(res.data.results)
@@ -598,16 +535,35 @@ Page({
         console.log(reg.test(carNum))
         console.log(reg_oneN.test(carNum))
         console.log("油卡不正确")
-        // wx.showToast({
-        //   title: '油卡不正确',
-        //   icon: 'error',
-        //   duration:2000
-        // })
         that.setData({
           bian: "",
           disabled: true
         })
       }
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title:'油卡充值',
+      path:'/pages/index/index'
+    }
   }
 })
 function trim(s) {

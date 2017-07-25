@@ -16,7 +16,7 @@ page{
 .NumberData{
     margin-top: 50rpx;
     font-size: 36rpx;
-    color: #252525;
+    color: #4f5761;
     height: 36rpx;
     line-height: 36rpx;
     margin-right: 30rpx;
@@ -51,7 +51,7 @@ page{
     font-size: 36rpx;
     height: 36rpx;
     line-height: 36rpx;
-    color: #252525;
+    color: #4f5761;
     padding: 40rpx 0;
     margin-left: 30rpx;
 }
@@ -97,11 +97,15 @@ button:after{
 .submitBtn{
     width: 690rpx;
     height: 100rpx;
-    background: #86d53c;
+    background: #4d8ef1;
+    /* background: #86d53c; */
     color: #fff;
     margin-top: 40rpx;
     font-size: 36rpx;
     border-radius: 2rpx;
+}
+.btnColor{
+  background: #86d53c;
 }
 .protocol{
     margin-top: 30rpx;

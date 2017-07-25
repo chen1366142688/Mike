@@ -71,8 +71,8 @@ Page({
     var mobileNum= this.data.mobile;
     mobileNum=parseInt(mobileNum);
 
-    console.log(mobileNum)
-    console.log(IsTel(mobileNum))
+    //console.log(mobileNum)
+    //console.log(IsTel(mobileNum))
     if (IsTel(mobileNum)) {
       that.setData({
         btnIsClick: "btnIsClick",

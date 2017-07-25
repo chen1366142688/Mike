@@ -11,11 +11,11 @@
 </view>
 <view class="phoneNumber clearfix">
     <view class="cnTxt fl">手机号</view>
-    <input type="number" class="phoneData fl" value='{{mobile}}' placeholder="请输入手机号" bindblur="mobileInputEvent"></input>
+    <input type="number" class="phoneData fl" value='{{mobile}}' placeholder="请输入手机号" bindinput="mobileInputEvent"></input>
 </view>
 <view class="phoneNumber pr clearfix" style="height:118rpx;" hidden="{{yanz}}">
     <view class="cnTxt fl">验证码</view>
-    <input type="number" class="phoneData fl" placeholder="请输入验证码" bindblur="saveCode"></input>
+    <input type="number" class="phoneData fl" placeholder="请输入验证码" bindinput="saveCode"></input>
     <button class="sendBtn {{color}}" bindtap="vertifyCode">{{VerifyCode}}</button>
 </view>
 
@@ -23,7 +23,7 @@
     <view class="pmTxt mt55 fl">支付金额</view>
     <view class="NumberData fr">{{money}}元</view>
 </view>
-<button class="submitBtn" bindtap="bindMobile">确认购买</button>
+<button class="submitBtn {{btnColor}}" bindtap="bindMobile" disabled="{{shop}}">确认购买</button>
 <view class="protocol">
     <icon type="success" size="15" color="{{color}}" bindtap="icon" class="icon_success fl" />
     <view class="pTxt fl">同意</view>

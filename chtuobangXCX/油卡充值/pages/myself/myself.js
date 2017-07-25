@@ -131,6 +131,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: '绑定手机号',
+      path: '/pages/myself/myself'
+    }
   }
 })

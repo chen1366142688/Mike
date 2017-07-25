@@ -75,6 +75,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: '信息详情',
+      path: '/pages/hasBindPhone/hasBindPhone'
+    }
   }
 })

@@ -99,7 +99,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: '充值记录',
+      path: '/pages/order/order'
+    }
   }
 })
 //时间戳转换时间  

@@ -20,7 +20,7 @@ page{
     height: 32rpx;
     line-height: 32rpx;
     display: inline-block;
-    color: #252525;
+    color: #4f5761;
 }
 .userPhone{
     background: #fff;

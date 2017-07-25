@@ -41,7 +41,7 @@ page{
 }
 .cardNumber{
     font-size: 30rpx;
-    color:#252525;
+    color:#4f5761;
     font-weight: bold;
     margin-top: 30rpx;
     height: 30rpx;

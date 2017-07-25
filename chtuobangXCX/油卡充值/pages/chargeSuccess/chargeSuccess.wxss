@@ -30,7 +30,7 @@
 }
 .data{
     font-size: 26rpx;
-    color: #252525;
+    color: #4f5761;
     margin-right: 50rpx;
 }
 .okBtn{
