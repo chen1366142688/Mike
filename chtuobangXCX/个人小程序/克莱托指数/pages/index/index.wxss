@@ -1,0 +1,100 @@
+
+.notes{
+  font-size: 30rpx;
+  color:#ff6600;
+  text-align: center;
+  height:100rpx;
+  line-height: 100rpx;
+  background: #f7f7f8;
+}
+.content{
+    width:690rpx;
+    height:140rpx;
+    border:1rpx solid rgba(103,213,103,0.3); 
+    border-radius: 20rpx;
+    padding-top:20rpx;
+    box-shadow: 0 4px 14px 0 rgba(103,213,103,0.44);
+    margin-top:60rpx;
+}
+.user{
+  display: inline-block;
+  width:70rpx;
+  height:160rpx;
+  line-height: 160rpx;
+  padding:0 10rpx;
+}
+.userinfo-avatar{
+  display: inline-block;
+  width:70rpx;
+  height:70rpx;
+  border-radius: 50%;
+  }
+  .notels{
+    display: inline-block;
+    font-size:30rpx;
+    width:595rpx;
+    padding-right:5rpx;
+    color: #333333;
+    line-height: 50rpx;
+  }
+  .plase{
+    display: block;
+    height:60rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    color:rgb(103,213,103);
+    margin:40rpx 0;
+  }
+  .login{
+    width:690rpx;
+    margin:40rpx 0 50rpx 0;
+  }
+  .height{
+    height:60rpx;
+    padding-bottom:20rpx;
+    border-bottom:1rpx solid #ddd;
+    margin-bottom:20rpx;
+  }
+  .weight{
+    height:60rpx;
+    border-top:0.01rpx solid transparent;
+    margin-top:20rpx;
+  }
+  .heightText{
+      display: inline-block;
+      height:60rpx;
+      font-size: 30rpx;
+      width:130rpx;
+    }
+    .height .heightInfo{
+      display: inline-block;
+      height:60rpx;
+      width:460rpx;
+      font-size: 30rpx;
+      overflow: visible;
+    }
+     .weight .weightText{
+      display: inline-block;
+      height:60rpx;
+      font-size: 30rpx;
+      width:130rpx;
+    }
+    .weight .weightInfo{
+      display:inline-block;
+      height:60rpx;
+      width:460rpx;
+      font-size: 30rpx;
+      overflow: visible;
+    } 
+    .cm{
+      display: inline-block;
+      font-size: 30rpx;
+      color:#999999;
+      width:100rpx;
+    }
+  .btn{
+    color: #fff;
+    text-align: center;
+    background: rgba(103,213,103,0.9);
+    margin-top:100rpx;
+  }

@@ -1,0 +1,2 @@
+<view class="header">{{take}} </view>
+<view class="monery" bindtap="fuMoney">{{jin}}</view>

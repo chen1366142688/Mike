@@ -1,0 +1,35 @@
+<!--pages/result/result.wxml-->
+<view class="notes">测试结果：</view>
+<view class="container">
+  <!--指数为：-->
+  <view class="top">
+    <view class="tops">您的BMI指数为：</view>
+    <view class="results">{{results}}</view>
+  </view>
+  <!--结果-->
+  <view class="box">
+    <view class='boxTop'>
+      <view class="height">身高：{{height}}</view>
+      <view class='one active {{bug}}'>
+      <image class='one' src='../../images/11.png'></image>
+      </view>
+      <view class='one active'>
+      <image class='one' src='../../images/22.png'></image>
+      </view>
+      <view class='one active'>
+      <image class='one' src='../../images/33.png'></image>
+      </view>
+      <view class='one active'>
+      <image class='one' src='../../images/44.png'></image>
+      </view>
+    </view>
+    <view class='boxBottom'>
+      <view class="weight">体重：{{weight}}</view>
+      <text class='num numberOne'>18.5</text>
+      <text class='num numberTwo'>24</text>
+      <text class='num numberThree'>28</text>
+    </view>
+  </view>
+  <view class="article">您的体重属于超重范围，请积极减肥，合理的饮食和运动能帮助你健康减重</view>
+  <button class="btn" bindtap="callBackIndex">重新计算</button>
+</view>

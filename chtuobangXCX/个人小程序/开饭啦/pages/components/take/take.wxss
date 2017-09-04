@@ -1,0 +1,7 @@
+.monery{
+    width:40rpx;
+    height:10rpx;
+    border:1rpx solid #ddd;
+    border-radius:1rpx;
+    background: #eee;
+}

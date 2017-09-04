@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/result/result",
+    "pages/index/index",
+    
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#67D565",
+    "navigationBarTitleText": "MBI计算器",
+    "navigationBarTextStyle":"#fff"
+  }
+}
