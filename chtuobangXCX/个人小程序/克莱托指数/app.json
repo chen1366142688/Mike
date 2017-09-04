@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/result/result",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#67D565",
+    "navigationBarTitleText": "BMI计算器",
+    "navigationBarTextStyle":"#fff"
+  }
+}
