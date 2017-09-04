@@ -1,0 +1,42 @@
+<!--pages/result/result.wxml-->
+<view class="notes">测试结果：</view>
+<view class="container">
+  <!--指数为：-->
+  <view class="top">
+    <view class="tops">您的BMI指数为：</view>
+    <view class="results">{{results}}</view>
+  </view>
+  <!--结果-->
+  <view class="box clearfix">
+    <view class='boxLeft fl'>
+      <view class="height">身高：{{height}}</view>
+      <view class="weight">体重：{{weight}}</view>
+    </view>
+    <view class='boxRight fl'>
+      <view class="rightTop">
+        <view class="topImg">
+          <image class='topImgOne' hidden='{{c1}}' src='../../images/55.png'></image>
+          <image class='topImgTwo' hidden='{{c2}}' src='../../images/55.png'></image>
+          <image class='topImgThree' hidden='{{c3}}' src='../../images/55.png'></image>
+          <image class='topImgFore' hidden="{{c4}}" src='../../images/55.png'></image>
+        </view>
+        <view class="bottomImg">
+          <image class='bottomImgOne' src='../../images/11.png'></image>
+          <image class='bottomImgTwo' src='../../images/22.png'></image>
+          <image class='bottomImgThree' src='../../images/33.png'></image>
+          <image class='bottomImgFore' src='../../images/44.png'></image>
+        </view>
+      </view>
+      <view class="rightBottom">
+        <text class="num">18.5</text>
+        <text class="num num2">24</text>
+        <text class="num num3">28</text>
+      </view>
+    </view>
+  </view>
+  <view class="article" hidden='{{c1}}'>你目前的体重属于偏瘦范围，请加强营养，高蛋白低纤维的食物有助于健康增重</view>
+  <view class="article" hidden='{{c2}}'>您目前的体重属于正常范围，请勿盲目减肥，规律的有氧运动能帮助你完美身体线条</view>
+  <view class="article" hidden='{{c3}}'>您目前的体重属于超重范围，请积极减肥，合理的饮食和运动能帮助你健康减重</view>
+  <view class="article" hidden='{{c4}}'>你目前的体重属于肥胖，请咨询医生建议，积极减肥，合理的饮食和运动能帮你健康减重</view>
+  <button class="btn" bindtap="callBackIndex">重新计算</button>
+</view>

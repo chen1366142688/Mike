@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="notes">*本工具仅适合正常非孕期健康成年人</view>
+<view class="container">
+  <view class="content">
+    <view class="user">   
+      <image class="userinfo-avatar"  src="../../images/logs.png" background-size="cover"></image>
+    </view>
+    <view class="notels">通过身高体重计算你的BMI值，从而得出你的身体状况评估，高于24你就是超重啦</view>
+  </view>
+  <text class="plase">请输入您的信息：</text>
+  <view class="login">
+    <view class="height">
+      <text class="heightText">身高：</text>
+      <input class="heightInfo"  bindblur='height' type="number" value='{{heightInfo}}' maxlength='3'/>
+      <view class="cm">cm</view>
+    </view>
+    <view class="weight">
+      <text class="weightText">体重：</text>
+      <input class="weightInfo" bindblur='weight' type="number" value='{{weightInfo}}' maxlength='3'/>
+      <view class="cm">kg</view>
+    </view>
+  </view>
+  <button class="btn" bindtap='btn'>计 算</button>
+
+
+
+  
+
+</view>
