@@ -74,9 +74,9 @@ body{
 }
 .shell{
     display: inline-block;
-    width:32px;
-    height:32px;
-    line-height: 32px;
+    width:36px;
+    height:36px;
+    line-height: 36px;
     margin:64px 30px 0 0;
     border-radius: 50%;
     text-align: center;
@@ -125,9 +125,8 @@ body{
 .selected{
     background: url("../images/select.png") no-repeat;
     border: 0;
-    width:32px;
-    height:32px;
-    line-height: 32px;
+    width:36px;
+    height:36px;
     background-size:cover ;
     border-radius:0 ;
 }

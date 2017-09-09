@@ -29,8 +29,8 @@ body{
 }
 .shell{
     display: inline-block;
-    width:32px;
-    height:32px;
+    width:36px;
+    height:36px;
     margin:67px 34px 0 0;
     border-radius: 50%;
 }
@@ -50,6 +50,10 @@ body{
     margin:61px 40.5px 0 0;
 }
 .checkImg2{
+    display: inline-block;
+    width:71.5px;
+    height:47.7px;
+    margin:61px 40.5px 0 0;
     background: url("../images/yellowCar.png") no-repeat;
 }
 .notes{
@@ -69,8 +73,8 @@ body{
 .selected{
     background: url("../images/select.png") no-repeat;
     border: 0;
-    width:32px;
-    height:32px;
+    width:36px;
+    height:36px;
     background-size:cover ;
     border-radius:0 ;
 }
