@@ -29,15 +29,15 @@ body{
 }
 .shell{
     display: inline-block;
-    width:36px;
-    height:36px;
+    width:32px;
+    height:32px;
     margin:67px 34px 0 0;
     border-radius: 50%;
 }
 .check,.checks{
-    display: inline-block;
-    width:32px;
-    height:32px;
+    display: block;
+    width:28px;
+    height:28px;
     background: #F8F8F8;
     border: 4px solid #E5E5E5;
     border-radius: 50%;
@@ -69,8 +69,8 @@ body{
 .selected{
     background: url("../images/select.png") no-repeat;
     border: 0;
-    width:36px;
-    height:36px;
+    width:32px;
+    height:32px;
     background-size:cover ;
     border-radius:0 ;
 }

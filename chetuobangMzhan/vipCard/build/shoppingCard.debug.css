@@ -34,17 +34,17 @@ body {
 
 .shell {
   display: inline-block;
-  width: 0.48rem;
-  height: 0.48rem;
+  width: 0.426667rem;
+  height: 0.426667rem;
   margin: 0.893333rem 0.453333rem 0 0;
   border-radius: 50%;
 }
 
 .check,
 .checks {
-  display: inline-block;
-  width: 0.426667rem;
-  height: 0.426667rem;
+  display: block;
+  width: 0.373333rem;
+  height: 0.373333rem;
   background: #F8F8F8;
   border: 0.053333rem solid #E5E5E5;
   border-radius: 50%;
@@ -82,8 +82,8 @@ body {
 .selected {
   background: url("../images/select.png") no-repeat;
   border: 0;
-  width: 0.48rem;
-  height: 0.48rem;
+  width: 0.426667rem;
+  height: 0.426667rem;
   background-size: cover;
   border-radius: 0;
 }
