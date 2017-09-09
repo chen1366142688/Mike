@@ -88,6 +88,7 @@ body {
   width: 0.48rem;
   height: 0.48rem;
   margin: 0.853333rem 0.4rem 0 0;
+  border-radius: 50%;
 }
 
 .check,

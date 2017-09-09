@@ -37,6 +37,7 @@ body {
   width: 0.48rem;
   height: 0.48rem;
   margin: 0.893333rem 0.453333rem 0 0;
+  border-radius: 50%;
 }
 
 .check,

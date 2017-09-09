@@ -32,7 +32,7 @@ body{
     width:36px;
     height:36px;
     margin:67px 34px 0 0;
-
+    border-radius: 50%;
 }
 .check,.checks{
     display: inline-block;
