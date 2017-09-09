@@ -32,6 +32,13 @@ body {
   padding-top: 0.56rem;
 }
 
+.shell {
+  display: inline-block;
+  width: 0.48rem;
+  height: 0.48rem;
+  margin: 0.893333rem 0.453333rem 0 0;
+}
+
 .check,
 .checks {
   display: inline-block;
@@ -40,7 +47,6 @@ body {
   background: #F8F8F8;
   border: 0.053333rem solid #E5E5E5;
   border-radius: 50%;
-  margin: 0.893333rem 0.453333rem 0 0;
 }
 
 .checkImg {
@@ -78,7 +84,7 @@ body {
   width: 0.48rem;
   height: 0.48rem;
   background-size: cover;
-  margin: 0.893333rem 0.512rem 0 0;
+  border-radius: 0;
 }
 
 .hr {
