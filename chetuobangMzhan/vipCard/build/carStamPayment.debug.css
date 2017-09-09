@@ -1,0 +1,157 @@
+body {
+  height: 100vh;
+  background: rgb(243,244,245);
+}
+
+.topBg {
+  width: 9.466667rem;
+  height: 4rem;
+  padding: 0.266667rem;
+  background: rgb(243,244,245);
+}
+
+.topImg {
+  width: 9.466667rem;
+  height: 3.986667rem;
+  background: url("../images/carbg.png") no-repeat;
+  background-size: cover;
+  border-top: 0.013333rem solid transparent;
+  border-radius: 0.08rem;
+}
+
+.money {
+  width: 1.693333rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  font-family: PingFangSC-Medium;
+  font-size: 0.4rem;
+  color: #FE7989;
+  letter-spacing: 0;
+  margin: 0.4rem auto 0 auto;
+}
+
+.money b {
+  font-size: 0.64rem;
+}
+
+.notes {
+  height: 0.32rem;
+  line-height: 0.32rem;
+  text-align: center;
+  font-family: PingFangSC-Light;
+  font-size: 0.32rem;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  margin: 0.133333rem 0 1.52rem 0;
+}
+
+.validity {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  margin: 0  0 0.133333rem 0.4rem;
+  font-family: PingFangSC-Light;
+  font-size: 0.293333rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.model {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  margin-left: 0.4rem;
+  font-family: PingFangSC-Light;
+  font-size: 0.293333rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.content {
+  width: 10rem;
+  background: #ffffff;
+}
+
+.oneNotes {
+  width: 9.6rem;
+  height: 2.186667rem;
+  padding-left: 0.4rem;
+  border-bottom: 0.013333rem solid rgb(243,244,245);
+}
+
+.twoNotes {
+  width: 9.6rem;
+  height: 2.186667rem;
+  padding-left: 0.4rem;
+}
+
+.shell {
+  display: inline-block;
+  width: 0.48rem;
+  height: 0.48rem;
+  margin: 0.853333rem 0.4rem 0 0;
+}
+
+.check,
+.checks {
+  display: block;
+  width: 0.426667rem;
+  height: 0.426667rem;
+  background: #F8F8F8;
+  border: 0.053333rem solid #E5E5E5;
+  border-radius: 50%;
+}
+
+.checkImg {
+  display: inline-block;
+  width: 1.04rem;
+  height: 0.44rem;
+  background: url("../images/greenCat.png") no-repeat;
+  margin: 0.893333rem 0.506667rem 0 0;
+  background-size: cover;
+}
+
+.checkImg2 {
+  display: inline-block;
+  width: 1.04rem;
+  height: 0.44rem;
+  background: url("../images/suv.png") no-repeat;
+  background-size: cover;
+  margin: 0.893333rem 0.506667rem 0 0;
+}
+
+.notesInfo {
+  font-family: PingFangSC-Light;
+  font-size: 0.4rem;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  line-height: 0.6rem;
+  margin: 0.533333rem 0 0.133333rem;
+}
+
+.moneys {
+  font-family: PingFangSC-Medium;
+  font-size: 0.4rem;
+  color: #FE7989;
+  letter-spacing: 0;
+}
+
+.selected {
+  background: url("../images/select.png") no-repeat;
+  border: 0;
+  width: 0.48rem;
+  height: 0.48rem;
+  background-size: cover;
+  border-radius: 0;
+}
+
+.btn {
+  width: 9.466667rem;
+  height: 1.173333rem;
+  background: #7CDAA2;
+  border-radius: 0.08rem;
+  font-family: PingFangSC-Medium;
+  font-size: 0.426667rem;
+  color: #FFFFFF;
+  letter-spacing: 0.08rem;
+  border: 0;
+  margin: 5.173333rem 0.266667rem 0.8rem 0.266667rem;
+}

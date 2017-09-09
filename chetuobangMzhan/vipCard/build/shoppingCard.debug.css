@@ -1,0 +1,176 @@
+body {
+  height: 100vh;
+  background: rgb(243,244,245);
+}
+
+.container {
+  width: 9.6rem;
+  height: 2.186667rem;
+  padding-left: 0.4rem;
+  border-top: 0.013333rem solid  rgb(243,244,245);
+  background: #ffffff;
+}
+
+.container2 {
+  width: 9.6rem;
+  height: 2.186667rem;
+  padding-left: 0.4rem;
+  border-top: 0.013333rem solid  rgb(243,244,245);
+  background: #ffffff;
+}
+
+.content {
+  background: #ffffff;
+}
+
+.select {
+  height: 2.186667rem;
+}
+
+.text {
+  height: 1.626667rem;
+  padding-top: 0.56rem;
+}
+
+.check,
+.checks {
+  display: inline-block;
+  width: 0.426667rem;
+  height: 0.426667rem;
+  background: #F8F8F8;
+  border: 0.053333rem solid #E5E5E5;
+  border-radius: 50%;
+  margin: 0.893333rem 0.453333rem 0 0;
+}
+
+.checkImg {
+  display: inline-block;
+  width: 0.953333rem;
+  height: 0.636rem;
+  background: url("../images/greenCar.png") no-repeat;
+  margin: 0.813333rem 0.54rem 0 0;
+}
+
+.checkImg2 {
+  background: url("../images/yellowCar.png") no-repeat;
+}
+
+.notes {
+  font-family: PingFangSC-Light;
+  font-size: 0.4rem;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  line-height: 0.6rem;
+  margin-bottom: 0.133333rem;
+}
+
+.money39,
+.money99 {
+  font-family: PingFangSC-Medium;
+  font-size: 0.4rem;
+  color: #FE7989;
+  letter-spacing: 0;
+}
+
+.selected {
+  background: url("../images/select.png") no-repeat;
+  border: 0;
+  width: 0.48rem;
+  height: 0.48rem;
+  background-size: cover;
+  margin: 0.893333rem 0.512rem 0 0;
+}
+
+.hr {
+  width: 10rem;
+  height: 0.146667rem;
+  background: rgb(243,244,245);
+}
+
+.one {
+  width: 8.4rem;
+  padding: 0.453333rem 0.8rem 0.386667rem 0.8rem;
+  border-bottom: 0.013333rem solid rgb(243,244,245);
+}
+
+.two {
+  width: 8.4rem;
+  padding: 0.453333rem 0.8rem 0.4rem 0.8rem;
+  border-bottom: 0.013333rem solid rgb(243,244,245);
+}
+
+.three {
+  width: 8.4rem;
+  padding: 0.453333rem 0.8rem 0.4rem 0.8rem;
+}
+
+.vipNotes,
+.carNotes,
+.rescueNotes {
+  width: 8.026667rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-left: 0.106667rem solid #B8E986;
+  padding-left: 0.266667rem;
+  font-family: PingFangSC-Light;
+  font-size: 0.346667rem;
+  color: #4a4a4a;
+  letter-spacing: 0;
+}
+
+.carNotes {
+  border-left: 0.106667rem solid #FBE550;
+}
+
+.rescueNotes {
+  border-left: 0.106667rem solid #FE7989;
+}
+
+.notesText {
+  width: 8.4rem;
+  font-family: PingFangSC-Light;
+  font-size: 0.32rem;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  line-height: 0.6rem;
+  padding-top: 0.28rem;
+}
+
+.date {
+  width: 8.4rem;
+  height: 0.6rem;
+  margin: 0.28rem 0 0.026667rem 0;
+  font-family: PingFangSC-Light;
+  font-size: 0.32rem;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  line-height: 0.6rem;
+}
+
+.range {
+  width: 8.4rem;
+  height: 0.6rem;
+  font-family: PingFangSC-Light;
+  font-size: 0.32rem;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  line-height: 0.6rem;
+}
+
+.footer {
+  width: 9.466667rem;
+  padding: 0.266667rem 0.266667rem 0.8rem 0.266667rem;
+  background: rgb(243,244,245);
+}
+
+.btn {
+  width: 9.466667rem;
+  height: 1.173333rem;
+  background: #7CDAA2;
+  border-radius: 0.08rem;
+  font-family: PingFangSC-Medium;
+  font-size: 0.426667rem;
+  color: #FFFFFF;
+  letter-spacing: 0.08rem;
+  border: 0;
+}

@@ -1,0 +1,150 @@
+
+body{
+    height:100vh;
+    background: rgb(243,244,245);
+}
+.container{
+    width:720px;
+    height:164px;
+    padding-left:30px;
+    border-top:1px solid  rgb(243,244,245);
+    background: #ffffff;
+}
+.container2{
+    width:720px;
+    height:164px;
+    padding-left:30px;
+    border-top:1px solid  rgb(243,244,245);
+    background: #ffffff;
+}
+.content{
+    background: #ffffff;
+}
+.select{
+    height:164px;
+}
+.text{
+    height:122px;
+    padding-top:42px;
+}
+.check,.checks{
+    display: inline-block;
+    width:32px;
+    height:32px;
+    background: #F8F8F8;
+    border: 4px solid #E5E5E5;
+    border-radius: 50%;
+    margin:67px 34px 0 0;
+}
+.checkImg{
+    display: inline-block;
+    width:71.5px;
+    height:47.7px;
+    background: url("../images/greenCar.png") no-repeat;
+    margin:61px 40.5px 0 0;
+}
+.checkImg2{
+    background: url("../images/yellowCar.png") no-repeat;
+}
+.notes{
+    font-family:PingFangSC-Light;
+    font-size: 30px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    line-height: 45px;
+    margin-bottom:10px;
+}
+.money39,.money99{
+    font-family:PingFangSC-Medium;
+    font-size: 30px;
+    color: #FE7989;
+    letter-spacing: 0;
+}
+.selected{
+    background: url("../images/select.png") no-repeat;
+    border: 0;
+    width:36px;
+    height:36px;
+    background-size:cover ;
+    margin:67px 38.4px 0 0;
+}
+.hr{
+    width:750px;
+    height:11px;
+    background: rgb(243,244,245);
+}
+.one{
+    width:630px;
+    padding:34px 60px 29px 60px;
+    border-bottom:1px solid rgb(243,244,245);
+}
+.two{
+    width:630px;
+    padding:34px 60px 30px 60px;
+    border-bottom:1px solid rgb(243,244,245);
+}
+.three{
+    width:630px;
+    padding:34px 60px 30px 60px;
+}
+.vipNotes,.carNotes,.rescueNotes{
+    width:602px;
+    height:30px;
+    line-height: 30px;
+    border-left:8px solid #B8E986;
+    padding-left: 20px;
+    font-family:PingFangSC-Light;
+    font-size: 26px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+}
+.carNotes{
+    border-left:8px solid #FBE550;
+}
+.rescueNotes{
+    border-left:8px solid #FE7989;
+}
+.notesText{
+    width:630px;
+    font-family:PingFangSC-Light;
+    font-size: 24px;
+    color: #9B9B9B;
+    letter-spacing: 0;
+    line-height: 45px;
+    padding-top:21px;
+}
+.date{
+    width:630px;
+    height:45px;
+    margin:21px 0 2px 0;
+    font-family:PingFangSC-Light;
+    font-size: 24px;
+    color: #9B9B9B;
+    letter-spacing: 0;
+    line-height: 45px;
+}
+.range{
+    width:630px;
+    height:45px;
+    font-family:PingFangSC-Light;
+    font-size: 24px;
+    color: #9B9B9B;
+    letter-spacing: 0;
+    line-height: 45px;
+}
+.footer{
+    width:710px;
+    padding:20px 20px 60px 20px;
+    background: rgb(243,244,245);
+}
+.btn{
+    width:710px;
+    height:88px;
+    background: #7CDAA2;
+    border-radius: 6px;
+    font-family:PingFangSC-Medium;
+    font-size: 32px;
+    color: #FFFFFF;
+    letter-spacing: 6px;
+    border: 0;
+}
