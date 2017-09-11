@@ -21,6 +21,8 @@ body {
 
 .content {
   background: #ffffff;
+  max-height: 10.666667rem;
+  overflow-y: scroll;
 }
 
 .select {
@@ -160,7 +162,6 @@ body {
 
 .range {
   width: 8.4rem;
-  height: 0.6rem;
   font-family: PingFangSC-Light;
   font-size: 0.32rem;
   color: #9B9B9B;
@@ -170,8 +171,9 @@ body {
 
 .footer {
   width: 9.466667rem;
-  padding: 0.266667rem 0.266667rem 0.8rem 0.266667rem;
+  padding: 0.266667rem 0.266667rem 0 0.266667rem;
   background: rgb(243,244,245);
+  position: relative;
 }
 
 .btn {
@@ -184,4 +186,6 @@ body {
   color: #FFFFFF;
   letter-spacing: 0.08rem;
   border: 0;
+  position: fixed;
+  bottom: 0.8rem;
 }

@@ -19,6 +19,8 @@ body{
 }
 .content{
     background: #ffffff;
+    max-height:800px;
+    overflow-y: scroll;
 }
 .select{
     height:164px;
@@ -135,7 +137,6 @@ body{
 }
 .range{
     width:630px;
-    height:45px;
     font-family:PingFangSC-Light;
     font-size: 24px;
     color: #9B9B9B;
@@ -144,8 +145,9 @@ body{
 }
 .footer{
     width:710px;
-    padding:20px 20px 60px 20px;
+    padding:20px 20px 0 20px;
     background: rgb(243,244,245);
+    position: relative;
 }
 .btn{
     width:710px;
@@ -157,4 +159,6 @@ body{
     color: #FFFFFF;
     letter-spacing: 6px;
     border: 0;
+    position: fixed;
+    bottom:60px;
 }
