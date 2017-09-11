@@ -34,8 +34,8 @@
       <file leaf-file-name="shoppingCard.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/shoppingCard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+            <state relative-caret-position="131">
+              <caret line="146" column="20" lean-forward="false" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -265,12 +265,12 @@
       <updated>1504690203254</updated>
       <workItem from="1504690214502" duration="33516000" />
       <workItem from="1505012317507" duration="5813000" />
-      <workItem from="1505107075021" duration="1480000" />
+      <workItem from="1505107075021" duration="1611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40809000" />
+    <option name="totallyTimeSpent" value="40940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="37" width="1260" height="670" extended-state="0" />
@@ -422,8 +422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/shoppingCard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+        <state relative-caret-position="131">
+          <caret line="146" column="20" lean-forward="false" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
           <folding />
         </state>
       </provider>
