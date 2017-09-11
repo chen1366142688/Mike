@@ -15,7 +15,7 @@
 }
 .content{
     background: #ffffff;
-    max-height:800px;
+    max-height:700px;
     overflow-y: scroll;
 }
 .select{
