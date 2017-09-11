@@ -16,7 +16,7 @@
 
 .content {
   background: #ffffff;
-  max-height: 10.666667rem;
+  max-height: 9.333333rem;
   overflow-y: scroll;
 }
 
@@ -167,7 +167,7 @@
 .footer {
   width: 9.466667rem;
   height: 1.173333rem;
-  padding: 0.266667rem 0.266667rem 0 0.266667rem;
+  padding: 0.266667rem 0.266667rem 0.8rem 0.266667rem;
   background: rgb(243,244,245);
   position: fixed;
   bottom: 0.8rem;
