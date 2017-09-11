@@ -171,9 +171,11 @@ body {
 
 .footer {
   width: 9.466667rem;
+  height: 1.333333rem;
   padding: 0.266667rem 0.266667rem 0 0.266667rem;
   background: rgb(243,244,245);
   position: relative;
+  z-index: 3;
 }
 
 .btn {
@@ -188,4 +190,5 @@ body {
   border: 0;
   position: fixed;
   bottom: 0.8rem;
+  z-index: 5;
 }

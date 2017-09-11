@@ -145,9 +145,11 @@ body{
 }
 .footer{
     width:710px;
+    height:100px;
     padding:20px 20px 0 20px;
     background: rgb(243,244,245);
     position: relative;
+    z-index: 3;
 }
 .btn{
     width:710px;
@@ -161,4 +163,5 @@ body{
     border: 0;
     position: fixed;
     bottom:60px;
+    z-index: 5;
 }
