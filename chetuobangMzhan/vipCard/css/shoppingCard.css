@@ -148,8 +148,8 @@ body{
     height:100px;
     padding:20px 20px 0 20px;
     background: rgb(243,244,245);
-    position: relative;
-    z-index: 3;
+    position: fixed;
+    bottom:60px;
 }
 .btn{
     width:710px;
@@ -161,7 +161,5 @@ body{
     color: #FFFFFF;
     letter-spacing: 6px;
     border: 0;
-    position: fixed;
-    bottom:60px;
-    z-index: 5;
+
 }
