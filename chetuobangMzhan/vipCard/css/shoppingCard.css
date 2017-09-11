@@ -145,6 +145,7 @@
     padding:20px 20px 60px 20px;
     background: rgb(243,244,245);
     position: fixed;
+    bottom:0;
 }
 .btn{
     width:710px;
