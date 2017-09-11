@@ -167,9 +167,10 @@
 .footer {
   width: 9.466667rem;
   height: 1.173333rem;
-  padding: 0.266667rem 0.266667rem 0.8rem 0;
+  padding: 0.266667rem 0.266667rem 0 0.266667rem;
   background: rgb(243,244,245);
   position: fixed;
+  bottom: 0.8rem;
 }
 
 .btn {
