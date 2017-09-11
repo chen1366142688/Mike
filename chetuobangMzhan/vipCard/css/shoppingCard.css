@@ -146,6 +146,7 @@
     background: rgb(243,244,245);
     position: fixed;
     bottom:0;
+    z-index: 99;
 }
 .btn{
     width:710px;
