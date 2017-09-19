@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e025c8-a1c8-4a6f-98d1-f18e67ce47d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chetuobangMzhan/wechat_js/js/base.js" afterPath="$PROJECT_DIR$/chetuobangMzhan/wechat_js/js/base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,9 +23,11 @@
       <file leaf-file-name="message.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chetuobangMzhan/wechat_js/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="85" column="69" lean-forward="false" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="69" />
-              <folding />
+            <state relative-caret-position="1694">
+              <caret line="103" column="38" lean-forward="true" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+              <folding>
+                <element signature="n#select#0;n#div#0;n#form#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -33,8 +35,8 @@
       <file leaf-file-name="base.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chetuobangMzhan/wechat_js/js/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
+            <state relative-caret-position="-132">
+              <caret line="131" column="64" lean-forward="true" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -173,12 +175,12 @@
       <updated>1489803729353</updated>
       <workItem from="1489803730917" duration="8000" />
       <workItem from="1489803787823" duration="38000" />
-      <workItem from="1505792754707" duration="388000" />
+      <workItem from="1505792754707" duration="1320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434000" />
+    <option name="totallyTimeSpent" value="1366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="1" />
@@ -231,16 +233,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chetuobangMzhan/wechat_js/message.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="85" column="69" lean-forward="false" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="69" />
-          <folding />
+        <state relative-caret-position="1694">
+          <caret line="103" column="38" lean-forward="true" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+          <folding>
+            <element signature="n#select#0;n#div#0;n#form#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chetuobangMzhan/wechat_js/js/base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
+        <state relative-caret-position="-132">
+          <caret line="131" column="64" lean-forward="true" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
           <folding />
         </state>
       </provider>
