@@ -11,7 +11,7 @@ xhr.onreadystatechange = function(){
         }
     }
 };
-xhr.open('GET','http://wzcx.chetuobang.com/wz_api/?service=default.jsapi&url='+ur,false);
+xhr.open('GET','https://wzcx.chetuobang.com/wz_api/?service=default.jsapi&url='+ur,false);
 xhr.send(null);
 
 function  doResponse(xhr){
@@ -128,10 +128,10 @@ wx.ready(function () {
         wx.chooseImage({
             success: function (res) {
                 images.localId = res.localIds;
-                $("#pic").find("img").attr("src", images.localId);
-                //alert(res.localIds);
-                alert("您以选择"+res.localIds.length+"图片");
+                $("#pic").find("img").attr("src", images.localId[0]);
                 $('#pic').css('display','block');
+                alert(res.localIds);
+                alert("您以选择"+res.localIds.length+"图片");
             }
         });
     };
@@ -163,7 +163,7 @@ wx.ready(function () {
                     var uid=sessionStorage.uid;
                     $.ajax({
                        type:"GET",
-                        url:"http://wzcx.chetuobang.com/wz_api/?service=media.index&media_id="+res.serverId+"&unionid="+uid,
+                        url:"https://wzcx.chetuobang.com/wz_api/?service=media.index&media_id="+res.serverId+"&unionid="+uid,
                         data:"",
                         success:function(data){
                             var obj=data;
