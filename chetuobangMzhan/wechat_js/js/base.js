@@ -124,7 +124,8 @@ wx.ready(function () {
         localId: [],
         serverId: []
     };
-    document.querySelector('#done').onclick = function () {
+    $('#done').click =function () {
+        alert("进入了点击事件");
         wx.chooseImage({
             success: function (res) {
                 images.localId = res.localIds;
