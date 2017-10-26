@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+.button {
+    width: 73px;
+    height: 50px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    font-weight: bold;
+    color: #1e395b;
+    background: aqua;
+    font-size:20px;
+    border-radius: 3px;
+}
+.text {
+    width: 300px;
+    border: 1px solid #c2c2c2;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: right;
+    background: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.textShow{
+    width: 300px;
+    border: 1px solid #c2c2c2;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: right;
+    background: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cal{
+    margin-left:200px;
+    border:2px solid #99ccff;
+    margin:100px auto;
+    position:relative;
+    width:330px;
+    height:420px;
+    border-radius: 10px;
+}
+.cont{
+    margin-left: 10px;
+}
+.funcBtn{
+    padding-left: 580px;
+    border-radius: 10px;
+    font-size: 20px;
+    position: fixed;
+}

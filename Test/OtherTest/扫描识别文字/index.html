@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>扫描识别图片文字内容</title>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="container">
+
+</div>
+<script>
+    $.ajax({
+        type:"POST",
+        url:'http://service.image.myqcloud.com/ocr/namecard',
+        contentType:'application/json',
+        Authorization:'122',
+        data:{
+            "appid":'1254248690',
+            "bucket":"rule123",
+            "ret_image":0,
+            "url_list":[
+                "http://www.test.com/aaa.jpg",
+                "http://www.test.com/bbb.jpg"
+            ]
+        },
+        success:function(data){
+            console.log("请求对方接口成功");
+            console.log(data)
+        },
+        fail:function(data){
+            console.log("请求对方接口失败")
+            console.log(data)
+        }
+    })
+</script>
+</body>
+</html>

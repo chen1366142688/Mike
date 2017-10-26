@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>丹寨小镇用户统计</title>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<table border="">
+    <tr>
+        <th>ID</th>
+        <th>userName</th>
+        <th>userMobile</th>
+    </tr>
+
+</table>
+
+</body>
+<style>
+    table{
+        margin:0 auto;
+        position:relative;
+        top:150px;
+    }
+</style>
+<script>
+    $.ajax({
+        type : "get",
+        url : "https://scrap.chetuobang.com/ctb_test/getUser",
+        //dataType : "jsonp",//数据类型为jsonp
+        //jsonp: "jsonpCallback",//服务端用于接收callback调用的function名的参数
+        success : function(data){
+            console.log(data.results)
+            var result=data.results;
+            for(var i =0;i<result.length;i++){
+                var html ="<tr><td>"+result[i].id+"</td><td>"+result[i].u_name+"</td><td>"+result[i].mobile+"</td></tr>>";
+                $('table').append(html);
+
+            }
+        },
+        error:function(){
+            alert('fail');
+        }
+    });
+</script>
+</html>

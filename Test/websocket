@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="date" onchange="fun()" id="demo" />
+    <button onclick="fun()">开始计算</button>
+</body>
+</html>
+<script type="text/javascript">
+    function fun(){
+        var year=prompt("请输入出生年：");
+        var month=prompt("请输入出生月：");
+        var day=prompt("请输入出生日：");
+        var temps = year+"-"+month+"-"+day;
+        console.log(temps);
+        var temp = temps.split("-");
+        for(var i=0;i<temp.length;i++){
+            year = temp[0];
+            month = temp[1];
+            day = temp[2];
+        }
+        alert(temps+"是第"+funtwo(year,month,day)+"天");
+    }
+     
+    function funtwo(x,y,z){
+            var n;
+        if(x%4==0 && x%400==0)
+        {
+            if(y==1)
+                n=z;
+            else if(y==2)
+                n=parseInt(31)+parseInt(z);
+            else if(y==3)
+                n=parseInt(60)+parseInt(z);
+            else if(y==4)
+                n=parseInt(91)+parseInt(z);
+            else if(y==5)
+                n=parseInt(121)+parseInt(z);
+            else if(y==6)
+                n=parseInt(152)+parseInt(z);
+            else if(y==7)
+                n=parseInt(182)+parseInt(z);
+            else if(y==8)
+                n=parseInt(213)+parseInt(z);
+            else if(y==9)
+                n=parseInt(244)+parseInt(z);
+            else if(y==10)
+                n=parseInt(274)+parseInt(z);
+            else if(y==11)
+                n=parseInt(305)+parseInt(z);
+            else if(y==12)
+                n=parseInt(335)+parseInt(z);
+        }
+        if(x%4!=0 || x%400!=0)
+        {
+             
+            if(y==1)
+                n=z;
+            else if(y==2)
+                n=parseInt(31)+parseInt(z);
+            else if(y==3)
+                n=parseInt(59)+parseInt(z);
+            else if(y==4)
+                n=parseInt(90)+parseInt(z);
+            else if(y==5)
+                n=parseInt(120)+parseInt(z);
+            else if(y==6)
+                n=parseInt(151)+parseInt(z);
+            else if(y==7)
+                n=parseInt(181)+parseInt(z);
+            else if(y==8)
+                n=parseInt(212)+parseInt(z);
+            else if(y==9)
+                n=parseInt(243)+parseInt(z);
+            else if(y==10)
+                n=parseInt(273)+parseInt(z);
+            else if(y==11)
+                n=parseInt(304)+parseInt(z);
+            else if(y==12)
+                n=parseInt(334)+parseInt(z);
+        }
+        return n;
+    }
+</script>
+<script>
+var arr=[1,37,9,3,18,29];
+console.log(arr)
+var n=parseInt(prompt("输入数字"));
+function fun(){
+    for(var i =0;i<arr.length;i++){     
+        console.log(arr[i]);
+        if(arr[i] == n){
+            return i;
+        }else{
+            return "dd"
+        }
+}
+}
+console.log(fun())
+
+</script>

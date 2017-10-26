@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mr_Chen</title>
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=pUdpk24ECioDBguRBSAAvjuvMOUluvD5"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+
+<script>
+    var map=new BMap.Geolocation();
+
+    map.getCurrentPosition(function(p){
+        //1.1获取到当前城市名
+        console.log(p);
+    })
+</script>
+</body>
+</html>

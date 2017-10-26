@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mr_Chen</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <style>
+        body{
+            background: #000;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            background: #fff;
+            border-radius: 15px;
+            display:flex;
+            padding:10px;
+
+        }
+        .item{
+            width:20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #000;
+        }
+        .item:nth-child(2) {
+            align-self: center;
+        }
+
+        .item:nth-child(3) {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</body>
+</html>

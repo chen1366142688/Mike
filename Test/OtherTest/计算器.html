@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--定义按键表格,每个按键对应一个事件触发-->
+<div id="cal" class="cal">
+    <form action="calcuServlet" method="post" id="toCalcu">
+        <input type="file" name="file">
+        <div class="cont">
+            <input id="upText" class="textShow" type="text" name="process"
+                   maxlength="10" readonly="readonly" />
+            <input id="downText" class="text" type="text" name="text" value="0"
+                   maxlength="10" readonly="readonly" />
+
+            <input type="button" class="button" name="deleteAll" value="C" onclick="clearAllText()" />
+            <input type="button" class="button" name="opposite" value="+/-" onclick="oppositeOp()" />
+            <input type="button" class="button" name="delOne" value="←" onclick="deleteOneDigit()" />
+            <input type="button" class="button" name="Add" value="+" onclick="clickOperation('+')" />
+            <input type="button" class="button" name="seven" value="7" onclick="clickNum(7)" />
+            <input type="button" class="button" name="eight" value="8" onclick="clickNum(8)" />
+            <input type="button" class="button" name="nine" value="9" onclick="clickNum(9)" />
+            <input type="button" class="button" name="Reduce" value="-" onclick="clickOperation('-')" />
+            <input type="button" class="button" name="Four" value="4" onclick="clickNum(4)" />
+            <input type="button" class="button" name="Five" value="5" onclick="clickNum(5)" />
+            <input type="button" class="button" name="Sex" value="6" onclick="clickNum(6)" />
+            <input type="button" class="button" name="Multip" value="x" onclick="clickOperation('x')" />
+            <input type="button" class="button" name="One" value="1" onclick="clickNum(1)" />
+            <input type="button" class="button" name="Two" value="2" onclick="clickNum(2)" />
+            <input type="button" class="button" name="Three" value="3" onclick="clickNum(3)" />
+            <input type="button" class="button" name="Division" value="÷" onclick="clickOperation('/')" />
+            <input type="button" class="button" name="opposite" value="√" onclick="more()" />
+            <input type="button" class="button" name="Zero" value="0" onclick="clickNum(0)" />
+            <input type="button" class="button" name="Point" value="." onclick="clickNum('.')" />
+            <input type="button" class="button" name="Equal" value="=" onclick="calcu()" />
+        </div>
+    </form>
+
+</div>
+<div class="funcBtn">
+    <input type="button" id="show" class="button" value="show" onclick="show()" /> <input
+        type="button" id="hide" class="button" value="hide" onclick="hide()" />
+</div>
+
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/calcu.js"></script>
+</body>
+</html>

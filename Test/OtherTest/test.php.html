@@ -1,0 +1,56 @@
+<?php
+public class RequestDataJSON
+{
+    public int classid { get; set; }
+    public string name { get; set; }
+    public string zlclass { get; set; }
+    public string pname { get; set; }
+    public string tel { get; set; }
+}
+public class RequestData : IHttpHandler
+{
+public void ProcessRequest(HttpContext context)
+{
+int num = 0;
+context.Response.ContentType = "application/json";
+var data = context.Request;
+var sr = new StreamReader(data.InputStream);
+var stream = sr.ReadToEnd();
+var javaScriptSerializer = new JavaScriptSerializer();
+var PostedData = javaScriptSerializer.Deserialize<RequestDataJSON>(stream);
+
+    tb_query obj = new tb_query();
+    obj.classid = PostedData.classid;
+    obj.name = PostedData.name;
+    obj.zlclass = PostedData.zlclass;
+    obj.pname = PostedData.pname;
+    obj.tel = PostedData.tel;
+    obj.ip = context.Request.UserHostAddress.ToString();
+    obj.posttime = DateTime.Now.ToString();
+
+    try
+    {
+    using (var ctx = new dbEntities())
+    {
+    ctx.tb_query.AddObject(obj);
+    num = ctx.SaveChanges();
+    }
+    }
+    catch (Exception msg)
+    {
+    context.Response.Write(msg.Message);
+    }
+
+    context.Response.ContentType = "text/plain";
+    context.Response.Write(num);
+    }
+
+    public bool IsReusable
+    {
+    get
+    {
+    return false;
+    }
+    }
+    }
+    ?>
